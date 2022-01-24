@@ -4,8 +4,8 @@ import axios from 'axios'
 function App() {
   React.useEffect(() => {
     const getData = async () => {
-      const res = await axios.get('/api/!!!!!endpointhere!!!!!')
-      console.log(res)
+      const res = await axios.get('/api/dogs')
+      console.log(res.data)
     }
     getData()
   })
