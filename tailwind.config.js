@@ -1,7 +1,9 @@
+/* eslint-disable semi */
 module.exports = {
-  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  content: [],
   theme: {
     extend: {},
   },
   plugins: [],
-}
+  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+};
