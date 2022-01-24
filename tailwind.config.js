@@ -2,7 +2,13 @@
 module.exports = {
   content: [],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'pawhub-yellow': '#FED636',
+        'pawhub-purple': '#50447c',
+        'pawhub-grey': '#302c2c',
+      },
+    },
   },
   plugins: [],
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
