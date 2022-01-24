@@ -1,6 +1,6 @@
 import React from 'react'
 import { Squash as Hamburger } from 'hamburger-react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import pawhubLogo from '../../assets/PawHub.png'
 // import { isAuthenticated, removeToken} from '../../lib/auth'
 
