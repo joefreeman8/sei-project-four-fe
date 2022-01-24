@@ -1,17 +1,17 @@
 import React from 'react'
-import axios from 'axios'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+import Nav from './components/common/Nav'
+import Home from './components/common/Home'
 
 function App() {
-  React.useEffect(() => {
-    const getData = async () => {
-      const res = await axios.get('/api/dogs')
-      console.log(res.data)
-    }
-    getData()
-  })
-
   return (
-    <h1 className="text-3xl font-bold underline">Hello world!</h1>
+    <BrowserRouter>
+      <Nav />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
