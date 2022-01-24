@@ -2,3 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
+=======
+@import url('https://allfont.net/allfont.css?fonts=gooddog-plain');
+
+.gooddog-font {
+  font-family: 'GoodDog Plain', arial;
+}
+
+.index-image {
+  width:300px;
+  height:300px;
+  object-fit:cover;
+}
+
+@media only screen and (max-width: 1023px) {
+  .index-image {
+    width:200px;
+    height:200px;
+    object-fit:cover;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .index-image {
+    width:400px;
+    height:400px;
+    object-fit:cover;
+  }
+}
+
+.hi {
+  
+  background-color: green;
+}
+>>>>>>> development
