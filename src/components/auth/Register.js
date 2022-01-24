@@ -80,11 +80,11 @@ function Register() {
           </div>
           <div className="border-2 border-pawhub-yellow my-5 p-5 flex md:flex-row">
             <div className="w-1/2 flex flex-col justify-center"><p>
-            For over 20 years we&apos;ve promised to do our best to help all our canine friends and to never put a healthy dog to sleep.
-              </p></div>
+              For over 20 years we&apos;ve promised to do our best to help all our canine friends and to never put a healthy dog to sleep.
+            </p></div>
             <div className="flex align-center justify-center w-1/2">
-            <p className="txt-xl text-weight-bold">
-            The PawHub Promise
+              <p className="txt-xl text-weight-bold">
+                The PawHub Promise
               </p>
             </div>
           </div>
