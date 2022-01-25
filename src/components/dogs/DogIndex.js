@@ -135,7 +135,7 @@ function DogIndex() {
               <strong>Your rehoming journey starts here</strong>
             </h3>
             <p>Find out how rehoming from us works and how to get started finding your perfect match.</p>
-            <button>How rehoming works ></button>
+            <button>How rehoming works</button>
           </div>
         </div>
       </div>
