@@ -89,51 +89,32 @@ function DogIndex() {
 
   const filteredDogs = (dogs) => {
     return dogs.filter(dog => {
-      return (
-        (dog.breed.includes(breed)) &&
-        (dog.age.includes(age))
-      )
+      return (breed.includes(dog.breed) || breed.length === 0) &&
+        (age.includes(dog.age) || age.length === 0) &&
+        (dog.canLiveWithDogs && liveWith.includes('Dogs') || !liveWith.includes('Dogs')) &&
+        (dog.canLiveWithCats && liveWith.includes('Cats') || !liveWith.includes('Cats')) &&
+        (dog.canLiveWithKids && liveWith.includes('Children') || !liveWith.includes('Children'))
     })
+
   }
-  
-  // const emptyArray = []
-
-  
-  // const filteredDogs = (dogs) => {
-  //   const dogsToDisplay = (
-  //     breed.map(breed => {
-  //       return dogs.filter(dog => {
-  //         return dog.breed.includes(breed)
-  //       })
-  //     })
-  //   ) 
-  //   dogsToDisplay.map(dog => {
-  //     dog.forEach(dog => {
-  //       console.log(dog)
-  //       emptyArray.push('hello')
-  //     })
-  //   })
-  // }
-
-  // console.log(emptyArray)
   
   return (
     <>
       <div className="background-image-container">
-        <h1 className="image-text">Rehoming</h1>
-        <p className="image-text">A dog is for life, not just for Christmas
+        <h1 className="image-text kessel-font" id="title">Rehoming</h1>
+        <p className="image-text text-lg" id="tagline">A dog is for life, not just for Christmas
           <sup>®</sup>
         </p>
-        <img src={backgroundImage} />
+        <img src={backgroundImage} className="background-image"/>
       </div>
       <div>
         <div>
-          <div>
-            <h3>
+          <div className="text-center">
+            <h3 className="text-xl m-1">
               <strong>Your rehoming journey starts here</strong>
             </h3>
-            <p>Find out how rehoming from us works and how to get started finding your perfect match.</p>
-            <button>How rehoming works ></button>
+            <p className="text-sm">Find out how rehoming from us works and how to get started finding your perfect match.</p>
+            <button className="bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded">How rehoming works ></button>
           </div>
         </div>
       </div>

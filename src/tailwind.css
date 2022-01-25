@@ -3,9 +3,24 @@
 @tailwind utilities;
 
 @import url('https://allfont.net/allfont.css?fonts=gooddog-plain');
+@import url('//db.onlinewebfonts.com/c/aee15e4c7f9dcdc9544851df8640213f?family=Kessel205W00-Heavy');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&family=Signika:wght@300&display=swap');
 
 .gooddog-font {
   font-family: 'GoodDog Plain', arial;
+}
+
+.kessel-font {
+  font-family: 'Kessel205W00-Heavy', arial;
+}
+
+.nunito-font {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.hi {
+  
+  background-color: green;
 }
 
 .index-image {
@@ -22,9 +37,22 @@
 
 .image-text {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+#tagline {
+  top: 65%;
+  left: 50%
+}
+
+#title {
+  font-size: 500%;
+}
+
+.background-image {
+  min-width: 1050px;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -32,6 +60,13 @@
     width:200px;
     height:200px;
     object-fit:cover;
+  }
+  #tagline {
+    top: 70%;
+    left: 50%;
+  }
+  #title {
+    font-size: 400%;
   }
 }
 
@@ -41,9 +76,18 @@
     height:400px;
     object-fit:cover;
   }
+
+  .background-image {
+    min-width: 100px;
+    object-fit: cover;
+  }
+
+  #tagline {
+    display: none;
+  }
+  #title {
+    font-size: xx-large;
+  }
+
 }
 
-.hi {
-  
-  background-color: green;
-}
