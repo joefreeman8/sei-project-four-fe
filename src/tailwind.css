@@ -96,6 +96,17 @@ nav {
   height: 15vh;
 }
 
+.filter-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.filter-item {
+  width: 100%;
+}
+
+
 @media only screen and (max-width: 1023px) {
   .nav-toggle {
     display: none;
@@ -142,5 +153,30 @@ nav {
     font-size: xx-large;
   }
 
+  .filter-container {
+    display: block;
+  }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.rehoming-questionnaire-header {
+  background-image: url("https://i.imgur.com/A7pPi5p.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 
