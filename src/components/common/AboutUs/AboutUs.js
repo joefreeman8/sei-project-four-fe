@@ -45,7 +45,7 @@ function AboutUs() {
             Help provide life changing care and forever homes for our furry friends.</p>
         </div>
         <div className="flex justify-center">
-          <Link to="/donate">
+          <Link to="/donation">
             <button className="mx-20 shadow-xl bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-10 m-3 rounded">
               Make Donation
             </button>

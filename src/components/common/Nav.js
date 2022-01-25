@@ -1,53 +1,53 @@
 import React from 'react'
 import { Squash as Hamburger } from 'hamburger-react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import pawhubLogo from '../../assets/PawHub.png'
-// import { isAuthenticated, removeToken} from '../../lib/auth'
+import { isAuthenticated, removeToken } from '../../lib/auth'
 
 function Nav() {
-  // const navigate = useNavigate()
+  const navigate = useNavigate()
+  const isAuth = isAuthenticated()
   const [sidebarShow, setSidebarShow] = React.useState(false)
 
   const handleSideBar = () => setSidebarShow(!sidebarShow)
 
-  // const handleLogout = () => {
-  //   removeToken()
-  //   navigate('/')
-  // }
+  const handleLogout = () => {
+    removeToken()
+    navigate('/')
+  }
 
   return (
     <>
-      <nav className="nav-toggle">
+      <nav className="nav-toggle sticky top-0 bg-white/80">
         <div className="flex float-left mt-3 pl-24">
           <Link className="flex float-left" to="/">
             <img src={pawhubLogo} alt="logo" className="h-20  w-20"></img></Link>
         </div>
         <div className="flex float-right mt-7">
-          <div className="mx-2">
-            <Link to="/dogs">View Dogs</Link>
-          </div>
-          <div className="mx-2">
-            <Link to="/aboutus">About Us</Link>
-          </div>
-          <div className="mx-2">
-            <Link to="/contact">Contact</Link>
-          </div>
-          <div className="mx-2">
-            <Link to="/favourites">Favourites</Link>
-          </div>
-          <div className="mx-2">
-            <Link to="/register">Register</Link>
-          </div>
-          <div className="mx-2">
-            <Link to="/login">Login</Link>
-          </div>
-          <div className="mx-2 pr-24">
-            <Link to="/donate">Donate Now</Link>
-          </div>
+          <Link className="mx-2" to="/dogs">View Dogs</Link>
+          <Link className="mx-2" to="/aboutus">About Us</Link>
+          <Link className="mx-2" to="/contact">Contact</Link>
+          <Link className="mx-2" to="/donation">Donate Now</Link>
+
+          {isAuth ? (
+            <>
+              <Link className="mx-2" to="/favourites">Favourites</Link>
+              <button
+                className="shadow-xl bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-5 rounded mr-24"
+                onClick={handleLogout}>
+                Logout
+              </button>
+            </>
+          ) : (
+            <>
+              <Link className="mx-2" to="/register">Register</Link>
+              <Link className="mx-2 pr-24" to="/login">Login</Link>
+            </>
+          )}
         </div>
       </nav>
 
-      <nav className="nav burger-toggle ">
+      <nav className="nav burger-toggle bg-white/80">
         <div className="flex float-left m-3 pl-4">
           <Link to="/"><img src={pawhubLogo} alt="logo" className="h-20  w-20"></img></Link>
         </div>
@@ -70,17 +70,31 @@ function Nav() {
               <Link to="/contact">Contact</Link>
             </div>
             <div className="m-1">
-              <Link to="/favourites">Favourites</Link>
+              <Link to="/donation">Donate Now</Link>
             </div>
-            <div className="m-1">
-              <Link to="/register">Register</Link>
-            </div>
-            <div className="m-1">
-              <Link to="/login">Login</Link>
-            </div>
-            <div className="m-1">
-              <Link to="/donate">Donate Now</Link>
-            </div>
+            {isAuth ? (
+              <>
+                <div className="m-1">
+                  <Link to="/favourites">Favourites</Link>
+                </div>
+                <div>
+                  <button
+                    className="shadow-xl bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-5 rounded"
+                    onClick={handleLogout}>
+                    Logout
+                  </button>
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="m-1">
+                  <Link to="/register">Register</Link>
+                </div>
+                <div className="m-1">
+                  <Link to="/login">Login</Link>
+                </div>
+              </>
+            )}
           </div>
         </div>
 

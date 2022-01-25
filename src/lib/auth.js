@@ -29,3 +29,12 @@ export function getUserId() {
   const payload = getPayload()
   return payload.sub
 }
+
+export function isAuthenticated() {
+  const payload = getPayload()
+  if (!payload) {
+    return false
+  }
+  const now = Math.round(Date.now() / 1000)
+  return now < payload.exp
+}
