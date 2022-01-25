@@ -1,7 +1,9 @@
 import Carousel from './carousel/HomeCarousel'
+import DivCarousel from './carousel/DivCarousel'
 import DogHomeCard from '../dogs/DogCard'
 
 import { getAllDogs, shuffle } from '../../lib/api'
+import { homepageCards } from '../../lib/data'
 
 import React from 'react'
 
@@ -80,7 +82,7 @@ function Home() {
         </button>
       </div>
       <div className="w-full h-1/3 bg-pawhub-yellow flex justify-center items-center">
-        <Carousel />
+        <DivCarousel {...homepageCards} />
       </div>
 
     </div>
