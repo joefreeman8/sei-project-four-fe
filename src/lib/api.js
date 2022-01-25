@@ -12,3 +12,7 @@ export function getAllDogs() {
 export function registerUser(formData) {
   return axios.post(`${baseUrl}/register/`, formData)
 }
+
+export function loginUser(formData) {
+  return axios.post(`${baseUrl}/login/`, formData)
+}
