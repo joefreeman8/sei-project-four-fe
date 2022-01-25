@@ -9,6 +9,7 @@ import Register from './components/auth/Register'
 import Login from './components/auth/Login'
 import DogIndex from './components/dogs/DogIndex'
 import AboutUs from './components/aboutUs/AboutUs'
+import DogShow from './components/dogs/DogShow'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/dogs" element={<DogIndex />} />
+        <Route path="/dogs/:dogId" element={<DogShow />} />
         <Route path="/aboutus" element={<AboutUs />} />
       </Routes>
     </BrowserRouter>
