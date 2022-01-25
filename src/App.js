@@ -9,7 +9,10 @@ import Donation from './components/common/Donation'
 import Register from './components/auth/Register'
 import Login from './components/auth/Login'
 import DogIndex from './components/dogs/DogIndex'
-import AboutUs from './components/aboutUs/AboutUs'
+import DogShow from './components/dogs/DogShow'
+import AboutUs from './components/common/AboutUs/AboutUs'
+import WhoWeAre from './components/common/AboutUs/WhoWeAre'
+import Fundraiser from './components/common/AboutUs/Fundraiser'
 
 
 function App() {
@@ -22,8 +25,11 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/dogs" element={<DogIndex />} />
-        <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/dogs/:dogId" element={<DogShow />} />
         <Route path="/donation" element={<Donation />} />
+        <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/aboutus/whoweare" element={<WhoWeAre />} />
+        <Route path="/aboutus/fundraiser" element={<Fundraiser />} />
       </Routes>
     </BrowserRouter>
   )
