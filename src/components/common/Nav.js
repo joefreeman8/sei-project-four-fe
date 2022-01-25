@@ -27,7 +27,7 @@ function Nav() {
           <Link className="mx-2" to="/dogs">View Dogs</Link>
           <Link className="mx-2" to="/aboutus">About Us</Link>
           <Link className="mx-2" to="/contact">Contact</Link>
-          <Link className="mx-2" to="/donate">Donate Now</Link>
+          <Link className="mx-2" to="/donation">Donate Now</Link>
 
           {isAuth ? (
             <>
@@ -47,7 +47,7 @@ function Nav() {
         </div>
       </nav>
 
-      <nav className="nav burger-toggle ">
+      <nav className="nav burger-toggle bg-white/80">
         <div className="flex float-left m-3 pl-4">
           <Link to="/"><img src={pawhubLogo} alt="logo" className="h-20  w-20"></img></Link>
         </div>
@@ -70,7 +70,7 @@ function Nav() {
               <Link to="/contact">Contact</Link>
             </div>
             <div className="m-1">
-              <Link to="/donate">Donate Now</Link>
+              <Link to="/donation">Donate Now</Link>
             </div>
             {isAuth ? (
               <>
