@@ -119,13 +119,11 @@ function DogIndex() {
   
   return (
     <>
-      <div>
-        <div>
-          <h1>Rehoming</h1>
-          <p>A dog is for life, not just for Christmas
-            <sup>®</sup>
-          </p>
-        </div>
+      <div className="background-image-container">
+        <h1 className="image-text">Rehoming</h1>
+        <p className="image-text">A dog is for life, not just for Christmas
+          <sup>®</sup>
+        </p>
         <img src={backgroundImage} />
       </div>
       <div>

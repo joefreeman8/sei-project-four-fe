@@ -14,6 +14,19 @@
   object-fit:cover;
 }
 
+.background-image-container {
+  position: relative;
+  text-align: center;
+  object-fit: contain;
+}
+
+.image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 @media only screen and (max-width: 1023px) {
   .index-image {
     width:200px;
