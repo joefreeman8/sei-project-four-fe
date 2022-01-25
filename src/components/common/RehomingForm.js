@@ -1,8 +1,6 @@
 function RehomingForm() {
   return (
 
-
-
     <div className="container min-w-full">
       {/* image */}
       {/* // mx-auto w-2/8 lg:w-full h-1/6 */}
@@ -38,6 +36,7 @@ function RehomingForm() {
         </form>
       </div>
 
+      {/* questionnaire starts here */}
       <div className="bg-pawhub-yellow pt-1 pb-10">
         <br></br>
 
@@ -47,9 +46,6 @@ function RehomingForm() {
           <br></br>
           
           <div className="mb-6">
-            {/* "shadow border-2 h-16 w-full py-2 px-3 text-gray-40 leading-tight focus:outline-none focus:border-pawhub-yellow mb-5" */}
-
-
             <label htmlFor="text" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">1. Adopter Title<span className="text-red-600"> *</span></label>
             <select id="text" className="bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow focus:border-pawhub-yellow block w-full p-2 dark:bg-gray-40 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:border-pawhub-yellow dark:focus:border-pawhub-yellow">
               <option>Miss</option>
