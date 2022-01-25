@@ -51,11 +51,6 @@ nav {
   font-family: 'Nunito Sans', sans-serif;
 }
 
-.hi {
-  
-  background-color: green;
-}
-
 .index-image {
   width:300px;
   height:300px;
@@ -88,7 +83,27 @@ nav {
   min-width: 1050px;
 }
 
+#aboutus-tagline {
+  top: 70%;
+  left: 50%
+}
+
+
+.about-buttons {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  height: 15vh;
+}
+
 @media only screen and (max-width: 1023px) {
+  .nav-toggle {
+    display: none;
+  } 
+  .burger-toggle {
+    display: inline-flex
+  }
+  
   .index-image {
     width:200px;
     height:200px;
@@ -101,15 +116,14 @@ nav {
   #title {
     font-size: 400%;
   }
+
+  #aboutus-tagline {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 767px) {
-  .nav-toggle {
-    display: none;
-  } 
-  .burger-toggle {
-    display: inline-flex
-  }
+  
   .index-image {
     width:400px;
     height:400px;
