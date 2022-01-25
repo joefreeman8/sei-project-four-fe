@@ -17,8 +17,8 @@ function Nav() {
 
   return (
     <>
-      <nav className="nav-toggle mt-3">
-        <div className="flex float-left pl-24">
+      <nav className="nav-toggle">
+        <div className="flex float-left mt-3 pl-24">
           <Link className="flex float-left" to="/">
             <img src={pawhubLogo} alt="logo" className="h-20  w-20"></img></Link>
         </div>

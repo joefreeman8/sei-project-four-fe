@@ -5,7 +5,7 @@
 
 
 nav {
-  height: 25vh;
+  height: 15vh;
 }
 
 .burger-toggle {
@@ -20,6 +20,9 @@ nav {
     .nav-toggle {
     display: none;
   }
+  nav {
+    height: 15vh;
+  }
 //   .burger-toggle {
 //     display: inline-flex;
 // }
@@ -27,7 +30,7 @@ nav {
 
 .side-nav-menu-container {
   width: 100px;
-  background-color: rgba(255, 255, 255, 0.42);
+  background-color: rgba(255, 255, 255, 0.92);
   height: auto;
   position: fixed;
   z-index: 2;
