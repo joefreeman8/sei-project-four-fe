@@ -114,15 +114,15 @@ function DogIndex() {
               <strong>Your rehoming journey starts here</strong>
             </h3>
             <p className="text-sm">Find out how rehoming from us works and how to get started finding your perfect match.</p>
-            <button className="bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded">How rehoming works</button>
+            <button className="bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded">How rehoming works &gt;</button>
           </div>
         </div>
       </div>
       <div className='bg-pawhub-purple text-white p-8'>
-        <div>
-          <div className="field">
-            <label className="label">May live with...</label>
-            <div className="control text-black">
+        <div className="filter-container">
+          <div className="m-2 filter-item">
+            <label className="p-1">May live with...</label>
+            <div className="text-pawhub-grey">
               <Select
                 options={liveWithSelectOptions}
                 isMulti
@@ -134,9 +134,9 @@ function DogIndex() {
               />
             </div>
           </div>
-          <div className="field">
-            <label className="label">Age</label>
-            <div className="control text-black">
+          <div className="m-2 filter-item">
+            <label className="p-1">Age</label>
+            <div className="text-pawhub-grey">
               <Select
                 options={ageSelectOptions}
                 isMulti
@@ -148,9 +148,9 @@ function DogIndex() {
               />
             </div>
           </div>
-          <div className="field">
-            <label className="label">Breed</label>
-            <div className="control text-black">
+          <div className="m-2 filter-item">
+            <label className="p-1">Breed</label>
+            <div className="text-pawhub-grey">
               <Select
                 options={breedSelectOptions}
                 isMulti
