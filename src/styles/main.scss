@@ -15,11 +15,15 @@ nav {
   }
 }
 
-.nav-toggle {
+
   @media only screen and (max-width: 900px){
+    .nav-toggle {
     display: none;
   }
-}
+//   .burger-toggle {
+//     display: inline-flex;
+// }
+  }
 
 .side-nav-menu-container {
   width: 100px;

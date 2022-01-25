@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
-=======
 @import url('https://allfont.net/allfont.css?fonts=gooddog-plain');
 
 .gooddog-font {
@@ -36,4 +34,3 @@
   
   background-color: green;
 }
->>>>>>> development
