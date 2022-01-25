@@ -6,6 +6,39 @@
 @import url('//db.onlinewebfonts.com/c/aee15e4c7f9dcdc9544851df8640213f?family=Kessel205W00-Heavy');
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&family=Signika:wght@300&display=swap');
 
+* {
+  margin:0;
+  box-sizing: border-box;
+}
+
+nav {
+  height: 10vh;
+}
+
+.burger-toggle {
+  display: none;
+}
+
+.side-nav-menu-container {
+  width: 100px;
+  background-color: rgba(255, 255, 255, 0.92);
+  height: auto;
+  position: fixed;
+  z-index: 2;
+  right: -100%;
+  padding: 10px 0 20px 0;
+  margin-top: 75px;
+}
+
+.side-nav-menu-container.active {
+  right: 0;
+  transition: all 0.4s
+}
+.burger-icon {
+  display: flex;
+  float: right;
+}
+
 .gooddog-font {
   font-family: 'GoodDog Plain', arial;
 }
@@ -71,6 +104,12 @@
 }
 
 @media only screen and (max-width: 767px) {
+  .nav-toggle {
+    display: none;
+  } 
+  .burger-toggle {
+    display: inline-flex
+  }
   .index-image {
     width:400px;
     height:400px;

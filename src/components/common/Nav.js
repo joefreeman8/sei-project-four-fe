@@ -18,32 +18,28 @@ function Nav() {
   return (
     <>
       <nav className="nav-toggle">
-        <div className="fullsize-navbar">
-          <div className="flex float-left pl-24">
-            <div className="m-3">
-              <Link className="flex float-left" to="/">
-                <img src={pawhubLogo} alt="logo" className="h-20  w-20"></img></Link>
-            </div>
+        <div className="flex float-left mt-3 pl-24">
+          <Link className="flex float-left" to="/">
+            <img src={pawhubLogo} alt="logo" className="h-20  w-20"></img></Link>
+        </div>
+        <div className="flex float-right mt-7">
+          <div className="mx-2">
+            <Link to="/dogs">View Dogs</Link>
           </div>
-          <div className="flex float-right">
-            <div className="mt-7 m-3">
-              <Link to="/dogs">View Dogs</Link>
-            </div>
-            <div className="mt-7 m-3">
-              <Link to="/aboutus">About Us</Link>
-            </div>
-            <div className="mt-7 m-3">
-              <Link to="/contact">Contact</Link>
-            </div>
-            <div className="mt-7 m-3">
-              <Link to="/favourites">Favourites</Link>
-            </div>
-            <div className="mt-7 m-3">
-              <Link to="/register">Register</Link>
-            </div>
-            <div className="mt-7 m-3 pr-24">
-              <Link to="/login">Login</Link>
-            </div>
+          <div className="mx-2">
+            <Link to="/aboutus">About Us</Link>
+          </div>
+          <div className="mx-2">
+            <Link to="/contact">Contact</Link>
+          </div>
+          <div className="mx-2">
+            <Link to="/favourites">Favourites</Link>
+          </div>
+          <div className="mx-2">
+            <Link to="/register">Register</Link>
+          </div>
+          <div className="mx-2 pr-24">
+            <Link to="/login">Login</Link>
           </div>
         </div>
       </nav>
@@ -62,7 +58,7 @@ function Nav() {
         }>
           <div onClick={handleSideBar}>
             <div className="m-1">
-              <Link to="/dogs">Dogs</Link>
+              <Link to="/dogs">View Dogs</Link>
             </div>
             <div className="m-1">
               <Link to="/aboutus">About Us</Link>
