@@ -7,6 +7,7 @@ module.exports = {
         'pawhub-yellow': '#FED636',
         'pawhub-purple': '#50447c',
         'pawhub-grey': '#302c2c',
+        'pawhub-stone': '#d2c8b9',
       },
     },
   },
