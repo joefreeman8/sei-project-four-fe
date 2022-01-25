@@ -38,8 +38,11 @@ function Nav() {
           <div className="mx-2">
             <Link to="/register">Register</Link>
           </div>
-          <div className="mx-2 pr-24">
+          <div className="mx-2">
             <Link to="/login">Login</Link>
+          </div>
+          <div className="mx-2 pr-24">
+            <Link to="/donate">Donate Now</Link>
           </div>
         </div>
       </nav>
@@ -74,6 +77,9 @@ function Nav() {
             </div>
             <div className="m-1">
               <Link to="/login">Login</Link>
+            </div>
+            <div className="m-1">
+              <Link to="/donate">Donate Now</Link>
             </div>
           </div>
         </div>
