@@ -4,6 +4,6 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: ['@tailwindcss/forms'],
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
 };

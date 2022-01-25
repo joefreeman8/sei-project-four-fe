@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@tailwindcss/forms": "^0.4.0",
     "axios": "^0.21.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react-hooks": "^4.2.0",
@@ -36,9 +37,9 @@
     ]
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.5.4",
     "autoprefixer": "^10.4.2",
     "babel-eslint": "^10.1.0",
-    "@babel/eslint-parser": "^7.5.4",
     "postcss": "^8.4.5",
     "tailwindcss": "^3.0.15"
   }
