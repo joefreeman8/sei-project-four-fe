@@ -7,3 +7,8 @@ const baseUrl = '/api'
 export function getAllDogs() {
   return axios.get(`${baseUrl}/dogs`)
 }
+
+// * User Requests
+export function registerUser(formData) {
+  return axios.post(`${baseUrl}/register/`, formData)
+}
