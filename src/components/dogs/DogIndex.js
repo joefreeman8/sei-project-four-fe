@@ -119,10 +119,10 @@ function DogIndex() {
         </div>
       </div>
       <div className='bg-pawhub-purple text-white p-8'>
-        <div>
-          <div className="field">
-            <label className="label">May live with...</label>
-            <div className="control text-black">
+        <div className="filter-container">
+          <div className="m-2 filter-item">
+            <label className="p-1">May live with...</label>
+            <div className="text-pawhub-grey">
               <Select
                 options={liveWithSelectOptions}
                 isMulti
@@ -134,9 +134,9 @@ function DogIndex() {
               />
             </div>
           </div>
-          <div className="field">
-            <label className="label">Age</label>
-            <div className="control text-black">
+          <div className="m-2 filter-item">
+            <label className="p-1">Age</label>
+            <div className="text-pawhub-grey">
               <Select
                 options={ageSelectOptions}
                 isMulti
@@ -148,9 +148,9 @@ function DogIndex() {
               />
             </div>
           </div>
-          <div className="field">
-            <label className="label">Breed</label>
-            <div className="control text-black">
+          <div className="m-2 filter-item">
+            <label className="p-1">Breed</label>
+            <div className="text-pawhub-grey">
               <Select
                 options={breedSelectOptions}
                 isMulti

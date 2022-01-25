@@ -88,6 +88,17 @@ nav {
   min-width: 1050px;
 }
 
+.filter-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.filter-item {
+  width: 100%;
+}
+
+
 @media only screen and (max-width: 1023px) {
   .index-image {
     width:200px;
@@ -126,6 +137,10 @@ nav {
   }
   #title {
     font-size: xx-large;
+  }
+
+  .filter-container {
+    display: block;
   }
 
 }
