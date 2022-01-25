@@ -29,6 +29,10 @@ export function loginUser(formData) {
 }
 
 // * Favorite Requests
-export function favoriteDog(dogId, userId) {
-  return axios.post(`${baseUrl}/dogs/${dogId}/favorites/`, dogId, userId, headers())
+export function favoriteDog(dogId, object) {
+  return axios.post(`${baseUrl}/dogs/${dogId}/favorites/`, object, headers())
+}
+
+export function removeFavorite(dogId, favoriteId) {
+  return axios.delete(`${baseUrl}/dogs/${dogId}/favorites/${favoriteId}/`)
 }

@@ -20,6 +20,13 @@ function DogShow() {
 
   const [isFavorited, setIsFavorited] = React.useState(false)
 
+  const favoriteObject = {
+    dog: dogId,
+    owner: getUserId().toString(),
+  }
+
+  
+
   React.useEffect(() => {
     const getData = async () => {
       try {
@@ -34,8 +41,9 @@ function DogShow() {
 
   const handleFavorite = async () => {
     try {
-      await favoriteDog(dogId, getUserId())
-      setIsFavorited(true)
+      await favoriteDog(dogId, favoriteObject)
+      setIsFavorited(!isFavorited)
+      console.log(isFavorited)
     } catch (err) {
       console.log(err)
     }
@@ -46,11 +54,19 @@ function DogShow() {
     dogImages.push(dog.imageOne) &&
     (!dog.imageTwo || dogImages.push(dog.imageTwo)) &&
     (!dog.imageThree || dogImages.push(dog.imageThree))
+    // dog.favoritedBy.map(favorite =>{
+    //   favorite.owner.id === getUserId()
+    //   setIsFavorited(true)
+    // })
     return
   }
 
-
-
+  // const favoriteCheck = (favorites) => {
+  //   favorites.map(favorite =>{
+  //     favorite.owner.id === getUserId()
+  //     setIsFavorited(true)
+  //   })
+  // }
 
   return (
     <>
@@ -65,6 +81,7 @@ function DogShow() {
       {dog &&
       
         <>
+          {/* {favoriteCheck(dog.favoritedBy)} */}
           {createImageArray(dog)}
           <div className="bg-pawhub-purple">
             <p className="text-white text-base py-4 pl-10"><a href="/" className="hover:underline">Home</a> &gt; <a href="/dogs" className="hover:underline">Rehome</a> &gt; {dog.name}</p>
@@ -76,8 +93,8 @@ function DogShow() {
                   <h1 className="gooddog-font text-5xl">{dog.name}</h1>
                   <p className="text-base">I&apos;m looking for a home...</p>
                 </div>
-              
-                <img src={emptyHeart} className="w-10 h-10" />
+                <a onClick={handleFavorite}><img src={!isFavorited ? emptyHeart : fullHeart} className="w-10 h-10" /></a>
+                
               </div>
               
               <Carousel {...dogImages}/>
