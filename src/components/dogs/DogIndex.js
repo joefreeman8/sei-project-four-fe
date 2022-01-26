@@ -72,6 +72,8 @@ function DogIndex() {
     getData()
   }, [])
 
+  console.log(dogs)
+
   const handleLiveWithSelect = (selected) => {
     const selectedLiveWith = selected.map(item => item.value)
     setLiveWith(selectedLiveWith)
@@ -167,7 +169,7 @@ function DogIndex() {
       <div className="grid flex grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4 bg-pawhub-yellow pt-10 pb-10 mb-10 justify-around">
         {dogs && (
           filteredDogs(dogs).map(dog => 
-            <DogCard key={dog._id} {...dog} />
+            <DogCard key={dog.id} {...dog} />
           )
         )}
       </div>

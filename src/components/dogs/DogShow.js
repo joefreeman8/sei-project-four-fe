@@ -1,7 +1,8 @@
 import React from 'react'
 import { useParams } from 'react-router'
-import { favoriteDog, getSingleDog } from '../../lib/api'
+import { createQuestion, deleteQuestion, favoriteDog, getSingleDog, removeFavorite } from '../../lib/api'
 import Carousel from './Carousel'
+import { isAuthenticated, isOwner } from '../../lib/auth'
 
 import dogPaw from '../../assets/dog-paw.png'
 import cat from '../../assets/cat.png'
@@ -11,20 +12,21 @@ import fullHeart from '../../assets/full-heart.png'
 
 import { getUserId } from '../../lib/auth'
 
-
-
 function DogShow() {
   const { dogId } = useParams()
   const [dog, setDog] = React.useState(null)
-  const dogImages = []
-
   const [isFavorited, setIsFavorited] = React.useState(false)
+  const [favoriteId, setFavoriteId] = React.useState(null)
+  const [question, setQuestion] = React.useState('')
+  const isAuth = isAuthenticated()
+  const dogImages = []
+  const [userId, setUserId] = React.useState('')
+
 
   const favoriteObject = {
     dog: dogId,
-    owner: getUserId().toString(),
+    owner: userId,
   }
-
   
 
   React.useEffect(() => {
@@ -32,20 +34,33 @@ function DogShow() {
       try {
         const res = await getSingleDog(dogId)
         setDog(res.data)
+        favoriteCheck(res.data.favoritedBy)
       } catch (err) {
         console.log(err)
       }
     }
     getData()
+    const interval = setInterval(getData, 500)
+    return () => clearInterval(interval)
   }, [dogId])
 
+
   const handleFavorite = async () => {
-    try {
-      await favoriteDog(dogId, favoriteObject)
-      setIsFavorited(!isFavorited)
-      console.log(isFavorited)
-    } catch (err) {
-      console.log(err)
+    if (!isFavorited) {
+      try {
+        const res = await favoriteDog(dogId, favoriteObject)
+        setIsFavorited(true)
+        setFavoriteId(res.data.id)
+      } catch (err) {
+        console.log(err)
+      }
+    } else {
+      try {
+        await removeFavorite(dogId, favoriteId)
+        setIsFavorited(false)
+      } catch (err) {
+        console.log(err)
+      }
     }
   }
 
@@ -54,19 +69,43 @@ function DogShow() {
     dogImages.push(dog.imageOne) &&
     (!dog.imageTwo || dogImages.push(dog.imageTwo)) &&
     (!dog.imageThree || dogImages.push(dog.imageThree))
-    // dog.favoritedBy.map(favorite =>{
-    //   favorite.owner.id === getUserId()
-    //   setIsFavorited(true)
-    // })
     return
   }
 
-  // const favoriteCheck = (favorites) => {
-  //   favorites.map(favorite =>{
-  //     favorite.owner.id === getUserId()
-  //     setIsFavorited(true)
-  //   })
-  // }
+  const favoriteCheck = (favorites) => {
+    favorites.map(favorite =>{
+      favorite.owner.id === getUserId()
+      setFavoriteId(favorite.id.toString())
+      setIsFavorited(true)
+    })
+    if (getUserId()) {
+      setUserId(getUserId().toString())
+    }
+  }
+
+  const handleChange = (e) => {
+    setQuestion(e.target.value)
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    try {
+      await createQuestion(dogId, { content: question, dog: dogId, owner: userId })
+      setQuestion('')
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
+  const handleDelete = async (e) => {
+    if (window.confirm('Do you want to delete this question?')) {
+      try {
+        await deleteQuestion(dogId, e.target.id)
+      } catch (err) {
+        console.log(err)
+      }
+    }
+  }
 
   return (
     <>
@@ -81,19 +120,21 @@ function DogShow() {
       {dog &&
       
         <>
-          {/* {favoriteCheck(dog.favoritedBy)} */}
           {createImageArray(dog)}
           <div className="bg-pawhub-purple">
             <p className="text-white text-base py-4 pl-10"><a href="/" className="hover:underline">Home</a> &gt; <a href="/dogs" className="hover:underline">Rehome</a> &gt; {dog.name}</p>
           </div>
-          <div className="bg-pawhub-yellow flex justify-center items-center p-5">
-            <div className="bg-white w-5/6 m-3 p-6">
+          <div className="bg-pawhub-yellow flex justify-center items-center p-5 flex-col">
+            <div className="bg-white w-5/6 m-3 p-6 xl:w-2/3">
               <div className="flex justify-between lg:justify-around">
                 <div>
                   <h1 className="gooddog-font text-5xl">{dog.name}</h1>
                   <p className="text-base">I&apos;m looking for a home...</p>
                 </div>
-                <a onClick={handleFavorite}><img src={!isFavorited ? emptyHeart : fullHeart} className="w-10 h-10" /></a>
+                {isAuth &&
+                  <a onClick={handleFavorite}><img src={!isFavorited ? emptyHeart : fullHeart} className="w-10 h-10" /></a>
+                }
+
                 
               </div>
               
@@ -142,6 +183,38 @@ function DogShow() {
               </div>
               
 
+            </div>
+            <div className="bg-white w-5/6 m-3 p-6 xl:w-2/3">
+              <h1 className="gooddog-font text-3xl">Questions</h1>
+              {dog.questions.length > 0 &&
+                <h1 className="m-1"><strong>Questions asked about {dog.name}</strong></h1>
+              }
+              <div className="flex items-center flex-col">
+                {dog.questions.map(question => 
+                  <div key={question.id} className="w-5/6 m-2 shadow-lg p-2 rounded-md">
+                    <p>{question.content}</p>
+                    {isOwner(getUserId()) ?
+                      <div>
+                        <p className="text-right text-xs">asked by: you</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" onClick={handleDelete} id={question.id}>
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                        </svg>
+                        
+                      </div> :
+                      <p className="text-right text-xs">asked by: {question.owner.username}</p>
+                    }
+                  </div>  
+                )
+                }
+              </div>
+              {isAuth &&
+                <><label className="m-1"><strong>Can&apos;t see the answer to your question? Ask something about {dog.name}?</strong></label><form onSubmit={handleSubmit}>
+                  <input type="text" className="border focus:border-pawhub-yellow w-2/3 p-1 m-2 rounded" placeholder="Type your question here" onChange={handleChange} value={question}></input>
+                  <br />
+                  <button type="submit" className="bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded">Submit Question</button>
+                </form></>
+              }
+              
             </div>
           </div>
         
