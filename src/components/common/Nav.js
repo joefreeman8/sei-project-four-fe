@@ -50,7 +50,7 @@ function Nav() {
       </nav>
 
       <nav className="nav burger-toggle inline z-50">
-        <div className="flex float-left m-3 pl-4">
+        <div className="flex float-left m-3 pl-4 z-50">
           <Link to="/"><img src={pawhubLogo} alt="logo" className="h-20  w-20"></img></Link>
         </div>
         <div className="flex fixed right-0 burger-icon mt-6 h-20 w-20 z-50" onClick={handleSideBar}>
