@@ -85,7 +85,7 @@ nav {
 }
 
 .background-image {
-  object-fit: cover;
+  min-width: 1050px;
 }
 
 #aboutus-tagline {
@@ -109,6 +109,11 @@ nav {
 
 .filter-item {
   width: 100%;
+}
+
+
+.fundraiser-background {
+  background-image: url('')
 }
 
 
@@ -147,6 +152,7 @@ nav {
   }
 
   .background-image {
+    min-width: 100px;
     object-fit: cover;
   }
 
@@ -171,6 +177,32 @@ nav {
 
 
 
+/* DONATION PAGE */
+
+/* .donation-header {
+  background-image: url("https://i.imgur.com/QEhZ5UG.png");
+} */
+
+
+
+
+.pawprint-background {
+  /* background-image: ('/assets/pawprint-background.png'); */
+  background-repeat: repeat;
+  width:300px;
+  height:300px;
+}
+
+/* .Donate-container {
+display: flex;
+flex-direction: column;
+justify-content: left;
+} */
+
+/* .donate-form {
+  height: 200px;
+  width: 150px;
+} */
 
   .triangle-new {
     width: 0;
@@ -181,9 +213,4 @@ nav {
 
   .triangle-text {
     transform: rotate(-45deg)
-  }
-
-  .newsletter-background {
-    background-image: url('https://images.unsplash.com/photo-1520038410233-7141be7e6f97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1748&q=80');
-    height: 100%;
   }

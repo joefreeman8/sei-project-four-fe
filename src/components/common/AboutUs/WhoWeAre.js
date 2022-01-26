@@ -40,7 +40,7 @@ function WhoWeAre() {
         <div className="bg-white w-5/6 m-3 p-6 shadow-xl">
           <div className="flex lg:start">
             <div className="columns-1 w-2/6">
-              <img src={'https://i.imgur.com/IBu4iKXm.jpg?2'} />
+              <img src={'https://i.imgur.com/JWVnfPSm.jpg?1'} />
             </div>
             <div className="columns-1 w-4/6">
               <h1 className="gooddog-font text-5xl">Joe Freeman</h1>
@@ -51,7 +51,7 @@ function WhoWeAre() {
         <div className="bg-white w-5/6 m-3 p-6 shadow-xl">
           <div className="flex lg:start">
             <div className="columns-1 w-2/6">
-              <img src={'https://i.imgur.com/IBu4iKXm.jpg?2'} />
+              <img src={'https://i.imgur.com/JWVnfPSm.jpg?1'} />
             </div>
             <div className="columns-1 w-4/6">
               <h1 className="gooddog-font text-5xl">Mike Salter</h1>
