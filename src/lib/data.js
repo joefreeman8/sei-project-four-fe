@@ -18,13 +18,13 @@ export const homepageCards = [
     content: 'We\'re here to help dog owners every step of the walk.',
     link: '',
     buttonText: 'Adopting a dog',
-    png: '',
+    png: 'https://www.dogstrust.org.uk/assets/images/facts/HelpAndAdvice.png',
   },
   {
     title: 'We love dogs!',
     content: 'We\'re the best place for dogs in need.',
     link: '',
     buttonText: 'About Us',
-    png: '',
+    png: 'https://www.dogstrust.org.uk/assets/images/facts/AdoptADog.png',
   }
 ]
