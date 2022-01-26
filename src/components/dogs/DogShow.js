@@ -9,6 +9,7 @@ import cat from '../../assets/cat.png'
 import baby from '../../assets/baby.png'
 import emptyHeart from '../../assets/empty-heart.png'
 import fullHeart from '../../assets/full-heart.png'
+import dogFigure from '../../assets/dog-figure.png'
 
 import { getUserId } from '../../lib/auth'
 
@@ -179,7 +180,9 @@ function DogShow() {
                   <button className="bg-pawhub-purple hover:bg-pawhub-purple/50 text-white font-bold py-2 px-4 m-3 rounded">Rehoming me starts here</button>
                 </a>
                 
-                <button className="bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded">How rehoming works &gt;</button>
+                <a href="/donation">
+                  <button className="bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded"><img src={dogFigure} className="w-6 h-6 inline" /> Donate to Dogs Trust</button>
+                </a>
               </div>
               
 
@@ -194,8 +197,8 @@ function DogShow() {
                   <div key={question.id} className="w-5/6 m-2 shadow-lg p-2 rounded-md">
                     <p>{question.content}</p>
                     {isOwner(getUserId()) ?
-                      <div>
-                        <p className="text-right text-xs">asked by: you</p>
+                      <div className="flex flex-col items-end">
+                        <p className="text-xs">asked by: you</p>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" onClick={handleDelete} id={question.id}>
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
                         </svg>

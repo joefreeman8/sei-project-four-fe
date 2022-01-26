@@ -17,7 +17,6 @@ function Carousel(props) {
     }
   }
 
-
   return (
     <div className="mt-8 flex justify-center">
       <div className="max-w-xl h-96 flex overflow-hidden relative">
