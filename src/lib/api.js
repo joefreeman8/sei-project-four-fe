@@ -12,7 +12,7 @@ const baseUrl = '/api'
 // * Dog Requests
 
 export function getAllDogs() {
-  return axios.get(`${baseUrl}/dogs`)
+  return axios.get(`${baseUrl}/dogs/`)
 }
 
 export function getSingleDog(dogId) {
@@ -47,10 +47,20 @@ export function shuffle(array) {
   return array
 }
 // * Favorite Requests
-export function favoriteDog(dogId, object) {
-  return axios.post(`${baseUrl}/dogs/${dogId}/favorites/`, object, headers())
+export function favoriteDog(dogId, favoriteObject) {
+  return axios.post(`${baseUrl}/dogs/${dogId}/favorites/`, favoriteObject, headers())
 }
 
 export function removeFavorite(dogId, favoriteId) {
   return axios.delete(`${baseUrl}/dogs/${dogId}/favorites/${favoriteId}/`, headers())
+}
+
+// * Question Requests
+
+export function createQuestion(dogId, formData) {
+  return axios.post(`${baseUrl}/dogs/${dogId}/questions/`, formData, headers())
+}
+
+export function deleteQuestion(dogId, questionId) {
+  return axios.delete(`${baseUrl}/dogs/${dogId}/questions/${questionId}/`, headers())
 }
