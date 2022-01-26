@@ -42,10 +42,10 @@ function Home() {
   dogs ? dogs.slice(0, 5) : null
 
   return (
-    <div className="container h-screen w-full mx-auto">
-      <div className="w-full h-4/6 sm:h2/5 flex flex-col lg:flex-row">
-        <div className="h-full w-full bg-center bg-cover home-header"></div>
-        <div className="bg-pawhub-yellow h-2/6 w-full lg:h-full lg:w-1/3 text-xl text-center p-5 lg:flex lg:flex-col lg:items-center lg:justify-center">
+    <div className="container h-full w-full mx-auto">
+      <div className="w-full h-5/6 sm:h2/5 flex flex-col lg:flex-row">
+        <div className="h-96 w-full bg-center bg-cover home-header"></div>
+        <div className="bg-pawhub-yellow h-auto w-full lg:w-1/3 text-xl text-center p-5 lg:flex lg:flex-col lg:items-center lg:justify-center">
           <p>I spend all day looking out this window, wondering if I&apos;ll ever be loved again</p>
           <Link to="/dogs">
             <button className="bg-pawhub-grey rounded-md text-white text-2xl w-auto h-auto p-7 mt-5 hover:bg-white hover:text-pawhub-grey hover:border-2 hover:border-pawhub-grey">
