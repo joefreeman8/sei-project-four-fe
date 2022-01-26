@@ -47,11 +47,11 @@ function Nav() {
         </div>
       </nav>
 
-      <nav className="nav burger-toggle">
+      <nav className="nav burger-toggle z-50">
         <div className="flex float-left m-3 pl-4">
           <Link to="/"><img src={pawhubLogo} alt="logo" className="h-20  w-20"></img></Link>
         </div>
-        <div className="flex fixed right-0 burger-icon mt-6 h-20 w-20" onClick={handleSideBar}>
+        <div className="flex fixed right-0 burger-icon mt-6 h-20 w-20 z-50" onClick={handleSideBar}>
           <Hamburger duration={0.35} toggle={setSidebarShow} toggled={sidebarShow} />
         </div>
         <div className={
