@@ -3,11 +3,13 @@ import { Squash as Hamburger } from 'hamburger-react'
 import { Link, useNavigate } from 'react-router-dom'
 import pawhubLogo from '../../assets/PawHub.png'
 import { isAuthenticated, removeToken } from '../../lib/auth'
+import { getUserId } from '../../lib/auth'
 
 function Nav() {
   const navigate = useNavigate()
   const isAuth = isAuthenticated()
   const [sidebarShow, setSidebarShow] = React.useState(false)
+  const userId = getUserId()
 
   const handleSideBar = () => setSidebarShow(!sidebarShow)
 
@@ -31,7 +33,7 @@ function Nav() {
 
           {isAuth ? (
             <>
-              <Link className="mx-2" to="/favourites">Favourites</Link>
+              <Link className="mx-2" to={`/profile/${userId}`}>Profile</Link>
               <button
                 className="shadow-xl bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-5 rounded mr-24"
                 onClick={handleLogout}>
@@ -75,7 +77,7 @@ function Nav() {
             {isAuth ? (
               <>
                 <div className="m-1">
-                  <Link to="/favourites">Favourites</Link>
+                  <Link to={`/profile/${userId}`}>Profile</Link>
                 </div>
                 <div>
                   <button
