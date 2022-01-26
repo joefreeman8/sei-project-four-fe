@@ -25,7 +25,7 @@ nav {
   background-color: rgba(255, 255, 255, 0.92);
   height: auto;
   position: fixed;
-  z-index: 2;
+  z-index: 50;
   right: -100%;
   padding: 3px 2px 3px 0;
   margin-top: 75px;
@@ -113,7 +113,7 @@ nav {
 
 
 .fundraiser-background {
-  background-image: url('https://i.imgur.com/Bm9jKXC.jpg')
+  background-image: url('')
 }
 
 

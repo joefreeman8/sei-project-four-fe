@@ -3,11 +3,13 @@ import { Squash as Hamburger } from 'hamburger-react'
 import { Link, useNavigate } from 'react-router-dom'
 import pawhubLogo from '../../assets/PawHub.png'
 import { isAuthenticated, removeToken } from '../../lib/auth'
+import { getUserId } from '../../lib/auth'
 
 function Nav() {
   const navigate = useNavigate()
   const isAuth = isAuthenticated()
   const [sidebarShow, setSidebarShow] = React.useState(false)
+  const userId = getUserId()
 
   const handleSideBar = () => setSidebarShow(!sidebarShow)
 
@@ -23,7 +25,7 @@ function Nav() {
           <Link className="flex float-left" to="/">
             <img src={pawhubLogo} alt="logo" className="h-20 w-20"></img></Link>
         </div>
-        <div className="flex float-right mt-8 text-lg">
+        <div className="flex float-right mt-8 text-lg items-center">
           <Link className="mx-2" to="/dogs">View Dogs</Link>
           <Link className="mx-2" to="/aboutus">About Us</Link>
           <Link className="mx-2" to="/contact">Contact</Link>
@@ -31,7 +33,7 @@ function Nav() {
 
           {isAuth ? (
             <>
-              <Link className="mx-2" to="/favourites">Favourites</Link>
+              <Link className="mx-2" to={`/profile/${userId}`}>Profile</Link>
               <button
                 className="shadow-xl bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-5 rounded mr-24"
                 onClick={handleLogout}>
@@ -47,8 +49,8 @@ function Nav() {
         </div>
       </nav>
 
-      <nav className="nav burger-toggle z-50">
-        <div className="flex float-left m-3 pl-4">
+      <nav className="nav burger-toggle inline z-50">
+        <div className="flex float-left m-3 pl-4 z-50">
           <Link to="/"><img src={pawhubLogo} alt="logo" className="h-20  w-20"></img></Link>
         </div>
         <div className="flex fixed right-0 burger-icon mt-6 h-20 w-20 z-50" onClick={handleSideBar}>
@@ -67,19 +69,16 @@ function Nav() {
               <Link to="/aboutus">About Us</Link>
             </div>
             <div className="m-1">
-              <Link to="/contact">Contact</Link>
-            </div>
-            <div className="m-1">
               <Link to="/donation">Donate Now</Link>
             </div>
             {isAuth ? (
               <>
                 <div className="m-1">
-                  <Link to="/favourites">Favourites</Link>
+                  <Link to={`/profile/${userId}`}>Profile</Link>
                 </div>
                 <div>
                   <button
-                    className="shadow-xl bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-5 rounded"
+                    className="shadow-xl bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-3 ml-1 rounded"
                     onClick={handleLogout}>
                     Logout
                   </button>
