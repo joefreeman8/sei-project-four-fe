@@ -11,6 +11,7 @@
   box-sizing: border-box;
 }
 
+/* NAV BAR */
 nav {
   height: 10vh;
 }
@@ -39,6 +40,8 @@ nav {
   float: right;
 }
 
+/* FONTS */
+
 .gooddog-font {
   font-family: 'GoodDog Plain', arial;
 }
@@ -50,6 +53,8 @@ nav {
 .nunito-font {
   font-family: 'Nunito Sans', sans-serif;
 }
+
+/* INDEX */
 
 .index-image {
   width:300px;
@@ -167,33 +172,32 @@ nav {
 
 
 
-
-
-
-
-
-
-
-/* REHOMING QUESTIONNAIRE PAGE */
-/* .....image not in use currently.... */
-
-.rehoming-questionnaire-header {
-  background-image: url("https://i.imgur.com/A7pPi5p.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
 /* DONATION PAGE */
 
-.donation-header {
+/* .donation-header {
   background-image: url("https://i.imgur.com/QEhZ5UG.png");
-}
+} */
+
+
+
 
 .pawprint-background {
   /* background-image: ('/assets/pawprint-background.png'); */
   background-repeat: repeat;
   width:300px;
   height:300px;
-
 }
+
+/* .Donate-container {
+display: flex;
+flex-direction: column;
+justify-content: left;
+} */
+
+/* .donate-form {
+  height: 200px;
+  width: 150px;
+} */
+
+
 

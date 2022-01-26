@@ -1,16 +1,13 @@
 function RehomingForm() {
   return (
 
-    <div className="container min-w-full">
-      {/* image */}
-      {/* // mx-auto w-2/8 lg:w-full h-1/6 */}
-      
-      <img className="bg-cover mx-auto w-2/8 lg:w-full h-1/6" src="https://i.imgur.com/A7pPi5p.png"></img>
-      
-    
+    <div className="container min-w-full bg-pawhub-yellow">
+
+      <section className="w-2/8 lg:w-full h-screen h-1/6 bg-rehomingHeader bg-cover bg-center -mt-40"></section>
+          
       {/* card starts here */}
-      <div className="rehoming-questionnaire bg-pawhub-yellow pt-2 pb-0">
-        <form className="bg-white shadow-xl rounded w-3/5 mx-auto mt--10 px-5 pt-5 pb-5">
+      <div className="rehoming-questionnaire pb-0">
+        <div className="-mt-60 bg-white shadow-xl rounded w-5/6 mx-auto px-5 p-5">
           <div className="px-5">
             <p className="text-3xl font-bold">Rehoming Questionnaire </p>
             <br></br>
@@ -33,20 +30,21 @@ function RehomingForm() {
             <p className="text-1xl font-bold">CONTACT US</p>
             <p>If you have any questions, please call our Contact Centre team on 03050050000, or visit our website: https://www.pawhub.org.uk/rehoming/how-to-adopt/</p>
           </div>
-        </form>
+        </div>
       </div>
 
       {/* questionnaire starts here */}
-      <div className="bg-pawhub-yellow pt-1 pb-10">
+      <div className="pt-1 pb-10">
         <br></br>
 
-        <form className="bg-white shadow-xl rounded w-3/5  mx-auto mt--10 px-5 pt-5 pb-5">
+        <form className="bg-white shadow-xl rounded w-5/6 mx-auto mt--10 px-10 pt-5 pb-5">
           <p className="text-xl text-gray-400">Section 1: Your Details</p>
           <p className="text-sm text-red-600">* <span className="text-gray-400">Required</span></p>
           <br></br>
           
           <div className="mb-6">
-            <label htmlFor="text" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">1. Adopter Title<span className="text-red-600"> *</span></label>
+
+            <label htmlFor="text" className="block mb-2 text-sm font-medium text-gray-400 dark:text-gray-400">1. Adopter Title<span className="text-red-600"> *</span></label>
             <select id="text" className="bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow focus:border-pawhub-yellow block w-full p-2 dark:bg-gray-40 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:border-pawhub-yellow dark:focus:border-pawhub-yellow">
               <option>Miss</option>
               <option>Mrs</option>
@@ -61,32 +59,32 @@ function RehomingForm() {
             <br></br>
 
             <label htmlFor="text" className="block mb- text-sm font-medium text-gray-900 dark:text-gray-400">2. Adopter First Name<span className="text-red-600"> *</span></label>
-            <input type="text" id="text" className="bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow focus:border-blue-500 block w-full p-2 dark:bg-gray-40 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-pawhub-yellow dark:focus:border-pawhub-yellow" placeholder="Enter your answer"
+            <input type="text" id="text" className="bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow focus:border-blue-500 block w-full p-2 dark:bg-gray-40 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:border-pawhub-yellow dark:focus:border-pawhub-yellow" placeholder="Enter your answer"
               required/>
 
             <br></br>
 
             <label htmlFor="text" className="block mb-0 text-sm font-medium text-gray-900 dark:text-gray-400">3. Adopter Surname<span className="text-red-600"> *</span></label>
-            <input type="text" id="text" className="bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow focus:border-blue-500 block w-full p-2 dark:bg-gray-40 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-pawhub-yellow dark:focus:border-blue-500" placeholder="Enter your answer"
+            <input type="text" id="text" className="bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow focus:border-blue-500 block w-full p-2 dark:bg-gray-40 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:border-pawhub-yellow dark:focus:border-blue-500" placeholder="Enter your answer"
               required/>
 
             <br></br>
 
             <label htmlFor="text" className="block mb-0 text-sm font-medium text-gray-900 dark:text-gray-400">4. Address<span className="text-red-600"> *</span></label>
-            <input type="text" id="text" className="bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow focus:border-blue-500 block w-full p-2 dark:bg-gray-40 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-pawhub-yellow dark:focus:border-blue-500" placeholder="Enter your answer"
+            <input type="text" id="text" className="bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow focus:border-blue-500 block w-full p-2 dark:bg-gray-40 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:border-pawhub-yellow dark:focus:border-blue-500" placeholder="Enter your answer"
               required/>
 
             <br></br>
 
             <label htmlFor="text" className="block text-sm font-medium text-gray-900 dark:text-gray-400">5. Telephone Number<span className="text-red-600"> *</span></label>
             <p className="text-xs italic text-gray-400 mb-0">Please enter one number with no spaces e.g. 02078370006</p>
-            <input type="text" id="text" className="bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow focus:border-blue-500 block w-full p-2 dark:bg-gray-40 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-pawhub-yellow dark:focus:border-blue-500" placeholder="Enter your answer"
+            <input type="text" id="text" className="bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow focus:border-blue-500 block w-full p-2 dark:bg-gray-40 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:border-pawhub-yellow dark:focus:border-blue-500" placeholder="Enter your answer"
               required/>
 
             <br></br>
 
             <label htmlFor="email" className="block mb-0 text-sm font-medium text-gray-900 dark:text-gray-400">6. Email<span className="text-red-600"> *</span></label>
-            <input type="email" id="email" className="bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow focus:border-blue-500 block w-full p-2 dark:bg-gray-40 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-pawhub-yellow dark:focus:border-blue-500" placeholder="Enter your answer"
+            <input type="email" id="email" className="bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow focus:border-blue-500 block w-full p-2 dark:bg-gray-40 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:border-pawhub-yellow dark:focus:border-blue-500" placeholder="Enter your answer"
               required/>
 
             <br></br>
@@ -97,13 +95,13 @@ function RehomingForm() {
 
             <label htmlFor="text" className="block text-sm font-medium text-gray-900 dark:text-gray-400">7. Please state the name of dog you are applying for:<span className="text-red-600"> *</span></label>
             <p className="text-xs italic text-gray-400 mb-0">Please use the same spelling as on our website. You can include the breed too if we have more than one dog with the same name. </p>
-            <input type="text" id="text" className="bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow focus:border-blue-500 block w-full p-2 dark:bg-gray-40 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-pawhub-yellow dark:focus:border-blue-500" placeholder="Enter your answer"
+            <input type="text" id="text" className="bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow focus:border-blue-500 block w-full p-2 dark:bg-gray-40 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:border-pawhub-yellow dark:focus:border-blue-500" placeholder="Enter your answer"
               required/>
 
             <br></br>
 
             <label htmlFor="text" className="block mb-0 text-sm font-medium text-gray-900 dark:text-gray-400">8. Is this the only dog you have seen on our website that might be a suitable match for you?<span className="text-red-600"> *</span></label>
-            <select id="text" className="bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow focus:border-blue-500 block w-full p-2 dark:bg-gray-40 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-pawhub-yellow dark:focus:border-blue-500">
+            <select id="text" className="bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow focus:border-blue-500 block w-full p-2 dark:bg-gray-40 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:border-pawhub-yellow dark:focus:border-blue-500">
               <option>This is the only dog I&apos;ve applied for</option>
               <option>I&apos;ve applied for a couple of dogs</option>
               <option>I&apos;ve seen quite a few dogs on the website that could be suitable</option>
@@ -167,7 +165,7 @@ function RehomingForm() {
               <div className="flex items-center mb-0">
                 <input id="home-option-8" type="radio" name="homeType" value="Other" className="w-4 h-4 border-gray-300 focus:ring-2 focus:ring:pawhub-yellow dark:focus-ring-pawhub-yellow dark:bg-gray-40 dark:border-gray-600" aria-labelledby="home-option-8" aria-describedby="home-option-8"/>
                 <label htmlFor="home-option-8" className="block ml-2 text-sm font-medium text-gray-900 dark:text-gray-400"></label>
-                <input type="text" id="text" className="bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow focus:border-blue-500 block w-full p-1.5 dark:bg-gray-40 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-pawhub-yellow dark:focus:border-blue-500" placeholder="Other"
+                <input type="text" id="text" className="bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow focus:border-blue-500 block w-full p-1.5 dark:bg-gray-40 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:border-pawhub-yellow dark:focus:border-blue-500" placeholder="Other"
                   required/>
               </div>
 
@@ -263,28 +261,28 @@ function RehomingForm() {
 
             <label htmlFor="text" className="block text-sm font-medium text-gray-900 dark:text-gray-400">14. How many adults live in your home?<span className="text-red-600"> *</span></label>
             <p className="text-xs italic text-gray-400 mb-0">Please include any young adults of 17 years old in this number</p>
-            <input type="text" id="text" className="bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow focus:border-blue-500 block w-full p-2 dark:bg-gray-40 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-pawhub-yellow dark:focus:border-blue-500" placeholder="The value must be a number"
+            <input type="text" id="text" className="bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow focus:border-blue-500 block w-full p-2 dark:bg-gray-40 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:border-pawhub-yellow dark:focus:border-blue-500" placeholder="The value must be a number"
               required/>
 
             <br></br>
 
             <label htmlFor="text" className="block text-sm font-medium text-gray-900 dark:text-gray-400">15. How many children under 5 years old?<span className="text-red-600"> *</span></label>
             <p className="text-xs italic text-gray-400 mb-0">If you are planning on expanding your family in the future, please discuss this with a member of staff so we can find the best possible dog to match your circumstances and offer you the best advice on how to introduce your new family members. The last thing you want to do is take home a dog that doesn&apos;t like children! </p>
-            <input type="text" id="text" className="bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow focus:border-blue-500 block w-full p-2 dark:bg-gray-40 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-pawhub-yellow dark:focus:border-blue-500" placeholder="The value must be a number"
+            <input type="text" id="text" className="bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow focus:border-blue-500 block w-full p-2 dark:bg-gray-40 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:border-pawhub-yellow dark:focus:border-blue-500" placeholder="The value must be a number"
               required/>
 
             <br></br>
 
             <label htmlFor="text" className="block text-sm font-medium text-gray-900 dark:text-gray-400">16. How many children 5-11 years?<span className="text-red-600"> *</span></label>
             <p className="text-xs italic text-gray-400 mb-0">We classify these children as primary school age on our website </p>
-            <input type="text" id="text" className="bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow focus:border-blue-500 block w-full p-2 dark:bg-gray-40 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-pawhub-yellow dark:focus:border-blue-500" placeholder="The value must be a number"
+            <input type="text" id="text" className="bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow focus:border-blue-500 block w-full p-2 dark:bg-gray-40 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:border-pawhub-yellow dark:focus:border-blue-500" placeholder="The value must be a number"
               required/>
 
             <br></br>
 
             <label htmlFor="text" className="block text-sm font-medium text-gray-900 dark:text-gray-400 ">17. How many children 12-16 years?<span className="text-red-600"> *</span></label>
             <p className="text-xs italic text-gray-400 mb-0">We classify these children as secondary school age on our website </p>
-            <input type="text" id="text" className="bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow focus:border-blue-500 block w-full p-2 dark:bg-gray-40 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-pawhub-yellow dark:focus:border-blue-500" placeholder="The value must be a number"
+            <input type="text" id="text" className="bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow focus:border-blue-500 block w-full p-2 dark:bg-gray-40 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:border-pawhub-yellow dark:focus:border-blue-500" placeholder="The value must be a number"
               required/>
 
             <br></br>
@@ -360,7 +358,7 @@ function RehomingForm() {
               <div className="flex items-center mb-0">
                 <input id="checkbox-7" aria-describedby="checkbox-7" type="checkbox" className="w-4 h-4 text-pawhub-yellow bg-gray-100 rounded border-gray-300 focus:border-pawhub-yellow dark:focus:ring-pawhub-yellow dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-40 dark:border-gray-600"/>
                 <label htmlFor="checkbox-7" className="ml-3 text-sm font-medium text-gray-900 dark:text-gray-400"></label>
-                <input type="text" id="text" className="bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow focus:border-blue-500 block w-full p-1.5 dark:bg-gray-40 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-pawhub-yellow dark:focus:border-blue-500" placeholder="Other"
+                <input type="text" id="text" className="bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow focus:border-blue-500 block w-full p-1.5 dark:bg-gray-40 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:border-pawhub-yellow dark:focus:border-blue-500" placeholder="Other"
                   required/>
               </div>
             </fieldset>
@@ -409,12 +407,12 @@ function RehomingForm() {
             <br></br>
 
             <label htmlFor="text" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">22. How many hours would your dog be left alone? (Day Time)<span className="text-red-600"> *</span></label>
-            <input type="text" id="text" className="bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow focus:border-blue-500 block w-full p-2 dark:bg-gray-40 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-pawhub-yellow dark:focus:border-blue-500" placeholder="The value must be a number" required/>
+            <input type="text" id="text" className="bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow focus:border-blue-500 block w-full p-2 dark:bg-gray-40 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:border-pawhub-yellow dark:focus:border-blue-500" placeholder="The value must be a number" required/>
 
             <br></br>
 
             <label htmlFor="text" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">23. How many hours would your dog be left alone? (NIght Time)<span className="text-red-600"> *</span></label>
-            <input type="text" id="text" className="bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow focus:border-blue-500 block w-full p-2 dark:bg-gray-40 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-pawhub-yellow dark:focus:border-blue-500" placeholder="The value must be a number" required/>
+            <input type="text" id="text" className="bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow focus:border-blue-500 block w-full p-2 dark:bg-gray-40 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:border-pawhub-yellow dark:focus:border-blue-500" placeholder="The value must be a number" required/>
 
             <br></br>
 
@@ -546,7 +544,7 @@ function RehomingForm() {
           </div>
         
           <div className="flex items-start mb-6"></div>
-          <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-pawhub-yellow font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-pawhub-yellow dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+          <button type="submit" className="text-gray-400 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-pawhub-yellow font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-pawhub-yellow dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
         </form>
 
       </div>

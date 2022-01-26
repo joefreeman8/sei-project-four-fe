@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router'
-import { favoriteDog, getSingleDog } from '../../lib/api'
+import { favoriteDog, getSingleDog, removeFavorite } from '../../lib/api'
 import Carousel from './Carousel'
 
 import dogPaw from '../../assets/dog-paw.png'
@@ -16,15 +16,25 @@ import { getUserId } from '../../lib/auth'
 function DogShow() {
   const { dogId } = useParams()
   const [dog, setDog] = React.useState(null)
+  const [isFavorited, setIsFavorited] = React.useState(false)
+  const [favoriteId, setFavoriteId] = React.useState(null)
   const dogImages = []
 
-  const [isFavorited, setIsFavorited] = React.useState(false)
+
+
+  const favoriteObject = {
+    dog: dogId,
+    owner: getUserId().toString(),
+  }
+
+  
 
   React.useEffect(() => {
     const getData = async () => {
       try {
         const res = await getSingleDog(dogId)
         setDog(res.data)
+        favoriteCheck(res.data.favoritedBy)
       } catch (err) {
         console.log(err)
       }
@@ -32,13 +42,25 @@ function DogShow() {
     getData()
   }, [dogId])
 
+
   const handleFavorite = async () => {
-    try {
-      await favoriteDog(dogId, getUserId())
-      setIsFavorited(true)
-    } catch (err) {
-      console.log(err)
+    if (!isFavorited) {
+      try {
+        const res = await favoriteDog(dogId, favoriteObject)
+        setIsFavorited(true)
+        setFavoriteId(res.data.id)
+      } catch (err) {
+        console.log(err)
+      }
+    } else {
+      try {
+        await removeFavorite(dogId, favoriteId)
+        setIsFavorited(false)
+      } catch (err) {
+        console.log(err)
+      }
     }
+    
   }
 
 
@@ -49,6 +71,13 @@ function DogShow() {
     return
   }
 
+  const favoriteCheck = (favorites) => {
+    favorites.map(favorite =>{
+      favorite.owner.id === getUserId()
+      setFavoriteId(favorite.id.toString())
+      setIsFavorited(true)
+    })
+  }
 
 
 
@@ -76,8 +105,8 @@ function DogShow() {
                   <h1 className="gooddog-font text-5xl">{dog.name}</h1>
                   <p className="text-base">I&apos;m looking for a home...</p>
                 </div>
-              
-                <img src={emptyHeart} className="w-10 h-10" />
+                <a onClick={handleFavorite}><img src={!isFavorited ? emptyHeart : fullHeart} className="w-10 h-10" /></a>
+                
               </div>
               
               <Carousel {...dogImages}/>
