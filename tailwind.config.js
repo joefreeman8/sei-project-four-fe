@@ -7,7 +7,7 @@ module.exports = {
       backgroundImage: () => ({
         rehomingHeader: 'url(\'https://i.imgur.com/A7pPi5p.png\')',
         donationHeader: 'url(\'https://i.imgur.com/QEhZ5UG.png\')',
-        donationTile: 'url(\'https://i.imgur.com/oCl2Xay.png\')',
+        donationTile: 'url(\'https://i.imgur.com/EtJe78n.jpg\')',
 
       }),
 

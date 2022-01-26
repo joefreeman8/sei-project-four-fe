@@ -2,14 +2,13 @@ import React from 'react'
 
 function Donation() {
   return (
-    <div className="bg-donationTile bg-repeat-round">
 
-      <div className="container min-w-full">
 
-        <section className="w-2/8 lg:w-full h-screen h-1/6 bg-donationHeader bg-cover bg-center -mt-36"></section>
-      
+    <div className="container min-w-full">
+
+      <section className="w-2/8 lg:w-full h-screen h-1/6 bg-donationHeader bg-cover bg-center -mt-36"></section>
+      <div className="bg-donationTile bg-repeat-round h-screen">
         {/* card starts here */}
-
         <div className="Donate-container float-left pl-1/5 pr-1/5">
           <div className="-mt-60 bg-white shadow-xl rounded w-5/6 mx-auto px-5 p-5">
             <p className="text-3xl font-semibold pb-4">Donate Now</p>
@@ -60,9 +59,9 @@ function Donation() {
   
           </div>
         </div>
-        
-      </div>
+      </div>        
     </div>
+
     
     
 

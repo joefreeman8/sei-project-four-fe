@@ -171,32 +171,6 @@ nav {
 
 
 
-/* DONATION PAGE */
-
-/* .donation-header {
-  background-image: url("https://i.imgur.com/QEhZ5UG.png");
-} */
-
-
-
-
-.pawprint-background {
-  /* background-image: ('/assets/pawprint-background.png'); */
-  background-repeat: repeat;
-  width:300px;
-  height:300px;
-}
-
-/* .Donate-container {
-display: flex;
-flex-direction: column;
-justify-content: left;
-} */
-
-/* .donate-form {
-  height: 200px;
-  width: 150px;
-} */
 
   .triangle-new {
     width: 0;

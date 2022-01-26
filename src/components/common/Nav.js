@@ -49,7 +49,7 @@ function Nav() {
         </div>
       </nav>
 
-      <nav className="nav burger-toggle">
+      <nav className="nav burger-toggle inline ">
         <div className="flex float-left m-3 pl-4">
           <Link to="/"><img src={pawhubLogo} alt="logo" className="h-20  w-20"></img></Link>
         </div>
@@ -67,9 +67,6 @@ function Nav() {
             </div>
             <div className="m-1">
               <Link to="/aboutus">About Us</Link>
-            </div>
-            <div className="m-1">
-              <Link to="/contact">Contact</Link>
             </div>
             <div className="m-1">
               <Link to="/donation">Donate Now</Link>

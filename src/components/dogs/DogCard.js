@@ -10,7 +10,6 @@ function DogCard({ id, name, imageOne, breed, dateAdded }) {
     const nowSeconds = Date.parse(now)
     const dogAdded = new Date(dateAdded)
     const dogAddedDate = Date.parse(dogAdded)
-    console.log(nowSeconds, dogAddedDate)
     if (nowSeconds - dogAddedDate < 2068935000 ) {
       setIsNew(true)
     }
