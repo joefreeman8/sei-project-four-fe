@@ -177,10 +177,8 @@ nav {
 /* REHOMING QUESTIONNAIRE PAGE */
 /* .....image not in use currently.... */
 
-.rehoming-questionnaire-header {
-  background-image: url("https://i.imgur.com/A7pPi5p.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+.rehoming-header {
+  background-image: url('https://i.imgur.com/A7pPi5p.png')
 }
 
 /* DONATION PAGE */
