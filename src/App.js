@@ -14,6 +14,7 @@ import AboutUs from './components/common/AboutUs/AboutUs'
 import WhoWeAre from './components/common/AboutUs/WhoWeAre'
 import Fundraiser from './components/common/AboutUs/Fundraiser'
 import Footer from './components/common/Footer'
+import Newsletter from './components/common/Newsletter'
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/aboutus/whoweare" element={<WhoWeAre />} />
         <Route path="/aboutus/fundraiser" element={<Fundraiser />} />
+        <Route path="/newsletter" element={<Newsletter />} />
       </Routes>
       <Footer />
     </BrowserRouter>
