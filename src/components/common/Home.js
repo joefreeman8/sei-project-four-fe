@@ -42,12 +42,12 @@ function Home() {
   console.log(dogsToShow)
 
   return (
-    <div className="container h-screen w-full bg-stone-400 mx-auto">
-      <div className="w-full h-5/6 sm:h2/5 border-2 border-black flex flex-col lg:flex-row">
+    <div className="container h-screen w-full mx-auto">
+      <div className="w-full h-4/6 sm:h2/5 flex flex-col lg:flex-row">
         <div className="h-full w-full bg-center bg-cover home-header"></div>
-        <div className="bg-pawhub-yellow h-2/6 w-full  lg:h-full lg:w-1/3 text-xl text-center p-5 lg:flex lg:flex-col lg:items-center lg:justify-center">
-          I spend all day looking out this window, wondering if I&apos;ll ever be loved again
-          <button className="block mx-auto bg-pawhub-grey rounded-md text-white h-16 w:fit lg:w-2/6 mt-5">
+        <div className="bg-pawhub-yellow h-2/6 w-full lg:h-full lg:w-1/3 text-xl text-center p-5 lg:flex lg:flex-col lg:items-center lg:justify-center">
+          <p>I spend all day looking out this window, wondering if I&apos;ll ever be loved again</p>
+          <button className="bg-pawhub-grey rounded-md text-white text-2xl w-auto h-auto p-7 mt-5 hover:bg-white hover:text-pawhub-grey hover:border-2 hover:border-pawhub-grey">
             Dogs for adoption
           </button>
         </div>
@@ -55,16 +55,16 @@ function Home() {
 
       {/* Donate portion */}
       <div className="flex flex-col items-center bg-pawhub-stone pb-10">
-        <h3 className="gooddog-font text-6xl">Donate Today</h3>
-        <p>Welcome a sponsor dog into your life</p>
+        <h3 className="kessel-font m-5 text-6xl">Donate Today</h3>
+        <p>Every penny will help a dog in need</p>
         <Carousel />
-        <button className="block mx-auto bg-pawhub-grey rounded-md text-white h-16 w-2/6 mt-5">
+        <button className="block mx-auto bg-pawhub-grey rounded-md text-white h-16 w-2/6 mt-5 hover:bg-white hover:text-pawhub-grey hover:border-2 hover:border-pawhub-grey">
           Donate
         </button>
       </div>
       <div className="flex flex-col items-center bgwhite pb-10">
-        <h3 className="gooddog-font text-6xl">Adopt A Dog</h3>
-        <p>Give one of our dogs a forever home</p>
+        <h3 className="kessel-font text-6xl m-5">Adopt A Dog</h3>
+        <p>These are just 10 of the {dogs && <span className='font-bold'>{dogs.length}</span>} dogs that need a forver home</p>
         <div className="flex flex-row">
 
         </div>
@@ -77,7 +77,7 @@ function Home() {
           )}
           <button onClick={moveDogs}>Next</button>
         </div>
-        <button className="block mx-auto bg-pawhub-grey rounded-md text-white h-16 w-2/6 mt-5">
+        <button className="block mx-auto bg-pawhub-grey hover:bg-white rounded-md text-white hover:text-pawhub-grey hover:border-2 hover:border-pawhub-grey h-16 w-2/6 mt-5">
           See our Dogs
         </button>
       </div>

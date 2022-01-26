@@ -18,12 +18,12 @@ function Nav() {
 
   return (
     <>
-      <nav className="nav-toggle sticky top-0 bg-white/80">
-        <div className="flex float-left mt-3 pl-24">
+      <nav className="nav-toggle sticky top-0 h-24 bg-white/80">
+        <div className="flex float-left mt-2 pl-24">
           <Link className="flex float-left" to="/">
-            <img src={pawhubLogo} alt="logo" className="h-20  w-20"></img></Link>
+            <img src={pawhubLogo} alt="logo" className="h-20 w-20"></img></Link>
         </div>
-        <div className="flex float-right mt-7">
+        <div className="flex float-right mt-8 text-lg">
           <Link className="mx-2" to="/dogs">View Dogs</Link>
           <Link className="mx-2" to="/aboutus">About Us</Link>
           <Link className="mx-2" to="/contact">Contact</Link>
@@ -47,7 +47,7 @@ function Nav() {
         </div>
       </nav>
 
-      <nav className="nav burger-toggle bg-white/80">
+      <nav className="nav burger-toggle">
         <div className="flex float-left m-3 pl-4">
           <Link to="/"><img src={pawhubLogo} alt="logo" className="h-20  w-20"></img></Link>
         </div>
