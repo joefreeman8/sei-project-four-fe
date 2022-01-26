@@ -544,10 +544,14 @@ function RehomingForm() {
           </div>
         
           <div className="flex items-start mb-6"></div>
-          <button type="submit" className="text-gray-400 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-pawhub-yellow font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-pawhub-yellow dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+          <button type="submit" className="text-gray-400 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-pawhub-yellow font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-pawhub-yellow dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>          
         </form>
 
+        <p className="text-xs text-center italic w-5/6 mx-auto pt-5 pb-5">This content is created by the owner of the form. The data you submit will be sent to the form owner. Microsoft is not responsible for the privacy or security practices of its customers, including those of this form owner. Never give out your password.
+          <br></br>
+        The owner of this form has not provided a privacy statement as to how they will use your response data. Do not provide personal or sensitive information.</p>
       </div>
+
     </div>
 
 
