@@ -1,17 +1,17 @@
 import React from 'react'
 import { useParams } from 'react-router'
-import { favoriteDog, getSingleDog, removeFavorite } from '../../lib/api'
+import { createQuestion, deleteQuestion, favoriteDog, getSingleDog, removeFavorite } from '../../lib/api'
 import Carousel from './Carousel'
+import { isAuthenticated, isOwner } from '../../lib/auth'
 
 import dogPaw from '../../assets/dog-paw.png'
 import cat from '../../assets/cat.png'
 import baby from '../../assets/baby.png'
 import emptyHeart from '../../assets/empty-heart.png'
 import fullHeart from '../../assets/full-heart.png'
+import dogFigure from '../../assets/dog-figure.png'
 
 import { getUserId } from '../../lib/auth'
-
-
 
 function DogShow() {
   const { dogId } = useParams()
@@ -38,6 +38,10 @@ function DogShow() {
 
 
 
+  const [question, setQuestion] = React.useState('')
+  const isAuth = isAuthenticated()
+  const [userId, setUserId] = React.useState('')
+  
 
   React.useEffect(() => {
     const getData = async () => {
@@ -51,6 +55,8 @@ function DogShow() {
       }
     }
     getData()
+    const interval = setInterval(getData, 500)
+    return () => clearInterval(interval)
   }, [dogId])
 
 
@@ -71,7 +77,6 @@ function DogShow() {
         console.log(err)
       }
     }
-
   }
 
 
@@ -88,6 +93,9 @@ function DogShow() {
       setFavoriteId(favorite.id.toString())
       setIsFavorited(true)
     })
+    if (getUserId()) {
+      setUserId(getUserId().toString())
+    }
   }
 
   const newFlagCheck = (dog) => {
@@ -103,7 +111,29 @@ function DogShow() {
 
   const carouselProps = { dogImages, 'isNew': isNew }
   userCheck()
+  const handleChange = (e) => {
+    setQuestion(e.target.value)
+  }
 
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    try {
+      await createQuestion(dogId, { content: question, dog: dogId, owner: userId })
+      setQuestion('')
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
+  const handleDelete = async (e) => {
+    if (window.confirm('Do you want to delete this question?')) {
+      try {
+        await deleteQuestion(dogId, e.target.id)
+      } catch (err) {
+        console.log(err)
+      }
+    }
+  }
 
   return (
     <>
@@ -122,8 +152,8 @@ function DogShow() {
           <div className="bg-pawhub-purple">
             <p className="text-white text-base py-4 pl-10"><a href="/" className="hover:underline">Home</a> &gt; <a href="/dogs" className="hover:underline">Rehome</a> &gt; {dog.name}</p>
           </div>
-          <div className="bg-pawhub-yellow flex justify-center items-center p-5">
-            <div className="bg-white w-5/6 m-3 p-6">
+          <div className="bg-pawhub-yellow flex justify-center items-center p-5 flex-col">
+            <div className="bg-white w-5/6 m-3 p-6 xl:w-2/3">
               <div className="flex justify-between lg:justify-around">
                 <div>
                   <h1 className="gooddog-font text-5xl">{dog.name}</h1>
@@ -131,6 +161,11 @@ function DogShow() {
                 </div>
                 <a onClick={handleFavorite}><img src={!isFavorited ? emptyHeart : fullHeart} className="w-10 h-10" /></a>
 
+                {isAuth &&
+                  <a onClick={handleFavorite}><img src={!isFavorited ? emptyHeart : fullHeart} className="w-10 h-10" /></a>
+                }
+
+                
               </div>
 
               <Carousel {...carouselProps} />
@@ -175,9 +210,45 @@ function DogShow() {
                 </a>
 
                 <button className="bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded">How rehoming works &gt;</button>
+                
+                <a href="/donation">
+                  <button className="bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded"><img src={dogFigure} className="w-6 h-6 inline" /> Donate to Dogs Trust</button>
+                </a>
               </div>
 
 
+            </div>
+            <div className="bg-white w-5/6 m-3 p-6 xl:w-2/3">
+              <h1 className="gooddog-font text-3xl">Questions</h1>
+              {dog.questions.length > 0 &&
+                <h1 className="m-1"><strong>Questions asked about {dog.name}</strong></h1>
+              }
+              <div className="flex items-center flex-col">
+                {dog.questions.map(question => 
+                  <div key={question.id} className="w-5/6 m-2 shadow-lg p-2 rounded-md">
+                    <p>{question.content}</p>
+                    {isOwner(getUserId()) ?
+                      <div className="flex flex-col items-end">
+                        <p className="text-xs">asked by: you</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" onClick={handleDelete} id={question.id}>
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                        </svg>
+                        
+                      </div> :
+                      <p className="text-right text-xs">asked by: {question.owner.username}</p>
+                    }
+                  </div>  
+                )
+                }
+              </div>
+              {isAuth &&
+                <><label className="m-1"><strong>Can&apos;t see the answer to your question? Ask something about {dog.name}?</strong></label><form onSubmit={handleSubmit}>
+                  <input type="text" className="border focus:border-pawhub-yellow w-2/3 p-1 m-2 rounded" placeholder="Type your question here" onChange={handleChange} value={question}></input>
+                  <br />
+                  <button type="submit" className="bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded">Submit Question</button>
+                </form></>
+              }
+              
             </div>
           </div>
 
