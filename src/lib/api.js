@@ -52,5 +52,5 @@ export function favoriteDog(dogId, object) {
 }
 
 export function removeFavorite(dogId, favoriteId) {
-  return axios.delete(`${baseUrl}/dogs/${dogId}/favorites/${favoriteId}/`)
+  return axios.delete(`${baseUrl}/dogs/${dogId}/favorites/${favoriteId}/`, headers())
 }

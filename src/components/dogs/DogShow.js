@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router'
-import { favoriteDog, getSingleDog } from '../../lib/api'
+import { favoriteDog, getSingleDog, removeFavorite } from '../../lib/api'
 import Carousel from './Carousel'
 
 import dogPaw from '../../assets/dog-paw.png'
@@ -16,9 +16,11 @@ import { getUserId } from '../../lib/auth'
 function DogShow() {
   const { dogId } = useParams()
   const [dog, setDog] = React.useState(null)
+  const [isFavorited, setIsFavorited] = React.useState(false)
+  const [favoriteId, setFavoriteId] = React.useState(null)
   const dogImages = []
 
-  const [isFavorited, setIsFavorited] = React.useState(false)
+
 
   const favoriteObject = {
     dog: dogId,
@@ -32,6 +34,7 @@ function DogShow() {
       try {
         const res = await getSingleDog(dogId)
         setDog(res.data)
+        favoriteCheck(res.data.favoritedBy)
       } catch (err) {
         console.log(err)
       }
@@ -39,14 +42,25 @@ function DogShow() {
     getData()
   }, [dogId])
 
+
   const handleFavorite = async () => {
-    try {
-      await favoriteDog(dogId, favoriteObject)
-      setIsFavorited(!isFavorited)
-      console.log(isFavorited)
-    } catch (err) {
-      console.log(err)
+    if (!isFavorited) {
+      try {
+        const res = await favoriteDog(dogId, favoriteObject)
+        setIsFavorited(true)
+        setFavoriteId(res.data.id)
+      } catch (err) {
+        console.log(err)
+      }
+    } else {
+      try {
+        await removeFavorite(dogId, favoriteId)
+        setIsFavorited(false)
+      } catch (err) {
+        console.log(err)
+      }
     }
+    
   }
 
 
@@ -54,19 +68,18 @@ function DogShow() {
     dogImages.push(dog.imageOne) &&
     (!dog.imageTwo || dogImages.push(dog.imageTwo)) &&
     (!dog.imageThree || dogImages.push(dog.imageThree))
-    // dog.favoritedBy.map(favorite =>{
-    //   favorite.owner.id === getUserId()
-    //   setIsFavorited(true)
-    // })
     return
   }
 
-  // const favoriteCheck = (favorites) => {
-  //   favorites.map(favorite =>{
-  //     favorite.owner.id === getUserId()
-  //     setIsFavorited(true)
-  //   })
-  // }
+  const favoriteCheck = (favorites) => {
+    favorites.map(favorite =>{
+      favorite.owner.id === getUserId()
+      setFavoriteId(favorite.id.toString())
+      setIsFavorited(true)
+    })
+  }
+
+
 
   return (
     <>
@@ -81,7 +94,6 @@ function DogShow() {
       {dog &&
       
         <>
-          {/* {favoriteCheck(dog.favoritedBy)} */}
           {createImageArray(dog)}
           <div className="bg-pawhub-purple">
             <p className="text-white text-base py-4 pl-10"><a href="/" className="hover:underline">Home</a> &gt; <a href="/dogs" className="hover:underline">Rehome</a> &gt; {dog.name}</p>
