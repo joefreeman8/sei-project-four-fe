@@ -72,6 +72,8 @@ function DogIndex() {
     getData()
   }, [])
 
+  console.log(dogs)
+
   const handleLiveWithSelect = (selected) => {
     const selectedLiveWith = selected.map(item => item.value)
     setLiveWith(selectedLiveWith)
