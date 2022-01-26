@@ -18,6 +18,7 @@ function DogShow() {
   const [dog, setDog] = React.useState(null)
   const [isFavorited, setIsFavorited] = React.useState(false)
   const [favoriteId, setFavoriteId] = React.useState(null)
+  const [isNew, setIsNew] = React.useState(false)
   const dogImages = []
 
 
@@ -35,6 +36,7 @@ function DogShow() {
         const res = await getSingleDog(dogId)
         setDog(res.data)
         favoriteCheck(res.data.favoritedBy)
+        newFlagCheck(res.data)
       } catch (err) {
         console.log(err)
       }
@@ -79,6 +81,18 @@ function DogShow() {
     })
   }
 
+  const newFlagCheck = (dog) => {
+    const now = new Date
+    const nowSeconds = Date.parse(now)
+    const dogAdded = new Date(dog.dateAdded)
+    const dogAddedDate = Date.parse(dogAdded)
+    console.log(nowSeconds - dogAddedDate)
+    if (nowSeconds - dogAddedDate < 2068935000 ) {
+      setIsNew(true)
+    }
+  }
+
+  const carouselProps = { dogImages, 'isNew': isNew }
 
 
   return (
@@ -109,7 +123,7 @@ function DogShow() {
                 
               </div>
               
-              <Carousel {...dogImages}/>
+              <Carousel {...carouselProps} />
               <h1 className="gooddog-font text-3xl">About {dog.name}</h1>
               <hr />
               <div className="px-2">
