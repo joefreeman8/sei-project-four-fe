@@ -3,6 +3,7 @@ import { useParams } from 'react-router'
 import { createQuestion, deleteQuestion, favoriteDog, getSingleDog, removeFavorite } from '../../lib/api'
 import Carousel from './Carousel'
 import { isAuthenticated, isOwner } from '../../lib/auth'
+import { Link } from 'react-router-dom'
 
 import dogPaw from '../../assets/dog-paw.png'
 import cat from '../../assets/cat.png'
@@ -114,9 +115,12 @@ function DogShow() {
           <strong>Your rehoming journey starts here</strong>
         </h3>
         <p className="text-sm">Find out how rehoming from us works and how to get started finding your perfect match.</p>
-        <button className="bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded">How rehoming works &gt;</button>
+        <Link to="/rehoming">
+          <button className="bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded">
+            How rehoming works &gt;</button>
+        </Link>
       </div>
-      
+
       {dog &&
       
         <>
@@ -174,12 +178,17 @@ function DogShow() {
               <div className="pt-5">
                 <p><strong>Donate today, to help us continue our work providing life-changing care and finding forever homes for thousands of dogs a year. We&apos;re so grateful for your support.</strong></p>
               </div>
+
               <div className="flex justify-around pt-5">
-                <a href="/rehomingform">
+
+                <Link to="/rehomingform">
                   <button className="bg-pawhub-purple hover:bg-pawhub-purple/50 text-white font-bold py-2 px-4 m-3 rounded">Rehoming me starts here</button>
-                </a>
-                
-                <button className="bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded">How rehoming works &gt;</button>
+                </Link>
+
+                <Link to="/rehoming">
+                  <button className="bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded">
+                  How rehoming works &gt;</button>
+                </Link>
               </div>
               
 

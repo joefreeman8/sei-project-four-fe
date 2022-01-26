@@ -3,6 +3,7 @@ import { getAllDogs } from '../../lib/api'
 import backgroundImage from '../../assets/Rehome-Background.png'
 import DogCard from './DogCard'
 import Select from 'react-select'
+import { Link } from 'react-router-dom'
 
 function DogIndex() {
   const [dogs, setDogs] = React.useState([])
@@ -116,7 +117,10 @@ function DogIndex() {
               <strong>Your rehoming journey starts here</strong>
             </h3>
             <p className="text-sm">Find out how rehoming from us works and how to get started finding your perfect match.</p>
-            <button className="bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded">How rehoming works &gt;</button>
+            <Link to="/rehoming">
+              <button className="bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded">
+              How rehoming works &gt;</button>
+            </Link>
           </div>
         </div>
       </div>
