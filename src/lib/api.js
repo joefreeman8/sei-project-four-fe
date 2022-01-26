@@ -28,6 +28,14 @@ export function loginUser(formData) {
   return axios.post(`${baseUrl}/login/`, formData)
 }
 
+export function getSingleUser(userId) {
+  return axios.get(`${baseUrl}/profile/${userId}/`, headers())
+}
+
+export function deleteUser(userId) {
+  return axios.delete(`${baseUrl}/profile/${userId}/`, headers())
+}
+
 // Shuffling data 
 export function shuffle(array) {
   let currentIndex = array.length, randomIndex

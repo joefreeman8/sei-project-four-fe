@@ -3,6 +3,7 @@ import { useParams } from 'react-router'
 import { createQuestion, deleteQuestion, favoriteDog, getSingleDog, removeFavorite } from '../../lib/api'
 import Carousel from './Carousel'
 import { isAuthenticated, isOwner } from '../../lib/auth'
+import { Link } from 'react-router-dom'
 
 import dogPaw from '../../assets/dog-paw.png'
 import cat from '../../assets/cat.png'
@@ -142,7 +143,10 @@ function DogShow() {
           <strong>Your rehoming journey starts here</strong>
         </h3>
         <p className="text-sm">Find out how rehoming from us works and how to get started finding your perfect match.</p>
-        <button className="bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded">How rehoming works &gt;</button>
+        <Link to="/rehoming">
+          <button className="bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded">
+            How rehoming works &gt;</button>
+        </Link>
       </div>
 
       {dog &&
@@ -159,7 +163,6 @@ function DogShow() {
                   <h1 className="gooddog-font text-5xl">{dog.name}</h1>
                   <p className="text-base">I&apos;m looking for a home...</p>
                 </div>
-                <a onClick={handleFavorite}><img src={!isFavorited ? emptyHeart : fullHeart} className="w-10 h-10" /></a>
 
                 {isAuth &&
                   <a onClick={handleFavorite}><img src={!isFavorited ? emptyHeart : fullHeart} className="w-10 h-10" /></a>
@@ -204,14 +207,11 @@ function DogShow() {
               <div className="pt-5">
                 <p><strong>Donate today, to help us continue our work providing life-changing care and finding forever homes for thousands of dogs a year. We&apos;re so grateful for your support.</strong></p>
               </div>
-              <div className="flex justify-around pt-5">
-                <a href="/rehomingform">
+              <div className="flex justify-around pt-5 flex-col lg:flex-row md:flex-row sm:flex-row">
+                <a href="/rehomingform" className="flex justify-around xs:items-center">
                   <button className="bg-pawhub-purple hover:bg-pawhub-purple/50 text-white font-bold py-2 px-4 m-3 rounded">Rehoming me starts here</button>
                 </a>
-
-                <button className="bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded">How rehoming works &gt;</button>
-                
-                <a href="/donation">
+                <a href="/donation" className="flex justify-around xs:items-center">
                   <button className="bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded"><img src={dogFigure} className="w-6 h-6 inline" /> Donate to Dogs Trust</button>
                 </a>
               </div>
@@ -242,7 +242,7 @@ function DogShow() {
                 }
               </div>
               {isAuth &&
-                <><label className="m-1"><strong>Can&apos;t see the answer to your question? Ask something about {dog.name}?</strong></label><form onSubmit={handleSubmit}>
+                <><label><strong>Can&apos;t see the answer to your question? Ask something about {dog.name}?</strong></label><form onSubmit={handleSubmit}>
                   <input type="text" className="border focus:border-pawhub-yellow w-2/3 p-1 m-2 rounded" placeholder="Type your question here" onChange={handleChange} value={question}></input>
                   <br />
                   <button type="submit" className="bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded">Submit Question</button>

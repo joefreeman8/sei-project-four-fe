@@ -17,7 +17,7 @@ function DogCard({ id, name, imageOne, breed, dateAdded }) {
 
   return (
     <div className="flex justify-center">
-      <div className="bg-pawhub-yellow w-full max-w-sm text-center mb-4 group hover:text-pawhub-purple group-hover:bg-pawhub-purple flex justify-center">
+      <div className="w-full max-w-sm text-center mb-4 group hover:text-pawhub-purple group-hover:bg-pawhub-purple flex justify-center">
         <a href={`/dogs/${id}`} className='relative'>
           {isNew && <div className="triangle-new absolute top-0 left-0">
             <p className='triangle-text -mt-16 ml-5 text-xl font-bold'>New</p></div>} 

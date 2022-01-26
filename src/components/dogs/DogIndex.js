@@ -3,6 +3,8 @@ import { getAllDogs } from '../../lib/api'
 import backgroundImage from '../../assets/Rehome-Background.png'
 import DogCard from './DogCard'
 import Select from 'react-select'
+import { Link } from 'react-router-dom'
+import Error from '../common/Error'
 
 function DogIndex() {
   const [dogs, setDogs] = React.useState([])
@@ -10,6 +12,10 @@ function DogIndex() {
   const [liveWith, setLiveWith] = React.useState([])
   const [breed, setBreed] = React.useState([])
   const [age, setAge] = React.useState([])
+  const [isError, setIsError] = React.useState(false)
+  const isLoading = !dogs && !isError
+  const [error, setError] = React.useState(null)
+
 
   const liveWithSelectOptions = [
     { value: 'Children', label: 'Children' },
@@ -66,13 +72,14 @@ function DogIndex() {
         const { data } = await getAllDogs()
         setDogs(data)
       } catch (err) {
-        console.log(err)
+        setError(err.response.status.toString())
+        setIsError(true)
       }
     }
     getData()
   }, [])
 
-  console.log(dogs)
+  console.log(error)
 
   const handleLiveWithSelect = (selected) => {
     const selectedLiveWith = selected.map(item => item.value)
@@ -109,70 +116,82 @@ function DogIndex() {
         </p>
         <img src={backgroundImage} className="background-image"/>
       </div>
-      <div>
-        <div>
-          <div className="text-center">
-            <h3 className="text-xl m-1">
-              <strong>Your rehoming journey starts here</strong>
-            </h3>
-            <p className="text-sm">Find out how rehoming from us works and how to get started finding your perfect match.</p>
-            <button className="bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded">How rehoming works &gt;</button>
-          </div>
-        </div>
-      </div>
-      <div className='bg-pawhub-purple text-white p-8'>
-        <div className="filter-container">
-          <div className="m-2 filter-item">
-            <label className="p-1">May live with...</label>
-            <div className="text-pawhub-grey">
-              <Select
-                options={liveWithSelectOptions}
-                isMulti
-                onChange={handleLiveWithSelect}
-                value={liveWith.map(item => ({
-                  label: item[0] + item.substring(1),
-                  value: item,
-                }))}
-              />
+      {isError && 
+          <Error error={error} />
+      }
+      {dogs && !isError && (
+        <>
+          <div>
+
+            <div>
+              <div className="text-center">
+                <h3 className="text-xl m-1">
+                  <strong>Your rehoming journey starts here</strong>
+                </h3>
+                <p className="text-sm">Find out how rehoming from us works and how to get started finding your perfect match.</p>
+                <Link to="/rehoming">
+                  <button className="bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded">
+    How rehoming works &gt;</button>
+                </Link>
+              </div>
             </div>
           </div>
-          <div className="m-2 filter-item">
-            <label className="p-1">Age</label>
-            <div className="text-pawhub-grey">
-              <Select
-                options={ageSelectOptions}
-                isMulti
-                onChange={handleAgeSelect}
-                value={age.map(item => ({
-                  label: item[0] + item.substring(1),
-                  value: item,
-                }))}
-              />
+          <div className='bg-pawhub-purple text-white p-8'>
+            <div className="filter-container">
+              <div className="m-2 filter-item">
+                <label className="p-1">May live with...</label>
+                <div className="text-pawhub-grey">
+                  <Select
+                    options={liveWithSelectOptions}
+                    isMulti
+                    onChange={handleLiveWithSelect}
+                    value={liveWith.map(item => ({
+                      label: item[0] + item.substring(1),
+                      value: item,
+                    }))}
+                  />
+                </div>
+              </div>
+              <div className="m-2 filter-item">
+                <label className="p-1">Age</label>
+                <div className="text-pawhub-grey">
+                  <Select
+                    options={ageSelectOptions}
+                    isMulti
+                    onChange={handleAgeSelect}
+                    value={age.map(item => ({
+                      label: item[0] + item.substring(1),
+                      value: item,
+                    }))}
+                  />
+                </div>
+              </div>
+              <div className="m-2 filter-item">
+                <label className="p-1">Breed</label>
+                <div className="text-pawhub-grey">
+                  <Select
+                    options={breedSelectOptions}
+                    isMulti
+                    onChange={handleBreedSelect}
+                    value={breed.map(item => ({
+                      label: item[0] + item.substring(1),
+                      value: item,
+                    }))}
+                  />
+                </div>
+              </div>
             </div>
           </div>
-          <div className="m-2 filter-item">
-            <label className="p-1">Breed</label>
-            <div className="text-pawhub-grey">
-              <Select
-                options={breedSelectOptions}
-                isMulti
-                onChange={handleBreedSelect}
-                value={breed.map(item => ({
-                  label: item[0] + item.substring(1),
-                  value: item,
-                }))}
-              />
-            </div>
+          <div className="grid flex grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4 bg-pawhub-yellow pt-10 pb-10 justify-around">
+            {filteredDogs(dogs).map(dog => 
+              <DogCard key={dog.id} {...dog} />
+            )}
           </div>
-        </div>
-      </div>
-      <div className="grid flex grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4 bg-pawhub-yellow pt-10 pb-10 mb-10 justify-around">
-        {dogs && (
-          filteredDogs(dogs).map(dog => 
-            <DogCard key={dog.id} {...dog} />
-          )
-        )}
-      </div>
+        </>
+
+      )
+      }
+
     </>
   )
 }
