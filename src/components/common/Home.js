@@ -60,7 +60,7 @@ function Home() {
         <h3 className="kessel-font m-5 text-6xl">Donate Today</h3>
         <p>Every penny will help a dog in need</p>
         <Carousel />
-        <Link to="/donate">
+        <Link to="/donation">
           <button className="block mx-auto bg-pawhub-grey rounded-md text-white h-16 w-64 mt-5 hover:bg-white hover:text-pawhub-grey hover:border-2 hover:border-pawhub-grey">
             Donate
           </button>
