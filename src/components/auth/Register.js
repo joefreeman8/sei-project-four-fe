@@ -1,6 +1,8 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
-import { registerUser } from '../../lib/api'
+import { loginUser, registerUser } from '../../lib/api'
+import { setToken } from '../../lib/auth'
 
 const initialState = {
   email: '',
@@ -15,20 +17,32 @@ const initialState = {
   has_kids: false,
 }
 
+const loginDataOnlyInitialState = {
+  username: '',
+  password: '',
+}
+
 function Register() {
 
   const [formData, setFormData] = React.useState(initialState)
   const [formErrors, setFormErrors] = React.useState(initialState)
+  const [loginData, setLoginData] = React.useState(loginDataOnlyInitialState)
+
+  const navigate = useNavigate()
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
     setFormErrors({ ...formErrors, [e.target.name]: '' })
+    setLoginData({ username: e.target.name === 'username' ? e.target.value : formData.username, password: e.target.name === 'password' ? e.target.value : formData.password })
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
       await registerUser(formData)
+      const res = await loginUser(loginData)
+      setToken(res.data.token)
+      navigate('/')
     } catch (err) {
       console.log(err.response.data)
       setFormErrors(err.response.data)
@@ -36,7 +50,7 @@ function Register() {
     }
   }
 
-  console.log(formErrors)
+  console.log(loginData)
 
   return (
     <div className="container min-w-full">

@@ -15,6 +15,7 @@ import DogShow from './components/dogs/DogShow'
 import AboutUs from './components/common/AboutUs/AboutUs'
 import WhoWeAre from './components/common/AboutUs/WhoWeAre'
 import Fundraiser from './components/common/AboutUs/Fundraiser'
+import Footer from './components/common/Footer'
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
         <Route path="/aboutus/whoweare" element={<WhoWeAre />} />
         <Route path="/aboutus/fundraiser" element={<Fundraiser />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }
