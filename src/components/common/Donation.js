@@ -6,12 +6,26 @@ function Donation() {
 
     <div className="container min-w-full">
 
-      <section className="w-2/8 lg:w-full h-screen h-1/6 bg-donationHeader bg-cover bg-center -mt-36"></section>
+      <div className="bg-pawhub-purple mt-2 px-24"> 
+        <p className="text-white text-base py-4 pl-10"><a href="/" className="hover:underline">Home</a> &gt; <a href="/dogs" className="hover:underline">Rehoming</a> &gt; Donate Now</p>
+      </div>
+
+      {/* sm:w-11/12 md:w-7/12 lg:w-5/12 xl:w-5/12 mx-auto px-6 */}
+
+
+
+      <section className="w-2/7 lg:w-full h-screen h-6/6 bg-donationHeader bg-cover bg-center mt-0"></section>
       <div className="bg-donationTile bg-repeat-round h-screen">
         {/* card starts here */}
         <div className="Donate-container float-left pl-1/5 pr-1/5">
-          <div className="-mt-60 bg-white shadow-xl rounded w-5/6 mx-auto px-5 p-5">
-            <p className="text-3xl font-semibold pb-4">Donate Now</p>
+          <div className="-mt-96 bg-white shadow-xl rounded w-5/6 mx-auto px-5 p-5">
+          
+            {/* <div className="bg-pawhub-purple mt-2 px-10"> 
+              <p className="text-white text-base py-4 pl-0"><a href="/" className="hover:underline">Home</a> &gt; <a href="/dogs" className="hover:underline">Rehoming</a> &gt; Donate Now</p>
+            </div> */}
+            
+
+            <p className="text-3xl font-semibold pt-4 pb-4">Donate Now</p>
             <p className="text-base">Your kind donations help us provide life changing care and forever homes for over 14,000 of our furry friends.</p>
             <br></br>
             <p className="text-base">We really appreciate your support (and we know the dogs do too!)</p>

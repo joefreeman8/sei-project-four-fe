@@ -28,9 +28,8 @@ function Nav() {
         <div className="flex float-right mt-8 text-lg items-center">
           <Link className="mx-2" to="/dogs">View Dogs</Link>
           <Link className="mx-2" to="/aboutus">About Us</Link>
-          <Link className="mx-2" to="/contact">Contact</Link>
           <Link className="mx-2" to="/donation">Donate Now</Link>
-
+          <Link className="mx-2" to="/newsletter">Newsletter</Link>
           {isAuth ? (
             <>
               <Link className="mx-2" to={`/profile/${userId}`}>Profile</Link>
@@ -51,7 +50,7 @@ function Nav() {
 
       <nav className="nav burger-toggle inline z-50">
         <div className="flex float-left m-3 pl-4 z-50">
-          <Link to="/"><img src={pawhubLogo} alt="logo" className="h-20  w-20"></img></Link>
+          <Link to="/"><img src={pawhubLogo} alt="logo" className="h-20 w-20"></img></Link>
         </div>
         <div className="flex fixed right-0 burger-icon mt-6 h-20 w-20 z-50" onClick={handleSideBar}>
           <Hamburger duration={0.35} toggle={setSidebarShow} toggled={sidebarShow} />
@@ -70,6 +69,9 @@ function Nav() {
             </div>
             <div className="m-1">
               <Link to="/donation">Donate Now</Link>
+            </div>
+            <div className="m-1">
+              <Link to="/newsletter">Newsletter</Link>
             </div>
             {isAuth ? (
               <>
