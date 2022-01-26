@@ -213,7 +213,7 @@ function DogShow() {
 
                 <Link to="/rehomingform">
                   <button className="bg-pawhub-purple hover:bg-pawhub-purple/50 text-white font-bold py-2 px-4 m-3 rounded">Rehoming me starts here</button>
-                </a>
+                </Link>
 
                 <button className="bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded">How rehoming works &gt;</button>
                 
