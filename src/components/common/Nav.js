@@ -25,7 +25,7 @@ function Nav() {
           <Link className="flex float-left" to="/">
             <img src={pawhubLogo} alt="logo" className="h-20 w-20"></img></Link>
         </div>
-        <div className="flex float-right mt-8 text-lg">
+        <div className="flex float-right mt-8 text-lg items-center">
           <Link className="mx-2" to="/dogs">View Dogs</Link>
           <Link className="mx-2" to="/aboutus">About Us</Link>
           <Link className="mx-2" to="/contact">Contact</Link>
@@ -49,7 +49,7 @@ function Nav() {
         </div>
       </nav>
 
-      <nav className="nav burger-toggle inline ">
+      <nav className="nav burger-toggle inline z-50">
         <div className="flex float-left m-3 pl-4">
           <Link to="/"><img src={pawhubLogo} alt="logo" className="h-20  w-20"></img></Link>
         </div>
@@ -78,7 +78,7 @@ function Nav() {
                 </div>
                 <div>
                   <button
-                    className="shadow-xl bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-5 rounded"
+                    className="shadow-xl bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-3 ml-1 rounded"
                     onClick={handleLogout}>
                     Logout
                   </button>

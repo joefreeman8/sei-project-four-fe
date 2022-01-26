@@ -163,7 +163,6 @@ function DogShow() {
                   <h1 className="gooddog-font text-5xl">{dog.name}</h1>
                   <p className="text-base">I&apos;m looking for a home...</p>
                 </div>
-                <a onClick={handleFavorite}><img src={!isFavorited ? emptyHeart : fullHeart} className="w-10 h-10" /></a>
 
                 {isAuth &&
                   <a onClick={handleFavorite}><img src={!isFavorited ? emptyHeart : fullHeart} className="w-10 h-10" /></a>
@@ -212,9 +211,6 @@ function DogShow() {
                 <a href="/rehomingform" className="flex justify-around xs:items-center">
                   <button className="bg-pawhub-purple hover:bg-pawhub-purple/50 text-white font-bold py-2 px-4 m-3 rounded">Rehoming me starts here</button>
                 </a>
-
-                <button className="bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded">How rehoming works &gt;</button>
-                
                 <a href="/donation" className="flex justify-around xs:items-center">
                   <button className="bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded"><img src={dogFigure} className="w-6 h-6 inline" /> Donate to Dogs Trust</button>
                 </a>
