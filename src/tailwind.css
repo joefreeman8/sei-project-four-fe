@@ -85,7 +85,7 @@ nav {
 }
 
 .background-image {
-  min-width: 1050px;
+  object-fit: cover;
 }
 
 #aboutus-tagline {
@@ -118,12 +118,7 @@ nav {
 
 
 @media only screen and (max-width: 1023px) {
-  .nav-toggle {
-    display: none;
-  } 
-  .burger-toggle {
-    display: inline-flex
-  }
+
   
   .index-image {
     width:200px;
@@ -138,8 +133,21 @@ nav {
     font-size: 400%;
   }
 
+}
+
+@media only screen and (max-width: 850px) {
+  .nav-toggle {
+    display: none;
+  } 
+  .burger-toggle {
+    display: inline-flex
+  }
+
   #aboutus-tagline {
     display: none;
+  }
+  #title {
+    font-size: xx-large;
   }
 }
 
@@ -149,11 +157,6 @@ nav {
     width:400px;
     height:400px;
     object-fit:cover;
-  }
-
-  .background-image {
-    min-width: 100px;
-    object-fit: cover;
   }
 
   #tagline {
@@ -167,6 +170,19 @@ nav {
     display: block;
   }
 
+  .teamcard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .whoweare-name {
+    font-size: xx-large;
+  }
+
+  #fundraiser-tagline {
+    display: none;
+  }
 }
 
 .home-header {
@@ -174,35 +190,6 @@ nav {
 }
 
 
-
-
-
-/* DONATION PAGE */
-
-/* .donation-header {
-  background-image: url("https://i.imgur.com/QEhZ5UG.png");
-} */
-
-
-
-
-.pawprint-background {
-  /* background-image: ('/assets/pawprint-background.png'); */
-  background-repeat: repeat;
-  width:300px;
-  height:300px;
-}
-
-/* .Donate-container {
-display: flex;
-flex-direction: column;
-justify-content: left;
-} */
-
-/* .donate-form {
-  height: 200px;
-  width: 150px;
-} */
 
   .triangle-new {
     width: 0;

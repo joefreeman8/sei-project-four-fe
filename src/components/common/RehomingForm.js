@@ -3,7 +3,7 @@ function RehomingForm() {
 
     <div className="container min-w-full bg-pawhub-yellow">
 
-      <div className="bg-pawhub-purple mt-2 px-24"> 
+      <div className="bg-pawhub-purple"> 
         <p className="text-white text-base py-4 pl-10"><a href="/" className="hover:underline">Home</a> &gt; <a href="/dogs" className="hover:underline">Rehoming</a> &gt; How Rehoming Works</p>
       </div>
 
@@ -32,7 +32,10 @@ function RehomingForm() {
             <br></br>
 
             <p className="text-1xl font-bold">CONTACT US</p>
-            <p>If you have any questions, please call our Contact Centre team on 03050050000, or visit our website: https://www.pawhub.org.uk/rehoming/how-to-adopt/</p>
+
+            <p className="text-base pt-5">If you have any questions, please call our Contact Centre team on 03050050000, or visit
+              <span className="text-blue-500"><a href="/dogs"> here </a></span>to learn more on how to adopt a dog.</p>
+          
           </div>
         </div>
       </div>

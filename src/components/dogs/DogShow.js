@@ -5,6 +5,7 @@ import Carousel from './Carousel'
 import { isAuthenticated, isOwner, getUserId } from '../../lib/auth'
 import { Link } from 'react-router-dom'
 import Error from '../common/Error'
+import Loading from '../common/Loading'
 
 import dogPaw from '../../assets/dog-paw.png'
 import cat from '../../assets/cat.png'
@@ -23,6 +24,8 @@ function DogShow() {
   const dogImages = []
   const [isError, setIsError] = React.useState(false)
   const [error, setError] = React.useState(null)
+  const isLoading = !dog && !isError
+
 
   let favoriteObject = {
     dog: '',
@@ -138,6 +141,7 @@ function DogShow() {
 
   return (
     <>
+      {isLoading && <Loading />}
       {isError && 
       <div className="bg-black h-screen">
         <Error error={error} />
