@@ -7,7 +7,7 @@ function Fundraiser() {
     <>
       <div className="background-image-container">
         <h1 className="image-text kessel-font mb-5" id="title">Fundraiser</h1>
-        <p className="image-text text-lg mt-10" id="whoweare-tagline">
+        <p className="image-text text-lg mt-10" id="fundraiser-tagline">
           Thanks to your generosity we can help save these wonderful animals.
         </p>
         <img src={twopawbanner} className="background-image" />

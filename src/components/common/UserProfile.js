@@ -6,6 +6,7 @@ import dogFigure from '../../assets/dog-figure.png'
 import backgroundImage from '../../assets/user-background.png'
 import { useNavigate } from 'react-router-dom'
 import Error from './Error'
+import Loading from './Loading'
 
 
 function UserProfile() {
@@ -14,6 +15,8 @@ function UserProfile() {
   const navigate = useNavigate()
   const [isError, setIsError] = React.useState(false)
   const [error, setError] = React.useState(null)
+  const isLoading = !user && !isError
+
 
   React.useEffect(() => {
     const getData = async () => {
@@ -48,6 +51,7 @@ function UserProfile() {
 
   return (
     <>
+      {isLoading && <Loading />}
       {isError && 
       <div className="bg-black h-screen">
         <Error error={error} />

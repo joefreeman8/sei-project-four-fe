@@ -31,7 +31,7 @@ function Carousel(props) {
           return (
             <img
               src={slide}
-              alt="This is a carousel slide"
+              alt="Image of dog"
               key={slide}
               className={
                 index === currentSlide
