@@ -116,6 +116,10 @@ nav {
   background-image: url('https://i.imgur.com/Bm9jKXC.jpg?1')
 }
 
+.fundraiser-mobile-view {
+  display: none;
+}
+
 .aboutus-button {
   width: 16em;
 }
@@ -153,6 +157,14 @@ nav {
   } 
   .burger-toggle {
     display: inline-flex
+  }
+
+  .fundraiser-background {
+    display: none;
+  }
+
+  .fundraiser-mobile-view {
+    display: inline-block;
   }
 
   #aboutus-tagline {
