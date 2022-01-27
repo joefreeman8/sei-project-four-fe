@@ -51,13 +51,13 @@ function Register() {
   console.log(loginData)
 
   return (
-    <div className="container min-w-full">
+    <div className="container h-full min-w-full bg-donationTile bg-repeat-round">
       {/* adorable puppy image */}
-      <div>
-        <img className="object-cover mx-auto w-3/5 lg:w-full h-1/6" src="https://i.imgur.com/rRP9lbR.jpg?1"></img>
+      <div className="register-background h-96">
+        {/* <img className="object-cover mx-auto w-3/5 lg:w-full h-1/6" src="https://i.imgur.com/rRP9lbR.jpg?1"></img> */}
       </div>
       {/* form starts here */}
-      <form className="bg-white shadow-xl rounded w-3/5 mx-auto px-5 pt-5 pb-5" onSubmit={handleSubmit}>
+      <form className="bg-white shadow-xl rounded w-3/5 mx-auto -mt-16 px-5 pt-5 pb-5" onSubmit={handleSubmit}>
         <div>
           <p className="text-3xl text-slate-700 text-bold text-center pb-5">Sign up to Pawhub</p>
           <p className="mb-10">Sign up to PawHub and join thousands of other dog lovers looking to find their four-legged partners. Once you sign-up, you can add dogs to your favourites, ask questions about any dog available for adoption, and start the adoption process for your future best friend.</p>

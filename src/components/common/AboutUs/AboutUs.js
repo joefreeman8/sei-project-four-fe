@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import banner from '../../../assets/banner.png'
+import twopawbanner from '../../../assets/twopawbanner.png'
 import boneIcon from '../../../assets/boneIcon.png'
 
 function AboutUs() {
@@ -9,9 +9,9 @@ function AboutUs() {
       <div className="background-image-container">
         <h1 className="image-text kessel-font" id="title">About Us</h1>
         <p className="image-text text-lg mt-5" id="aboutus-tagline">
-          Our mission is to bring about the day when all dogs can enjoy a happy <br />
+          Our mission is to bring about the day when all dogs can enjoy a happy
           life, free from the threat of unnecessary destruction.</p>
-        <img src={banner} className="background-image" />
+        <img src={twopawbanner} className="background-image" />
       </div>
       <div className="flex justify-center shadow-xl rounded w-full px-5 py-10 mt-20 bg-pawhub-purple">
         <div className="">

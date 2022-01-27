@@ -118,12 +118,7 @@ nav {
 
 
 @media only screen and (max-width: 1023px) {
-  .nav-toggle {
-    display: none;
-  } 
-  .burger-toggle {
-    display: inline-flex
-  }
+
   
   .index-image {
     width:200px;
@@ -138,8 +133,21 @@ nav {
     font-size: 400%;
   }
 
+}
+
+@media only screen and (max-width: 850px) {
+  .nav-toggle {
+    display: none;
+  } 
+  .burger-toggle {
+    display: inline-flex
+  }
+
   #aboutus-tagline {
     display: none;
+  }
+  #title {
+    font-size: xx-large;
   }
 }
 
@@ -162,6 +170,19 @@ nav {
     display: block;
   }
 
+  .teamcard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .whoweare-name {
+    font-size: xx-large;
+  }
+
+  #fundraiser-tagline {
+    display: none;
+  }
 }
 
 .home-header {
@@ -185,3 +206,11 @@ nav {
     background-image: url('https://i.imgur.com/selrng8.jpg');
     height: 100%;
   }
+
+  .register-background {
+    background-image: url('https://i.imgur.com/rRP9lbR.jpg?1');
+  }
+
+  .login-background {
+    background-image: url('https://i.imgur.com/tdmm0eW.jpg')
+    }
