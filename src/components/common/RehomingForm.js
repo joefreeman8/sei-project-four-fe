@@ -139,7 +139,7 @@ function RehomingForm() {
 
               <div className="flex items-center mb-0">
                 <input id="home-option-1" type="radio" name="homeType" value="House" 
-                  className="w-4 h-4 focus:outline-none transition duration-200 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow" 
+                  className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow" 
                   aria-labelledby="home-option-1" aria-describedby="home-option-1"/>
                 <label htmlFor="home-option-1" className="block ml-2 text-sm font-medium text-gray-900">
                 House
@@ -148,7 +148,7 @@ function RehomingForm() {
 
               <div className="flex items-center mb-0">
                 <input id="home-option-2" type="radio" name="homeType" value="Bungalow" 
-                  className="w-4 h-4 focus:outline-none transition duration-200 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow" 
+                  className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow" 
                   aria-labelledby="home-option-2" aria-describedby="home-option-2"/>
                 <label htmlFor="home-option-2" className="block ml-2 text-sm font-medium text-gray-900">
                 Bungalow
@@ -157,7 +157,7 @@ function RehomingForm() {
 
               <div className="flex items-center mb-0">
                 <input id="home-option-3" type="radio" name="homeType" value="Farm"
-                  className="w-4 h-4 focus:outline-none transition duration-200 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow" 
+                  className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow" 
                   aria-labelledby="home-option-3" aria-describedby="home-option-3"/>
                 <label htmlFor="home-option-3" className="block ml-2 text-sm font-medium text-gray-900">
                 Farm
@@ -166,7 +166,7 @@ function RehomingForm() {
 
               <div className="flex items-center mb-0">
                 <input id="home-option-4" type="radio" name="homeType" value="Caravan" 
-                  className="w-4 h-4 focus:outline-none transition duration-200 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow" 
+                  className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow" 
                   aria-labelledby="home-option-4" aria-describedby="home-option-4"/>
                 <label htmlFor="home-option-4" className="block ml-2 text-sm font-medium text-gray-900">
                 Caravan
@@ -175,7 +175,7 @@ function RehomingForm() {
 
               <div className="flex items-center mb-0">
                 <input id="home-option-5" type="radio" name="homeType" value="Boat" 
-                  className="w-4 h-4 focus:outline-none transition duration-200 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow" 
+                  className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow" 
                   aria-labelledby="home-option-5" aria-describedby="home-option-5"/>
                 <label htmlFor="home-option-5" className="block ml-2 text-sm font-medium text-gray-900">
                 Boat
@@ -184,7 +184,7 @@ function RehomingForm() {
 
               <div className="flex items-center mb-0">
                 <input id="home-option-6" type="radio" name="homeType" value="Flat" 
-                  className="w-4 h-4 focus:outline-none transition duration-200 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow" 
+                  className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow" 
                   aria-labelledby="home-option-6" aria-describedby="home-option-6"/>
                 <label htmlFor="home-option-6" className="block ml-2 text-sm font-medium text-gray-900">
                 First Floor or Above Flat
@@ -193,7 +193,7 @@ function RehomingForm() {
 
               <div className="flex items-center mb-0">
                 <input id="home-option-7" type="radio" name="homeType" value="GFlat" 
-                  className="w-4 h-4 focus:outline-none transition duration-200 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow" 
+                  className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow" 
                   aria-labelledby="home-option-7" aria-describedby="home-option-7"/>
                 <label htmlFor="home-option-7" className="block ml-2 text-sm font-medium text-gray-900">
                 Ground Floor Flat
@@ -202,7 +202,7 @@ function RehomingForm() {
 
               <div className="flex items-center mb-0">
                 <input id="home-option-8" type="radio" name="homeType" value="Other" 
-                  className="w-4 h-4 focus:outline-none transition duration-200 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow" 
+                  className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow" 
                   aria-labelledby="home-option-8" aria-describedby="home-option-8"/>
                 <label htmlFor="home-option-8" className="block ml-2 text-sm font-medium text-gray-900"></label>
                 <input type="text" id="text" 
@@ -217,7 +217,7 @@ function RehomingForm() {
 
               <div className="flex items-center mb-0">
                 <input id="home-own" type="radio" name="homeStatus" value="Owned" 
-                  className="w-4 h-4 focus:outline-none transition duration-200 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow" 
+                  className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow" 
                   aria-labelledby="home-own" aria-describedby="home-own"/>
                 <label htmlFor="home-own" className="block ml-2 text-sm font-medium text-gray-900">
                 Owned
@@ -226,7 +226,7 @@ function RehomingForm() {
 
               <div className="flex items-center mb-0">
                 <input id="home-rent" type="radio" name="homeStatus" value="Rented" 
-                  className="w-4 h-4 focus:outline-none transition duration-200 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow" 
+                  className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow" 
                   aria-labelledby="home-rent" aria-describedby="home-rent"/>
                 <label htmlFor="home-rent" className="block ml-2 text-sm font-medium text-gray-900">
                 Rented
@@ -243,7 +243,7 @@ function RehomingForm() {
 
             <div className="flex items-center mb-0">
               <input id="garden-option-1" type="radio" name="garden" value="private" 
-                className="w-4 h-4 focus:outline-none transition duration-200 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
+                className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
                 aria-labelledby="garden-option-1" aria-describedby="garden-option-1"/>
               <label htmlFor="garden-option-1" className="block ml-2 text-sm font-medium text-gray-900">
             Yes, private garden
@@ -252,7 +252,7 @@ function RehomingForm() {
 
             <div className="flex items-center mb-0">
               <input id="garden-option-2" type="radio" name="garden" value="communal" 
-                className="w-4 h-4 focus:outline-none transition duration-200 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
+                className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
                 aria-labelledby="garden-option-2" aria-describedby="garden-option-2"/>
               <label htmlFor="garden-option-2" className="block ml-2 text-sm font-medium text-gray-900">
             Yes, communal garden
@@ -261,7 +261,7 @@ function RehomingForm() {
 
             <div className="flex items-center mb-0">
               <input id="garden-option-3" type="radio" name="garden" value="None" 
-                className="w-4 h-4 focus:outline-none transition duration-200 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
+                className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
                 aria-labelledby="garden-option-3" aria-describedby="garden-option-3"/>
               <label htmlFor="garden-option-3" className="block ml-2 text-sm font-medium text-gray-900">
             No
@@ -274,7 +274,7 @@ function RehomingForm() {
               12. If Yes, is the garden secure from escape?</label>
             <div className="flex items-center mb-0">
               <input id="garden-secure-1" type="radio" name="gardenS" value="secure" 
-                className="w-4 h-4 focus:outline-none transition duration-200 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
+                className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
                 aria-labelledby="garden-option-1" aria-describedby="garden-secure-1"/>
               <label htmlFor="garden-secure-1" className="block ml-2 text-sm font-medium text-gray-900">
               Yes
@@ -283,7 +283,7 @@ function RehomingForm() {
 
             <div className="flex items-center mb-0">
               <input id="garden-secure-2" type="radio" name="gardenS" value="notsecure" 
-                className="w-4 h-4 focus:outline-none transition duration-200 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
+                className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
                 aria-labelledby="garden-option-2" aria-describedby="garden-secure-2"/>
               <label htmlFor="garden-secure-2" className="block ml-2 text-sm font-medium text-gray-900">
               No
@@ -297,7 +297,7 @@ function RehomingForm() {
 
             <div className="flex items-center mb-0">
               <input id="home-traffic-1" type="radio" name="home-traffic" value="busy" 
-                className="w-4 h-4 focus:outline-none transition duration-200 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
+                className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
                 aria-labelledby="home-traffic-1" aria-describedby="home-traffic1"/>
               <label htmlFor="home-traffic-1" className="block ml-2 text-sm font-medium text-gray-900">
               Busy - By this we mean a good amount of people coming in and out, maybe loud children or a general &apos;always on the go&apos; kind of atmosphere
@@ -306,7 +306,7 @@ function RehomingForm() {
 
             <div className="flex items-center mb-0">
               <input id="home-traffic-2" type="radio" name="home-traffic" value="moderate" 
-                className="w-4 h-4 focus:outline-none transition duration-200 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
+                className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
                 aria-labelledby="home-traffic-2" aria-describedby="home-traffic-2"/>
               <label htmlFor="home-traffic-2" className="block ml-2 text-sm font-medium text-gray-900">
               Moderate
@@ -315,7 +315,7 @@ function RehomingForm() {
 
             <div className="flex items-center mb-0">
               <input id="home-traffic-3" type="radio" name="home-traffic" value="quiet" 
-                className="w-4 h-4 focus:outline-none transition duration-200 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
+                className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
                 aria-labelledby="home-traffic-3" aria-describedby="home-traffic-3"/>
               <label htmlFor="home-traffic-3" className="block ml-2 text-sm font-medium text-gray-900">
               Quiet - By this we mean very few people coming and going, maybe quiet children, quite a calm, peaceful atmosphere
@@ -451,7 +451,7 @@ function RehomingForm() {
 
             <div className="flex items-center mb-0">
               <input id="away-option-1" type="radio" name="away-option" value="yes" 
-                className="w-4 h-4 focus:outline-none transition duration-200 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
+                className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
                 aria-labelledby="away-option-1" aria-describedby="away-option-1"/>
               <label htmlFor="away-option-1" className="block ml-2 text-sm font-medium text-gray-900">
               Yes
@@ -460,7 +460,7 @@ function RehomingForm() {
 
             <div className="flex items-center mb-0">
               <input id="away-option-2" type="radio" name="away-option" value="no" 
-                className="w-4 h-4 focus:outline-none transition duration-200 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
+                className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
                 aria-labelledby="away-option-2" aria-describedby="away-option-2"/>
               <label htmlFor="away-option-2" className="block ml-2 text-sm font-medium text-gray-900">
               No
@@ -479,7 +479,7 @@ function RehomingForm() {
 
             <div className="flex items-center mb-0">
               <input id="vet-costs-option-1" type="radio" name="vetCosts" value="Yes" 
-                className="w-4 h-4 focus:outline-none transition duration-200 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
+                className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
                 aria-labelledby="vet-costs-option-1" aria-describedby="vet-costs-option-1"/>
               <label htmlFor="vet-costs-option-1" className="block ml-2 text-sm font-medium text-gray-900">
               Yes
@@ -488,7 +488,7 @@ function RehomingForm() {
 
             <div className="flex items-center mb-0">
               <input id="vet-costs-option-2" type="radio" name="vetCosts" value="No" 
-                className="w-4 h-4 focus:outline-none transition duration-200 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
+                className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
                 aria-labelledby="vet-costs-option-2" aria-describedby="vet-costs-option-2"/>
               <label htmlFor="vet-costs-option-2" className="block ml-2 text-sm font-medium text-gray-900">
               No
@@ -513,7 +513,7 @@ function RehomingForm() {
 
             <div className="flex items-center mb-0">
               <input id="alone-option-1" type="radio" name="alone-time" value="Yes" 
-                className="w-4 h-4 focus:outline-none transition duration-200 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
+                className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
                 aria-labelledby="alone-option-1" aria-describedby="alone-option-1"/>
               <label htmlFor="alone-option-1" className="block ml-2 text-sm font-medium text-gray-900">
               Continuous
@@ -522,7 +522,7 @@ function RehomingForm() {
 
             <div className="flex items-center mb-0">
               <input id="alone-option-2" type="radio" name="alone-time" value="Yes" 
-                className="w-4 h-4 focus:outline-none transition duration-200 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
+                className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
                 aria-labelledby="alone-option-2" aria-describedby="alone-option-2"/>
               <label htmlFor="alone-option-2" className="block ml-2 text-sm font-medium text-gray-900">
               Breaks
@@ -536,7 +536,7 @@ function RehomingForm() {
 
             <div className="flex items-center mb-0">
               <input id="work-option-1" type="radio" name="work" value="Yes" 
-                className="w-4 h-4 focus:outline-none transition duration-200 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
+                className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
                 aria-labelledby="work-option-1" aria-describedby="work-option-1"/>
               <label htmlFor="work-option-1" className="block ml-2 text-sm font-medium text-gray-900">
               Yes
@@ -545,7 +545,7 @@ function RehomingForm() {
 
             <div className="flex items-center mb-0">
               <input id="work-option-2" type="radio" name="work" value="No" 
-                className="w-4 h-4 focus:outline-none transition duration-200 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow" 
+                className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow" 
                 aria-labelledby="work-option-2" aria-describedby="work-option-2"/>
               <label htmlFor="work-option-2" className="block ml-2 text-sm font-medium text-gray-900">
               No
@@ -554,7 +554,7 @@ function RehomingForm() {
 
             <div className="flex items-center mb-0">
               <input id="work-option-3" type="radio" name="work" value="Possibly" 
-                className="w-4 h-4 focus:outline-none transition duration-200 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
+                className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
                 aria-labelledby="work-option-3" aria-describedby="work-option-3"/>
               <label htmlFor="work-option-3" className="block ml-2 text-sm font-medium text-gray-900">
               Possibly
