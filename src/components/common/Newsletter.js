@@ -41,8 +41,8 @@ function Newsletter() {
 
   return (
     <div className="container h-screen flex justify-center mx-auto">
-      <div className="newsletter-background h-full w-full border-2 border-black flex md:justify-start sm:justify-center">
-        <form className="bg-white md:w-1/2 sm:w-full h-1/2 pb-10 mb-20 m-10 shadow flex flex-col" onSubmit={sendEmail}>
+      <div className="newsletter-background bg-auto lg:bg-left-top md:bg-center h-screen w-full shadow flex lg:justify-start md:justify-center">
+        <form className="bg-white lg:w-2/3 md:w-full sm:w-full h-1/2 pb-10 mb-20 m-10 shadow flex flex-col items-center" onSubmit={sendEmail}>
           {!isValidEmail && <div>
             <div className="border border-red-400 rounded-b bg-red-100 px-4 py-3 w-4/5 mt-5 mx-auto text-red-700">
               <p>Please enter a valid email address</p>
@@ -60,10 +60,10 @@ function Newsletter() {
             Email
           </label>
           <input
-            className="block shadow rounded border-2 h-8 w-1/2 py-2 px-3 mx-5 text-gray-700 leading-tight focus:outline-none focus:border-pawhub-yellow mb-5" id="to_name" type="text" name="to_name" placeholder="signup to our newsletter" onChange={handleChange}>
+            className="block shadow rounded border-2 h-8 w-2/3 py-2 px-3 mx-5 text-gray-700 leading-tight focus:outline-none focus:border-pawhub-yellow mb-5" id="to_name" type="text" name="to_name" placeholder="signup to our newsletter" onChange={handleChange}>
           </input>
-          <div className="h-14 flex justify-end">
-            <button className="rounded-md w-1/6 mr-32 bg-cyan-600 text-white font-bold" type="submit">
+          <div className="h-14 w-full flex justify-center lg:justify-end">
+            <button className="rounded-md w-auto lg:align-self-right mx-auto lg:mr-36 p-5 bg-cyan-600 text-white font-bold" type="submit">
               Signup
             </button>
           </div>

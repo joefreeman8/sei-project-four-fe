@@ -39,7 +39,7 @@ class Carousel extends Component {
               <img
                 src={slide.image}
                 alt="Dogs for adoption"
-                key={slide}
+                key={slide.image}
                 className={
                   index === this.state.currentSlide
                     ? 'block w-full h-auto object-cover'
