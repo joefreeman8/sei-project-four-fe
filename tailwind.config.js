@@ -6,7 +6,7 @@ module.exports = {
     extend: {
       backgroundImage: () => ({
         rehomingHeader: 'url(\'https://i.imgur.com/A7pPi5p.png?1\')',
-        donationHeader: 'url(\'https://i.imgur.com/b307Jjk.png?1\')',
+        donationHeader: 'url(\'https://i.imgur.com/b307Jjk.png?2\')',
         donationTile: 'url(\'https://i.imgur.com/EtJe78n.jpg\')',
         fundraiserBG: 'url(\'https://i.imgur.com/Bm9jKXC.jpg\')',
       }),

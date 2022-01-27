@@ -54,8 +54,10 @@ function RehomingForm() {
           
           <div className="mb-6">
 
-            <label htmlFor="text" className="block mb-2 text-sm font-medium text-black">1. Adopter Title<span className="text-red-600"> *</span></label>
-            <select id="text" className="bg-gray-50 border border-black text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow focus:border-pawhub-yellow block w-full p-2 ">
+            <label htmlFor="text" className="block mb-2 text-sm font-medium text-black">
+              1. Adopter Title<span className="text-red-600"> *</span></label>
+            <select id="text" 
+              className="bg-gray-50 border border-black text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow focus:border-pawhub-yellow block w-full p-2 ">
               <option>Miss</option>
               <option>Mrs</option>
               <option>Ms</option>
@@ -68,34 +70,41 @@ function RehomingForm() {
 
             <br></br>
 
-            <label htmlFor="text" className="block mb- text-sm font-medium text-gray-900">2. Adopter First Name<span className="text-red-600"> *</span></label>
-            <input type="text" id="text" className="bg-gray-50 border border-black text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow block w-full p-2 " placeholder="Enter your answer"
+            <label htmlFor="text" className="block mb- text-sm font-medium text-gray-900">
+              2. Adopter First Name<span className="text-red-600"> *</span></label>
+            <input type="text" id="text" 
+              className="bg-gray-50 border border-black text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow block w-full p-2" 
+              placeholder="Enter your answer" required/>
+
+            <br></br>
+
+            <label htmlFor="text" className="block mb-0 text-sm font-medium text-gray-900">
+              3. Adopter Surname<span className="text-red-600"> *</span></label>
+            <input type="text" id="text" 
+              className="bg-gray-50 border border-black text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow block w-full p-2" 
+              placeholder="Enter your answer" required/>
+
+            <br></br>
+
+            <label htmlFor="text" className="block mb-0 text-sm font-medium text-gray-900">
+              4. Address<span className="text-red-600"> *</span></label>
+            <input type="text" id="text" className="bg-gray-50 border border-black text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow block w-full p-2" placeholder="Enter your answer"
               required/>
 
             <br></br>
 
-            <label htmlFor="text" className="block mb-0 text-sm font-medium text-gray-900">3. Adopter Surname<span className="text-red-600"> *</span></label>
-            <input type="text" id="text" className="bg-gray-50 border border-black text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow block w-full p-2  dark" placeholder="Enter your answer"
-              required/>
-
-            <br></br>
-
-            <label htmlFor="text" className="block mb-0 text-sm font-medium text-gray-900">4. Address<span className="text-red-600"> *</span></label>
-            <input type="text" id="text" className="bg-gray-50 border border-black text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow block w-full p-2  dark" placeholder="Enter your answer"
-              required/>
-
-            <br></br>
-
-            <label htmlFor="text" className="block text-sm font-medium text-gray-900">5. Telephone Number<span className="text-red-600"> *</span></label>
+            <label htmlFor="text" className="block text-sm font-medium text-gray-900">
+              5. Telephone Number<span className="text-red-600"> *</span></label>
             <p className="text-xs italic text-black mb-0">Please enter one number with no spaces e.g. 02078370006</p>
-            <input type="text" id="text" className="bg-gray-50 border border-black text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow block w-full p-2  dark" placeholder="Enter your answer"
-              required/>
+            <input type="text" id="text" className="bg-gray-50 border border-black text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow block w-full p-2" 
+              placeholder="Enter your answer" required/>
 
             <br></br>
 
-            <label htmlFor="email" className="block mb-0 text-sm font-medium text-gray-900">6. Email<span className="text-red-600"> *</span></label>
-            <input type="email" id="email" className="bg-gray-50 border border-black text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow block w-full p-2  dark" placeholder="Enter your answer"
-              required/>
+            <label htmlFor="email" className="block mb-0 text-sm font-medium text-gray-900">
+              6. Email<span className="text-red-600"> *</span></label>
+            <input type="email" id="email" className="bg-gray-50 border border-black text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow block w-full p-2" 
+              placeholder="Enter your answer" required/>
 
             <br></br>
 
@@ -103,15 +112,19 @@ function RehomingForm() {
 
             <br></br>
 
-            <label htmlFor="text" className="block text-sm font-medium text-gray-900">7. Please state the name of dog you are applying for:<span className="text-red-600"> *</span></label>
-            <p className="text-xs italic text-black mb-0">Please use the same spelling as on our website. You can include the breed too if we have more than one dog with the same name. </p>
-            <input type="text" id="text" className="bg-gray-50 border border-black text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow block w-full p-2  dark" placeholder="Enter your answer"
-              required/>
+            <label htmlFor="text" className="block text-sm font-medium text-gray-900">
+              7. Please state the name of dog you are applying for:<span className="text-red-600"> *</span></label>
+            <p className="text-xs italic text-black mb-0">
+              Please use the same spelling as on our website. You can include the breed too if we have more than one dog with the same name. </p>
+            <input type="text" id="text" 
+              className="bg-gray-50 border border-black text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow block w-full p-2" 
+              placeholder="Enter your answer" required/>
 
             <br></br>
 
-            <label htmlFor="text" className="block mb-0 text-sm font-medium text-gray-900">8. Is this the only dog you have seen on our website that might be a suitable match for you?<span className="text-red-600"> *</span></label>
-            <select id="text" className="bg-gray-50 border border-black text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow block w-full p-2  dark">
+            <label htmlFor="text" className="block mb-0 text-sm font-medium text-gray-900">
+              8. Is this the only dog you have seen on our website that might be a suitable match for you?<span className="text-red-600"> *</span></label>
+            <select id="text" className="bg-gray-50 border border-black text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow block w-full p-2">
               <option>This is the only dog I&apos;ve applied for</option>
               <option>I&apos;ve applied for a couple of dogs</option>
               <option>I&apos;ve seen quite a few dogs on the website that could be suitable</option>
@@ -121,104 +134,135 @@ function RehomingForm() {
 
 
             <fieldset>
-              <label htmlFor="text" className="block mb-0 text-sm font-medium text-gray-900">9. Is your home a:<span className="text-red-600"> *</span></label>
+              <label htmlFor="text" className="block mb-0 text-sm font-medium text-black">
+                9. Is your home a:<span className="text-red-600"> *</span></label>
 
               <div className="flex items-center mb-0">
-                <input id="home-option-1" type="radio" name="homeType" value="House" className="w-4 h-4 border-black focus:ring-2 focus:ring-pawhub-yellow dark:focus:ring-pawhub-yellow dark:focus:bg-pawhub-yellow " aria-labelledby="home-option-1" aria-describedby="home-option-1"/>
+                <input id="home-option-1" type="radio" name="homeType" value="House" 
+                  className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow" 
+                  aria-labelledby="home-option-1" aria-describedby="home-option-1"/>
                 <label htmlFor="home-option-1" className="block ml-2 text-sm font-medium text-gray-900">
                 House
                 </label>
               </div>
 
               <div className="flex items-center mb-0">
-                <input id="home-option-2" type="radio" name="homeType" value="Bungalow" className="w-4 h-4 border-black focus:ring-2 focus:ring-pawhub-yellow dark:focus:ring-pawhub-yellow dark:focus:bg-pawhub-yellow " aria-labelledby="home-option-2" aria-describedby="home-option-2"/>
+                <input id="home-option-2" type="radio" name="homeType" value="Bungalow" 
+                  className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow" 
+                  aria-labelledby="home-option-2" aria-describedby="home-option-2"/>
                 <label htmlFor="home-option-2" className="block ml-2 text-sm font-medium text-gray-900">
                 Bungalow
                 </label>
               </div>
 
               <div className="flex items-center mb-0">
-                <input id="home-option-3" type="radio" name="homeType" value="Farm" className="w-4 h-4 border-black focus:ring-2 focus:ring-pawhub-yellow dark:focus:ring-pawhub-yellow " aria-labelledby="home-option-3" aria-describedby="home-option-3"/>
+                <input id="home-option-3" type="radio" name="homeType" value="Farm"
+                  className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow" 
+                  aria-labelledby="home-option-3" aria-describedby="home-option-3"/>
                 <label htmlFor="home-option-3" className="block ml-2 text-sm font-medium text-gray-900">
                 Farm
                 </label>
               </div>
 
               <div className="flex items-center mb-0">
-                <input id="home-option-4" type="radio" name="homeType" value="Caravan" className="w-4 h-4 border-black focus:ring-2 focus:ring:pawhub-yellow dark:focus-ring-pawhub-yellow " aria-labelledby="home-option-4" aria-describedby="home-option-4"/>
+                <input id="home-option-4" type="radio" name="homeType" value="Caravan" 
+                  className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow" 
+                  aria-labelledby="home-option-4" aria-describedby="home-option-4"/>
                 <label htmlFor="home-option-4" className="block ml-2 text-sm font-medium text-gray-900">
                 Caravan
                 </label>
               </div>
 
               <div className="flex items-center mb-0">
-                <input id="home-option-5" type="radio" name="homeType" value="Boat" className="w-4 h-4 border-black focus:ring-2 focus:ring:pawhub-yellow dark:focus-ring-pawhub-yellow " aria-labelledby="home-option-5" aria-describedby="home-option-5"/>
+                <input id="home-option-5" type="radio" name="homeType" value="Boat" 
+                  className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow" 
+                  aria-labelledby="home-option-5" aria-describedby="home-option-5"/>
                 <label htmlFor="home-option-5" className="block ml-2 text-sm font-medium text-gray-900">
                 Boat
                 </label>
               </div>
 
               <div className="flex items-center mb-0">
-                <input id="home-option-6" type="radio" name="homeType" value="Flat" className="w-4 h-4 border-black focus:ring-2 focus:ring:pawhub-yellow dark:focus-ring-pawhub-yellow " aria-labelledby="home-option-6" aria-describedby="home-option-6"/>
+                <input id="home-option-6" type="radio" name="homeType" value="Flat" 
+                  className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow" 
+                  aria-labelledby="home-option-6" aria-describedby="home-option-6"/>
                 <label htmlFor="home-option-6" className="block ml-2 text-sm font-medium text-gray-900">
                 First Floor or Above Flat
                 </label>
               </div>
 
               <div className="flex items-center mb-0">
-                <input id="home-option-7" type="radio" name="homeType" value="GFlat" className="w-4 h-4 border-black focus:ring-2 focus:ring:pawhub-yellow dark:focus-ring-pawhub-yellow " aria-labelledby="home-option-7" aria-describedby="home-option-7"/>
+                <input id="home-option-7" type="radio" name="homeType" value="GFlat" 
+                  className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow" 
+                  aria-labelledby="home-option-7" aria-describedby="home-option-7"/>
                 <label htmlFor="home-option-7" className="block ml-2 text-sm font-medium text-gray-900">
                 Ground Floor Flat
                 </label>
               </div>
 
               <div className="flex items-center mb-0">
-                <input id="home-option-8" type="radio" name="homeType" value="Other" className="w-4 h-4 border-black focus:ring-2 focus:ring:pawhub-yellow dark:focus-ring-pawhub-yellow " aria-labelledby="home-option-8" aria-describedby="home-option-8"/>
+                <input id="home-option-8" type="radio" name="homeType" value="Other" 
+                  className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow" 
+                  aria-labelledby="home-option-8" aria-describedby="home-option-8"/>
                 <label htmlFor="home-option-8" className="block ml-2 text-sm font-medium text-gray-900"></label>
-                <input type="text" id="text" className="bg-gray-50 border border-black text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow block w-full p-1.5  dark" placeholder="Other"
-                  required/>
+                <input type="text" id="text" 
+                  className="bg-gray-50 border border-black text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow block w-full p-1.5" 
+                  placeholder="Other" required/>
               </div>
 
               <br></br>
 
-              <label htmlFor="text" className="block mb-0 text-sm font-medium text-gray-900">10. Is your home:<span className="text-red-600"> *</span></label>
+              <label htmlFor="text" className="block mb-0 text-sm font-medium text-gray-900">
+                10. Is your home:<span className="text-red-600"> *</span></label>
 
               <div className="flex items-center mb-0">
-                <input id="home-option1" type="radio" name="homeStatus" value="Owned" className="w-4 h-4 border-black focus:ring-2 focus:ring-pawhub-yellow dark:focus:ring-pawhub-yellow dark:focus:bg-pawhub-yellow " aria-labelledby="home-own" aria-describedby="home-own"/>
+                <input id="home-own" type="radio" name="homeStatus" value="Owned" 
+                  className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow" 
+                  aria-labelledby="home-own" aria-describedby="home-own"/>
                 <label htmlFor="home-own" className="block ml-2 text-sm font-medium text-gray-900">
                 Owned
                 </label>
               </div>
 
               <div className="flex items-center mb-0">
-                <input id="home-option2" type="radio" name="homeStatus" value="Rented" className="w-4 h-4 border-black focus:ring-2 focus:ring-pawhub-yellow dark:focus:ring-pawhub-yellow dark:focus:bg-pawhub-yellow " aria-labelledby="home-rent" aria-describedby="home-rent"/>
+                <input id="home-rent" type="radio" name="homeStatus" value="Rented" 
+                  className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow" 
+                  aria-labelledby="home-rent" aria-describedby="home-rent"/>
                 <label htmlFor="home-rent" className="block ml-2 text-sm font-medium text-gray-900">
                 Rented
                 </label>
               </div>
-              <span className="text-xs italic text-black">Rentals - Please note, proof of landlord&apos;s permission required before reserving a dog (We&apos;ll explain how when we call you!)</span>
+              <span className="text-xs italic text-black">
+                Rentals - Please note, proof of landlord&apos;s permission required before reserving a dog (We&apos;ll explain how when we call you!)</span>
             </fieldset>
 
             <br></br>
 
-            <label htmlFor="text" className="block mb-0 text-sm font-medium text-gray-900">11. Do you have a garden?<span className="text-red-600"> *</span></label>
+            <label htmlFor="text" className="block mb-0 text-sm font-medium text-gray-900">
+              11. Do you have a garden?<span className="text-red-600"> *</span></label>
 
             <div className="flex items-center mb-0">
-              <input id="garden-option-1" type="radio" name="garden" value="private" className="w-4 h-4 border-black focus:ring-2 focus:ring-pawhub-yellow dark:focus:ring-pawhub-yellow dark:focus:bg-pawhub-yellow " aria-labelledby="garden-option-1" aria-describedby="garden-option-1"/>
+              <input id="garden-option-1" type="radio" name="garden" value="private" 
+                className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
+                aria-labelledby="garden-option-1" aria-describedby="garden-option-1"/>
               <label htmlFor="garden-option-1" className="block ml-2 text-sm font-medium text-gray-900">
             Yes, private garden
               </label>
             </div>
 
             <div className="flex items-center mb-0">
-              <input id="garden-option-2" type="radio" name="garden" value="communal" className="w-4 h-4 border-black focus:ring-2 focus:ring-pawhub-yellow dark:focus:ring-pawhub-yellow dark:focus:bg-pawhub-yellow " aria-labelledby="garden-option-2" aria-describedby="garden-option-2"/>
+              <input id="garden-option-2" type="radio" name="garden" value="communal" 
+                className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
+                aria-labelledby="garden-option-2" aria-describedby="garden-option-2"/>
               <label htmlFor="garden-option-2" className="block ml-2 text-sm font-medium text-gray-900">
             Yes, communal garden
               </label>
             </div>
 
             <div className="flex items-center mb-0">
-              <input id="garden-option-3" type="radio" name="garden" value="None" className="w-4 h-4 border-black focus:ring-2 focus:ring-pawhub-yellow dark:focus:ring-pawhub-yellow dark:focus:bg-pawhub-yellow " aria-labelledby="garden-option-3" aria-describedby="garden-option-3"/>
+              <input id="garden-option-3" type="radio" name="garden" value="None" 
+                className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
+                aria-labelledby="garden-option-3" aria-describedby="garden-option-3"/>
               <label htmlFor="garden-option-3" className="block ml-2 text-sm font-medium text-gray-900">
             No
               </label>
@@ -226,17 +270,21 @@ function RehomingForm() {
 
             <br></br>
 
-            <label htmlFor="text" className="block mb-0 text-sm font-medium text-gray-900">12. If Yes, is the garden secure from escape?</label>
-
+            <label htmlFor="text" className="block mb-0 text-sm font-medium text-gray-900">
+              12. If Yes, is the garden secure from escape?</label>
             <div className="flex items-center mb-0">
-              <input id="garden-secure-1" type="radio" name="gardenS" value="secure" className="w-4 h-4 border-black focus:ring-2 focus:ring-pawhub-yellow dark:focus:ring-pawhub-yellow dark:focus:bg-pawhub-yellow " aria-labelledby="garden-option-1" aria-describedby="garden-secure-1"/>
+              <input id="garden-secure-1" type="radio" name="gardenS" value="secure" 
+                className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
+                aria-labelledby="garden-option-1" aria-describedby="garden-secure-1"/>
               <label htmlFor="garden-secure-1" className="block ml-2 text-sm font-medium text-gray-900">
               Yes
               </label>
             </div>
 
             <div className="flex items-center mb-0">
-              <input id="garden-secure-2" type="radio" name="gardenS" value="notsecure" className="w-4 h-4 border-black focus:ring-2 focus:ring-pawhub-yellow dark:focus:ring-pawhub-yellow dark:focus:bg-pawhub-yellow " aria-labelledby="garden-option-2" aria-describedby="garden-secure-2"/>
+              <input id="garden-secure-2" type="radio" name="gardenS" value="notsecure" 
+                className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
+                aria-labelledby="garden-option-2" aria-describedby="garden-secure-2"/>
               <label htmlFor="garden-secure-2" className="block ml-2 text-sm font-medium text-gray-900">
               No
               </label>
@@ -244,24 +292,31 @@ function RehomingForm() {
 
             <br></br>
 
-            <label htmlFor="text" className="block mb-0 text-sm font-medium text-gray-900">13. Is your home:<span className="text-red-600"> *</span></label>
+            <label htmlFor="text" className="block mb-0 text-sm font-medium text-gray-900">
+              13. Is your home:<span className="text-red-600"> *</span></label>
 
             <div className="flex items-center mb-0">
-              <input id="home-traffic-1" type="radio" name="home-traffic" value="busy" className="w-4 h-4 border-black focus:ring-2 focus:ring-pawhub-yellow dark:focus:ring-pawhub-yellow dark:focus:bg-pawhub-yellow " aria-labelledby="home-traffic-1" aria-describedby="home-traffic1"/>
+              <input id="home-traffic-1" type="radio" name="home-traffic" value="busy" 
+                className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
+                aria-labelledby="home-traffic-1" aria-describedby="home-traffic1"/>
               <label htmlFor="home-traffic-1" className="block ml-2 text-sm font-medium text-gray-900">
               Busy - By this we mean a good amount of people coming in and out, maybe loud children or a general &apos;always on the go&apos; kind of atmosphere
               </label>
             </div>
 
             <div className="flex items-center mb-0">
-              <input id="home-traffic-2" type="radio" name="home-traffic" value="moderate" className="w-4 h-4 border-black focus:ring-2 focus:ring-pawhub-yellow dark:focus:ring-pawhub-yellow dark:focus:bg-pawhub-yellow " aria-labelledby="home-traffic-2" aria-describedby="home-traffic-2"/>
+              <input id="home-traffic-2" type="radio" name="home-traffic" value="moderate" 
+                className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
+                aria-labelledby="home-traffic-2" aria-describedby="home-traffic-2"/>
               <label htmlFor="home-traffic-2" className="block ml-2 text-sm font-medium text-gray-900">
               Moderate
               </label>
             </div>
 
             <div className="flex items-center mb-0">
-              <input id="home-traffic-3" type="radio" name="home-traffic" value="quiet" className="w-4 h-4 border-black focus:ring-2 focus:ring-pawhub-yellow dark:focus:ring-pawhub-yellow dark:focus:bg-pawhub-yellow " aria-labelledby="home-traffic-3" aria-describedby="home-traffic-3"/>
+              <input id="home-traffic-3" type="radio" name="home-traffic" value="quiet" 
+                className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
+                aria-labelledby="home-traffic-3" aria-describedby="home-traffic-3"/>
               <label htmlFor="home-traffic-3" className="block ml-2 text-sm font-medium text-gray-900">
               Quiet - By this we mean very few people coming and going, maybe quiet children, quite a calm, peaceful atmosphere
               </label>
@@ -269,64 +324,72 @@ function RehomingForm() {
 
             <br></br>
 
-            <label htmlFor="text" className="block text-sm font-medium text-gray-900">14. How many adults live in your home?<span className="text-red-600"> *</span></label>
+            <label htmlFor="text" className="block text-sm font-medium text-gray-900">
+              14. How many adults live in your home?<span className="text-red-600"> *</span></label>
             <p className="text-xs italic text-black mb-0">Please include any young adults of 17 years old in this number</p>
-            <input type="text" id="text" className="bg-gray-50 border border-black text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow block w-full p-2  dark" placeholder="The value must be a number"
+            <input type="text" id="text" className="bg-gray-50 border border-black text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow block w-full p-2" placeholder="The value must be a number"
               required/>
 
             <br></br>
 
             <label htmlFor="text" className="block text-sm font-medium text-gray-900">15. How many children under 5 years old?<span className="text-red-600"> *</span></label>
             <p className="text-xs italic text-black mb-0">If you are planning on expanding your family in the future, please discuss this with a member of staff so we can find the best possible dog to match your circumstances and offer you the best advice on how to introduce your new family members. The last thing you want to do is take home a dog that doesn&apos;t like children! </p>
-            <input type="text" id="text" className="bg-gray-50 border border-black text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow block w-full p-2  dark" placeholder="The value must be a number"
+            <input type="text" id="text" className="bg-gray-50 border border-black text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow block w-full p-2" placeholder="The value must be a number"
               required/>
 
             <br></br>
 
             <label htmlFor="text" className="block text-sm font-medium text-gray-900">16. How many children 5-11 years?<span className="text-red-600"> *</span></label>
             <p className="text-xs italic text-black mb-0">We classify these children as primary school age on our website </p>
-            <input type="text" id="text" className="bg-gray-50 border border-black text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow block w-full p-2  dark" placeholder="The value must be a number"
+            <input type="text" id="text" className="bg-gray-50 border border-black text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow block w-full p-2" placeholder="The value must be a number"
               required/>
 
             <br></br>
 
             <label htmlFor="text" className="block text-sm font-medium text-gray-900 ">17. How many children 12-16 years?<span className="text-red-600"> *</span></label>
             <p className="text-xs italic text-black mb-0">We classify these children as secondary school age on our website </p>
-            <input type="text" id="text" className="bg-gray-50 border border-black text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow block w-full p-2  dark" placeholder="The value must be a number"
+            <input type="text" id="text" className="bg-gray-50 border border-black text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow block w-full p-2" placeholder="The value must be a number"
               required/>
 
             <br></br>
 
             <fieldset>
-              <label htmlFor="text" className="block mb-0 text-sm font-medium text-gray-900">18. Do you have visitors to your home?<span className="text-red-600"> *</span></label>
+              <label htmlFor="text" className="block mb-0 text-sm font-medium text-gray-900">
+                18. Do you have visitors to your home?<span className="text-red-600"> *</span></label>
               <p className="text-xs italic text-black mb-0">select all that apply</p>
               <div className="flex items-center mb-0">
-                <input id="visitors-1" aria-describedby="visitors-1" type="checkbox" className="w-4 h-4 text-pawhub-yellow bg-gray-100 rounded border-black focus:border-pawhub-yellow focus:ring-2 "/>
+                <input id="visitors-1" aria-describedby="visitors-1" type="checkbox" 
+                  className="w-4 h-4 text-pawhub-yellow bg-gray-100 rounded border-black focus:border-pawhub-yellow focus:ring-2 "/>
                 <label htmlFor="visitors-1" className="ml-3 text-sm font-medium text-gray-900">Adult visit most days</label>
               </div>
 
               <div className="flex items-center mb-0">
-                <input id="visitors-2" aria-describedby="visitors-2" type="checkbox" className="w-4 h-4 text-pawhub-yellow bg-gray-100 rounded border-black focus:border-pawhub-yellow focus:ring-2 "/>
+                <input id="visitors-2" aria-describedby="visitors-2" type="checkbox" 
+                  className="w-4 h-4 text-pawhub-yellow bg-gray-100 rounded border-black focus:border-pawhub-yellow focus:ring-2 "/>
                 <label htmlFor="visitors-2" className="ml-3 text-sm font-medium text-gray-900">Occasional adult visits</label>
               </div>
 
               <div className="flex items-center mb-0">
-                <input id="visitors-3" aria-describedby="visitors-3" type="checkbox" className="w-4 h-4 text-pawhub-yellow bg-gray-100 rounded border-black focus:border-pawhub-yellow focus:ring-2 "/>
+                <input id="visitors-3" aria-describedby="visitors-3" type="checkbox" 
+                  className="w-4 h-4 text-pawhub-yellow bg-gray-100 rounded border-black focus:border-pawhub-yellow focus:ring-2 "/>
                 <label htmlFor="visitors-3" className="ml-3 text-sm font-medium text-gray-900">Children under 11 years old visit most days</label>
               </div>
 
               <div className="flex items-center mb-0">
-                <input id="visitors-4" aria-describedby="visitors-4" type="checkbox" className="w-4 h-4 text-pawhub-yellow bg-gray-100 rounded border-black focus:border-pawhub-yellow focus:ring-2 "/>
+                <input id="visitors-4" aria-describedby="visitors-4" type="checkbox" 
+                  className="w-4 h-4 text-pawhub-yellow bg-gray-100 rounded border-black focus:border-pawhub-yellow focus:ring-2 "/>
                 <label htmlFor="visitors-4" className="ml-3 text-sm font-medium text-gray-900">Occasional visits from children under 11 years old</label>
               </div>
 
               <div className="flex items-center mb-0">
-                <input id="visitors-5" aria-describedby="visitors-5" type="checkbox" className="w-4 h-4 text-pawhub-yellow bg-gray-100 rounded border-black focus:border-pawhub-yellow focus:ring-2 "/>
+                <input id="visitors-5" aria-describedby="visitors-5" type="checkbox" 
+                  className="w-4 h-4 text-pawhub-yellow bg-gray-100 rounded border-black focus:border-pawhub-yellow focus:ring-2 "/>
                 <label htmlFor="visitors-5" className="ml-3 text-sm font-medium text-gray-900">Occasional visits from children aged 12-16 years old</label>
               </div>
 
               <div className="flex items-center mb-0">
-                <input id="visitors-6" aria-describedby="visitors-6" type="checkbox" className="w-4 h-4 text-pawhub-yellow bg-gray-100 rounded border-black focus:border-pawhub-yellow focus:ring-2 "/>
+                <input id="visitors-6" aria-describedby="visitors-6" type="checkbox" 
+                  className="w-4 h-4 text-pawhub-yellow bg-gray-100 rounded border-black focus:border-pawhub-yellow focus:ring-2 "/>
                 <label htmlFor="visitors-6" className="ml-3 text-sm font-medium text-gray-900">No Children visit</label>
               </div>
             </fieldset>
@@ -334,58 +397,71 @@ function RehomingForm() {
             <br></br>
 
             <fieldset>
-              <label htmlFor="text" className="block mb-0 text-sm font-medium text-gray-900">19. Do you have other pets?<span className="text-red-600"> *</span></label>
+              <label htmlFor="text" className="block mb-0 text-sm font-medium text-gray-900">
+                19. Do you have other pets?<span className="text-red-600"> *</span></label>
               <div className="flex items-center mb-0">
-                <input id="checkbox-1" aria-describedby="checkbox-1" type="checkbox" className="w-4 h-4 text-pawhub-yellow bg-gray-100 rounded border-black focus:border-pawhub-yellow focus:ring-2 "/>
+                <input id="checkbox-1" aria-describedby="checkbox-1" type="checkbox" 
+                  lassName="w-4 h-4 text-pawhub-yellow bg-gray-100 rounded border-black focus:border-pawhub-yellow focus:ring-2 "/>
                 <label htmlFor="checkbox-1" className="ml-3 text-sm font-medium text-gray-900">None</label>
               </div>
 
               <div className="flex items-center mb-0">
-                <input id="checkbox-2" aria-describedby="checkbox-2" type="checkbox" className="w-4 h-4 text-pawhub-yellow bg-gray-100 rounded border-black focus:border-pawhub-yellow focus:ring-2 "/>
+                <input id="checkbox-2" aria-describedby="checkbox-2" type="checkbox" 
+                  className="w-4 h-4 text-pawhub-yellow bg-gray-100 rounded border-black focus:border-pawhub-yellow focus:ring-2 "/>
                 <label htmlFor="checkbox-2" className="ml-3 text-sm font-medium text-gray-900">Dogs</label>
               </div>
 
               <div className="flex items-center mb-0">
-                <input id="checkbox-3" aria-describedby="checkbox-3" type="checkbox" className="w-4 h-4 text-pawhub-yellow bg-gray-100 rounded border-black focus:border-pawhub-yellow focus:ring-2 "/>
+                <input id="checkbox-3" aria-describedby="checkbox-3" type="checkbox" 
+                  className="w-4 h-4 text-pawhub-yellow bg-gray-100 rounded border-black focus:border-pawhub-yellow focus:ring-2 "/>
                 <label htmlFor="checkbox-3" className="ml-3 text-sm font-medium text-gray-900">Cats</label>
               </div>
 
               <div className="flex items-center mb-0">
-                <input id="checkbox-4" aria-describedby="checkbox-4" type="checkbox" className="w-4 h-4 text-pawhub-yellow bg-gray-100 rounded border-black focus:border-pawhub-yellow focus:ring-2 "/>
+                <input id="checkbox-4" aria-describedby="checkbox-4" type="checkbox" 
+                  className="w-4 h-4 text-pawhub-yellow bg-gray-100 rounded border-black focus:border-pawhub-yellow focus:ring-2 "/>
                 <label htmlFor="checkbox-4" className="ml-3 text-sm font-medium text-gray-900">Horses</label>
               </div>
 
               <div className="flex items-center mb-0">
-                <input id="checkbox-5" aria-describedby="checkbox-5" type="checkbox" className="w-4 h-4 text-pawhub-yellow bg-gray-100 rounded border-black focus:border-pawhub-yellow focus:ring-2 "/>
+                <input id="checkbox-5" aria-describedby="checkbox-5" type="checkbox" 
+                  className="w-4 h-4 text-pawhub-yellow bg-gray-100 rounded border-black focus:border-pawhub-yellow focus:ring-2 "/>
                 <label htmlFor="checkbox-5" className="ml-3 text-sm font-medium text-gray-900">Small Furries</label>
               </div>
 
               <div className="flex items-center mb-0">
-                <input id="checkbox-6" aria-describedby="checkbox-6" type="checkbox" className="w-4 h-4 text-pawhub-yellow bg-gray-100 rounded border-black focus:border-pawhub-yellow focus:ring-2 "/>
+                <input id="checkbox-6" aria-describedby="checkbox-6" type="checkbox"
+                  className="w-4 h-4 text-pawhub-yellow bg-gray-100 rounded border-black focus:border-pawhub-yellow focus:ring-2 "/>
                 <label htmlFor="checkbox-6" className="ml-3 text-sm font-medium text-gray-900">Birds</label>
               </div>
 
               <div className="flex items-center mb-0">
-                <input id="checkbox-7" aria-describedby="checkbox-7" type="checkbox" className="w-4 h-4 text-pawhub-yellow bg-gray-100 rounded border-black focus:border-pawhub-yellow focus:ring-2 "/>
+                <input id="checkbox-7" aria-describedby="checkbox-7" type="checkbox" 
+                  className="w-4 h-4 text-pawhub-yellow bg-gray-100 rounded border-black focus:border-pawhub-yellow focus:ring-2 "/>
                 <label htmlFor="checkbox-7" className="ml-3 text-sm font-medium text-gray-900"></label>
-                <input type="text" id="text" className="bg-gray-50 border border-black text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow block w-full p-1.5  dark" placeholder="Other"
+                <input type="text" id="text" className="bg-gray-50 border border-black text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow block w-full p-1.5" placeholder="Other"
                   required/>
               </div>
             </fieldset>
 
             <br></br>
 
-            <label htmlFor="text" className="block mb-0 text-sm font-medium text-gray-900">20. Are you planning a holiday or moving home in the next three months?<span className="text-red-600"> *</span></label>
+            <label htmlFor="text" className="block mb-0 text-sm font-medium text-gray-900">
+              20. Are you planning a holiday or moving home in the next three months?<span className="text-red-600"> *</span></label>
 
             <div className="flex items-center mb-0">
-              <input id="away-option-1" type="radio" name="away-option" value="yes" className="w-4 h-4 border-black focus:ring-2 focus:ring-pawhub-yellow dark:focus:ring-pawhub-yellow dark:focus:bg-pawhub-yellow " aria-labelledby="away-option-1" aria-describedby="away-option-1"/>
+              <input id="away-option-1" type="radio" name="away-option" value="yes" 
+                className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
+                aria-labelledby="away-option-1" aria-describedby="away-option-1"/>
               <label htmlFor="away-option-1" className="block ml-2 text-sm font-medium text-gray-900">
               Yes
               </label>
             </div>
 
             <div className="flex items-center mb-0">
-              <input id="away-option-2" type="radio" name="away-option" value="no" className="w-4 h-4 border-black focus:ring-2 focus:ring-pawhub-yellow dark:focus:ring-pawhub-yellow dark:focus:bg-pawhub-yellow " aria-labelledby="away-option-2" aria-describedby="away-option-2"/>
+              <input id="away-option-2" type="radio" name="away-option" value="no" 
+                className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
+                aria-labelledby="away-option-2" aria-describedby="away-option-2"/>
               <label htmlFor="away-option-2" className="block ml-2 text-sm font-medium text-gray-900">
               No
               </label>
@@ -397,18 +473,23 @@ function RehomingForm() {
 
             <br></br>
 
-            <label htmlFor="text" className="block mb-0 text-sm font-medium text-gray-900">21. Are you able to take on a dog that has extra veterinary costs due to a medical condition?<span className="text-red-600"> *</span></label>
+            <label htmlFor="text" className="block mb-0 text-sm font-medium text-gray-900">
+              21. Are you able to take on a dog that has extra veterinary costs due to a medical condition?<span className="text-red-600"> *</span></label>
             <p className="text-black text-xs italic">We&apos;ll explain any medical conditions and be upfront about the costs you could expect before you adopt</p>
 
             <div className="flex items-center mb-0">
-              <input id="vet-costs-option-1" type="radio" name="vetCosts" value="Yes" className="w-4 h-4 border-black focus:ring-2 focus:ring-pawhub-yellow dark:focus:ring-pawhub-yellow dark:focus:bg-pawhub-yellow " aria-labelledby="vet-costs-option-1" aria-describedby="vet-costs-option-1"/>
+              <input id="vet-costs-option-1" type="radio" name="vetCosts" value="Yes" 
+                className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
+                aria-labelledby="vet-costs-option-1" aria-describedby="vet-costs-option-1"/>
               <label htmlFor="vet-costs-option-1" className="block ml-2 text-sm font-medium text-gray-900">
               Yes
               </label>
             </div>
 
             <div className="flex items-center mb-0">
-              <input id="vet-costs-option-2" type="radio" name="vetCosts" value="No" className="w-4 h-4 border-black focus:ring-2 focus:ring-pawhub-yellow dark:focus:ring-pawhub-yellow dark:focus:bg-pawhub-yellow " aria-labelledby="vet-costs-option-2" aria-describedby="vet-costs-option-2"/>
+              <input id="vet-costs-option-2" type="radio" name="vetCosts" value="No" 
+                className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
+                aria-labelledby="vet-costs-option-2" aria-describedby="vet-costs-option-2"/>
               <label htmlFor="vet-costs-option-2" className="block ml-2 text-sm font-medium text-gray-900">
               No
               </label>
@@ -417,27 +498,32 @@ function RehomingForm() {
             <br></br>
 
             <label htmlFor="text" className="block mb-2 text-sm font-medium text-gray-900">22. How many hours would your dog be left alone? (Day Time)<span className="text-red-600"> *</span></label>
-            <input type="text" id="text" className="bg-gray-50 border border-black text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow block w-full p-2  dark" placeholder="The value must be a number" required/>
+            <input type="text" id="text" className="bg-gray-50 border border-black text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow block w-full p-2" placeholder="The value must be a number" required/>
 
             <br></br>
 
             <label htmlFor="text" className="block mb-2 text-sm font-medium text-gray-900">23. How many hours would your dog be left alone? (NIght Time)<span className="text-red-600"> *</span></label>
-            <input type="text" id="text" className="bg-gray-50 border border-black text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow block w-full p-2  dark" placeholder="The value must be a number" required/>
+            <input type="text" id="text" className="bg-gray-50 border border-black text-gray-900 text-sm rounded-lg focus:border-pawhub-yellow block w-full p-2" placeholder="The value must be a number" required/>
 
             <br></br>
 
-            <label htmlFor="text" className="block mb-0 text-sm font-medium text-gray-900">24. Would this be continuous or would there be breaks?<span className="text-red-600"> *</span></label>
+            <label htmlFor="text" className="block mb-0 text-sm font-medium text-gray-900">
+              24. Would this be continuous or would there be breaks?<span className="text-red-600"> *</span></label>
             <p className="text-black text-xs italic mb-0">We&apos;ll explain any medical conditions and be upfront about the costs you could expect before you adopt</p>
 
             <div className="flex items-center mb-0">
-              <input id="alone-option-1" type="radio" name="alone-time" value="Yes" className="w-4 h-4 border-black focus:ring-2 focus:ring-pawhub-yellow dark:focus:ring-pawhub-yellow dark:focus:bg-pawhub-yellow " aria-labelledby="alone-option-1" aria-describedby="alone-option-1"/>
+              <input id="alone-option-1" type="radio" name="alone-time" value="Yes" 
+                className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
+                aria-labelledby="alone-option-1" aria-describedby="alone-option-1"/>
               <label htmlFor="alone-option-1" className="block ml-2 text-sm font-medium text-gray-900">
               Continuous
               </label>
             </div>
 
             <div className="flex items-center mb-0">
-              <input id="alone-option-2" type="radio" name="alone-time" value="Yes" className="w-4 h-4 border-black focus:ring-2 focus:ring-pawhub-yellow dark:focus:ring-pawhub-yellow dark:focus:bg-pawhub-yellow " aria-labelledby="alone-option-2" aria-describedby="alone-option-2"/>
+              <input id="alone-option-2" type="radio" name="alone-time" value="Yes" 
+                className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
+                aria-labelledby="alone-option-2" aria-describedby="alone-option-2"/>
               <label htmlFor="alone-option-2" className="block ml-2 text-sm font-medium text-gray-900">
               Breaks
               </label>
@@ -445,24 +531,31 @@ function RehomingForm() {
 
             <br></br>
 
-            <label htmlFor="text" className="block mb-0 text-sm font-medium text-gray-900">25. Are you planning on taking your dog to work with you?<span className="text-red-600"> *</span></label>
+            <label htmlFor="text" className="block mb-0 text-sm font-medium text-gray-900">
+              25. Are you planning on taking your dog to work with you?<span className="text-red-600"> *</span></label>
 
             <div className="flex items-center mb-0">
-              <input id="work-option-1" type="radio" name="work" value="Yes" className="w-4 h-4 border-black focus:ring-2 focus:ring-pawhub-yellow dark:focus:ring-pawhub-yellow dark:focus:bg-pawhub-yellow " aria-labelledby="work-option-1" aria-describedby="work-option-1"/>
+              <input id="work-option-1" type="radio" name="work" value="Yes" 
+                className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
+                aria-labelledby="work-option-1" aria-describedby="work-option-1"/>
               <label htmlFor="work-option-1" className="block ml-2 text-sm font-medium text-gray-900">
               Yes
               </label>
             </div>
 
             <div className="flex items-center mb-0">
-              <input id="work-option-2" type="radio" name="work" value="No" className="w-4 h-4 border-black focus:ring-2 focus:ring-pawhub-yellow dark:focus:ring-pawhub-yellow dark:focus:bg-pawhub-yellow " aria-labelledby="alone-option-2" aria-describedby="work-option-2"/>
+              <input id="work-option-2" type="radio" name="work" value="No" 
+                className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow" 
+                aria-labelledby="work-option-2" aria-describedby="work-option-2"/>
               <label htmlFor="work-option-2" className="block ml-2 text-sm font-medium text-gray-900">
               No
               </label>
             </div>
 
             <div className="flex items-center mb-0">
-              <input id="work-option-3" type="radio" name="work" value="Possibly" className="w-4 h-4 border-black focus:ring-2 focus:ring-pawhub-yellow dark:focus:ring-pawhub-yellow dark:focus:bg-pawhub-yellow " aria-labelledby="alone-option-3" aria-describedby="work-option-3"/>
+              <input id="work-option-3" type="radio" name="work" value="Possibly" 
+                className="w-4 h-4 focus:outline-none transition duration-400 focus:ring-2 focus:ring-pawhub-yellow accent-pawhub-yellow"
+                aria-labelledby="work-option-3" aria-describedby="work-option-3"/>
               <label htmlFor="work-option-3" className="block ml-2 text-sm font-medium text-gray-900">
               Possibly
               </label>
@@ -554,7 +647,7 @@ function RehomingForm() {
           </div>
         
           <div className="flex items-start mb-6"></div>
-          <button type="submit" className="text-black bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-pawhub-yellow font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-pawhub-yellow dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>          
+          <button type="submit" className="text-black bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-pawhub-yellow font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Submit</button>          
         </form>
       </div>
 
