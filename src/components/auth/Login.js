@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import { loginUser } from '../../lib/api'
 import { setToken } from '../../lib/auth'
 
-
 const initialState = {
   username: '',
   password: '',
@@ -48,28 +47,26 @@ function Login() {
           </div>
         </div>}
         <label className="block mx-5 mb-2 text-pawhub-grey text-sm font-bold" htmlFor="username">
-          Username
+            Username
         </label>
         <input
           className="block shadow rounded border-2 h-8 w-1/2 py-2 px-3 mx-5 text-gray-700 leading-tight focus:outline-none focus:border-pawhub-yellow mb-5" id="username" type="text" name="username" placeholder="Enter your username" onChange={handleChange}>
         </input>
         <label className="block mx-5 mb-2 text-pawhub-grey text-sm font-bold mb-2" htmlFor="password">
-          Password
+            Password
         </label>
-        <input className="block shadow rounded border-2 h-8 w-1/2 py-2 px-3 mx-5 text-gray-700 leading-tight focus:outline-none focus:border-pawhub-yellow mb-5" id="passowrd" type="password" name="password" placeholder="password" onChange={handleChange}>
+        <input className="block shadow rounded border-2 h-8 w-1/2 py-2 px-3 mx-5 text-gray-700 leading-tight focus:outline-none focus:border-pawhub-yellow mb-5" id="passowrd" type="password" name="password" placeholder="Password" onChange={handleChange}>
         </input>
         <div className="h-14 flex justify-end">
           <button className="rounded-md w-1/6 mr-32 bg-cyan-600 text-white font-bold" type="submit">
-            Login 
+              Login 
           </button>
         </div>
         <div className="mx-5 text-blue-700">
           <Link to="/register" >Signup</Link>
         </div>
       </form>
-
     </div>
-
   )
 }
 

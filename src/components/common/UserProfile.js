@@ -5,13 +5,15 @@ import DogCard from '../dogs/DogCard'
 import dogFigure from '../../assets/dog-figure.png'
 import backgroundImage from '../../assets/user-background.png'
 import { useNavigate } from 'react-router-dom'
-
+import Error from './Error'
 
 
 function UserProfile() {
   const [user, setUser] = React.useState(null)
   const userId = getUserId()
   const navigate = useNavigate()
+  const [isError, setIsError] = React.useState(false)
+  const [error, setError] = React.useState(null)
 
   React.useEffect(() => {
     const getData = async () => {
@@ -19,7 +21,10 @@ function UserProfile() {
         const res = await getSingleUser(userId)
         setUser(res.data)
       } catch (err) {
-        console.log(err)
+        console.log(err.response.status)
+
+        setError(err.response.status.toString())
+        setIsError(true)
       }
     }
     getData()
@@ -33,7 +38,9 @@ function UserProfile() {
         removeToken()
         navigate('/')
       } catch (err) {
-        console.log(err)
+        console.log(err.response)
+        setError(err.response.status.toString())
+        setIsError(true)
       }
     }
   }
@@ -41,7 +48,12 @@ function UserProfile() {
 
   return (
     <>
-      {user &&
+      {isError && 
+      <div className="bg-black h-screen">
+        <Error error={error} />
+      </div>
+      }
+      {user && !isError &&
       <>
         <div className="text-center background-image-container">
           <h1 className="image-text kessel-font" id="title">Profile</h1>

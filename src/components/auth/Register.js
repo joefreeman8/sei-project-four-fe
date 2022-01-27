@@ -44,9 +44,7 @@ function Register() {
       setToken(res.data.token)
       navigate('/')
     } catch (err) {
-      console.log(err.response.data)
       setFormErrors(err.response.data)
-
     }
   }
 
@@ -76,7 +74,7 @@ function Register() {
             onChange={handleChange}>
           </input>
           {formErrors.password && <p className="text-red-500">{formErrors.password}</p>}
-          <input className="shadow border-2 h-16 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-pawhub-yellow mb-5" id="passowrd" type="password" name="password" placeholder="password"
+          <input className="shadow border-2 h-16 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-pawhub-yellow mb-5" id="passowrd" type="password" name="password" placeholder="Password"
             onChange={handleChange}>
           </input>
           {formErrors.detail && <p className="text-red-500">{formErrors.detail}</p>}
