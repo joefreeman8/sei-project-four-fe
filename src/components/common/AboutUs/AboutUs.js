@@ -11,9 +11,9 @@ function AboutUs() {
         <p className="image-text text-lg" id="aboutus-tagline">
           Our mission is to bring about the day when all dogs can enjoy a happy
           life, free from the threat of unnecessary destruction.</p>
-        <img src={twopawbanner} className="background-image" />
+        <img src={twopawbanner} className="background-image mt-5" />
       </div>
-      <div className="aboutus-banner flex justify-center shadow-xl w-full px-5 py-10 mt-20 bg-pawhub-purple">
+      <div className="aboutus-banner flex justify-center shadow-xl w-full px-5 py-10 mt-10 bg-pawhub-purple">
         <Link to="/aboutus/whoweare">
           <button className="aboutus-button mx-20 shadow-xl bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-5 px-10 m-3 rounded">
             Who We Are

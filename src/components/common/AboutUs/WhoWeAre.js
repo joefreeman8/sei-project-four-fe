@@ -9,7 +9,7 @@ function WhoWeAre() {
         <h1 className="image-text kessel-font" id="title">Who We Are</h1>
         <p className="image-text text-lg" id="tagline">
           Meet the team...</p>
-        <img src={twopawbanner} className="background-image w-full" />
+        <img src={twopawbanner} className="background-image w-full mt-5" />
       </div>
       <div className="bg-pawhub-purple mt-2">
         <p className="text-white text-base py-4 pl-10"><a href="/" className="hover:underline">Home</a> &gt; <a href="/aboutus" className="hover:underline">About Us</a> &gt; Who We Are</p>
