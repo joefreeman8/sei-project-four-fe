@@ -26,6 +26,8 @@ class Carousel extends Component {
     this.setState({ currentSlide: newSlide })
   }
 
+
+
   render() {
     return (
       <div className="mt-8">
@@ -36,10 +38,11 @@ class Carousel extends Component {
 
           {CarouselHomeData.map((slide, index) => {
             return (
+              
               <img
                 src={slide.image}
                 alt="Dogs for adoption"
-                key={slide}
+                key={slide.image}
                 className={
                   index === this.state.currentSlide
                     ? 'block w-full h-auto object-cover'

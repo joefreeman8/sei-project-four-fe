@@ -27,23 +27,24 @@ function DivCarousel(props) {
         <><AiOutlineLeft onClick={handleSlideChange} className='absolute left-0 text-3xl inset-y-1/2 text-pawhub-purple cursor-pointer' data-id='left' /><AiOutlineRight onClick={handleSlideChange} className='absolute right-0 text-3xl inset-y-1/2 text-pawhub-purple cursor-pointer' data-id='right' /></>
         }
         {array.map((slide, index) => {
+          console.log(slide)
           return (
             <div
               key={slide.title}
               className={
                 index === currentSlide
-                  ? 'block h-1/2 w-full object-contain bg-paw-hubyellow flex flex-row justify-around'
+                  ? 'block h-1/2 w-full object-contain bg-paw-hubyellow flex flex-row justify-center'
                   : 'hidden'
               }
             >
-              <div className='flex flex-col w-1/2'>
+              <div className='flex flex-col justify-center items-center w-2/3 pt-16'>
                 <h6 className='text-2xl font-bold mb-4'>{slide.title}</h6>
                 <p>{slide.content}</p>
                 <button className="block mx-auto bg-pawhub-grey hover:bg-white rounded-md text-white hover:text-black hover:border-2 hover: border-pawhub-grey h-auto p-5 w-auto mt-10">
-                  {slide.buttonText}
+                  <a href={slide.link}>{slide.buttonText}</a>
                 </button>
               </div>
-              <div className='flex flex-col item-center justify-center w-auto'>
+              <div className='flex flex-col item-center justify-center items-center w-auto'>
                 <img src={slide.png}></img>
               </div>
             </div>
