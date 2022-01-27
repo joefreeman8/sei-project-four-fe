@@ -5,11 +5,10 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: () => ({
-        rehomingHeader: 'url(\'https://i.imgur.com/A7pPi5p.png\')',
-        donationHeader: 'url(\'https://i.imgur.com/QEhZ5UG.png\')',
-        fundraiserBG: 'url(\'https://i.imgur.com/Bm9jKXC.jpg\')',
+        rehomingHeader: 'url(\'https://i.imgur.com/A7pPi5p.png?1\')',
+        donationHeader: 'url(\'https://i.imgur.com/b307Jjk.png?1\')',
         donationTile: 'url(\'https://i.imgur.com/EtJe78n.jpg\')',
-
+        fundraiserBG: 'url(\'https://i.imgur.com/Bm9jKXC.jpg\')',
       }),
 
       colors: {

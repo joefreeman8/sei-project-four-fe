@@ -3,8 +3,12 @@ function RehomingForm() {
 
     <div className="container min-w-full bg-pawhub-yellow">
 
-      <section className="w-2/8 lg:w-full h-screen h-1/6 bg-rehomingHeader bg-cover bg-center -mt-40"></section>
-          
+      <div className="bg-pawhub-purple mt-2 px-24"> 
+        <p className="text-white text-base py-4 pl-10"><a href="/" className="hover:underline">Home</a> &gt; <a href="/dogs" className="hover:underline">Rehoming</a> &gt; How Rehoming Works</p>
+      </div>
+
+      <section className="w-2/8 lg:w-full h-screen h-1/6 bg-rehomingHeader bg-cover bg-center -mt-0"></section>
+
       {/* card starts here */}
       <div className="rehoming-questionnaire pb-0">
         <div className="-mt-60 bg-white shadow-xl rounded w-5/6 mx-auto px-5 p-5">

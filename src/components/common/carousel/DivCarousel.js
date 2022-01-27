@@ -27,6 +27,7 @@ function DivCarousel(props) {
         <><AiOutlineLeft onClick={handleSlideChange} className='absolute left-0 text-3xl inset-y-1/2 text-pawhub-purple cursor-pointer' data-id='left' /><AiOutlineRight onClick={handleSlideChange} className='absolute right-0 text-3xl inset-y-1/2 text-pawhub-purple cursor-pointer' data-id='right' /></>
         }
         {array.map((slide, index) => {
+          console.log(slide)
           return (
             <div
               key={slide.title}

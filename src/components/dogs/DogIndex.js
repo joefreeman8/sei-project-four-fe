@@ -13,7 +13,6 @@ function DogIndex() {
   const [breed, setBreed] = React.useState([])
   const [age, setAge] = React.useState([])
   const [isError, setIsError] = React.useState(false)
-  const isLoading = !dogs && !isError
   const [error, setError] = React.useState(null)
 
 
