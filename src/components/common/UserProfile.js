@@ -69,10 +69,10 @@ function UserProfile() {
           <p className="text-white text-base py-4 pl-10"><a href="/" className="hover:underline">Home</a> &gt; {user.username}</p>
         </div>
         <div className="bg-pawhub-yellow flex items-center p-5 flex-col h-full">
-          <div className="bg-white w-5/6 m-3 p-6 xl:w-2/3">
-            <h3 className="text-3xl m-1 gooddog-font">Favorites</h3>
+          <div className="bg-white w-5/6 m-3 p-6 xl:w-2/3 shadow-xl">
+            <h3 className="text-3xl m-1 gooddog-font">Your Favourites</h3>
             {user.favoritedDogs.length > 0 ?
-              <div className="flex justify-around grid grid-cols-2 xs:grid-cols-1 md:grid-cols-4 lg:grid-cols-4">
+              <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
                 {user.favoritedDogs.map(dog => {
                   return <DogCard key={dog.dog.id} {...dog.dog} />
                 })}
@@ -86,9 +86,9 @@ function UserProfile() {
               </>
             }
           </div>
-          <div className="bg-white w-5/6 m-3 p-6 xl:w-2/3">
+          <div className="bg-white w-5/6 m-3 p-6 xl:w-2/3 shadow-xl">
             <p className="px-4 pt-4">Found your pefect match?</p>
-            <button className="bg-red-800 hover:bg-red-800/50 text-white font-bold py-2 px-4 m-3 rounded" onClick={handleDelete}>Delete your account</button>
+            <button className="bg-red-800 hover:bg-red-800/50 text-white font-bold py-2 px-4 m-3 rounded shadow-xl" onClick={handleDelete}>Delete your account</button>
           </div>
         </div>
       </>
