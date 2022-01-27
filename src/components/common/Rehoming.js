@@ -3,7 +3,7 @@
 function Rehoming() {
   return (
     <div className="bg-donationTile bg-repeat h-full pb-10">
-      <div className="bg-pawhub-purple mt-2 px-24"> 
+      <div className="bg-pawhub-purple"> 
         <p className="text-white text-base py-4 pl-10"><a href="/" className="hover:underline">Home</a> &gt; <a href="/dogs" className="hover:underline">Rehoming</a> &gt; How Rehoming Works</p>
       </div>
 
@@ -56,10 +56,10 @@ function Rehoming() {
 
         <div className="flex justify-around pt-5 flex-col lg:flex-row md:flex-row sm:flex-row">
           <a href="/rehomingform" className="flex justify-around xs:items-center">
-            <button className="bg-pawhub-purple hover:bg-pawhub-purple/50 text-white font-bold py-2 px-4 m-3 rounded">Rehoming Questionnaire</button>
+            <button className="shadow-xl bg-pawhub-purple hover:bg-pawhub-purple/50 text-white font-bold py-2 px-4 m-3 rounded">Rehoming Questionnaire</button>
           </a>
           <a href="/dogs" className="flex justify-around xs:items-center">
-            <button className="bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded">Browse available dogs</button>
+            <button className="shadow-xl bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded">Browse available dogs</button>
           </a>
         </div>
 
