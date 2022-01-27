@@ -2,11 +2,22 @@ import React from 'react'
 
 function Donation() {
   const [donationValue, setDonationValue] = React.useState('£')
+  const [hasDonated, setHasDonated] = React.useState(false)
 
   const handleClick = (e) => {
     e.preventDefault()
-    setDonationValue('£' + e.target.value.substring(1))
-    console.log(donationValue)
+    if (e.target.value.charAt(0) === '£') {
+      setDonationValue('£' + e.target.value.substring(1))
+    } else {
+      setDonationValue('£' + e.target.value)
+    }
+  }
+
+  const handleDonation = (e) => {
+    e.preventDefault()
+    if (parseFloat(donationValue.substring(1))) {
+      setHasDonated(true)
+    }
   }
 
   return (
@@ -31,45 +42,52 @@ function Donation() {
             <p className="text-base">We really appreciate your support (and we know the dogs do too!)</p>
 
             <div className="donate-form">
-              <form className="bg-pawhub-stone mt-5 px-5 pt-10 pb-5">
-                <p className="text kessel-font text-center">How much would you like to donate?</p>  
+              {!hasDonated ?
+                <>
+                  <form className="bg-pawhub-stone mt-5 px-5 pt-10 pb-5">
+                    <p className="text kessel-font text-center">How much would you like to donate?</p>  
 
-                <div className ="text-center donate-buttons flex items-stretch">
+                    <div className ="text-center donate-buttons flex items-stretch">
 
-                  <button className="shadow-xl mx-auto font-black bg-white hover:bg-pawhub-grey rounded-md text-black hover:text-white h-12 w-1/3 mx-3 mt-5" value='£30' onClick={handleClick}>
+                      <button className="shadow-xl mx-auto font-black bg-white hover:bg-pawhub-grey rounded-md text-black hover:text-white h-12 w-1/3 mx-3 mt-5" value='£30' onClick={handleClick}>
                 £30
-                  </button>
+                      </button>
 
-                  <button className="shadow-xl mx-auto font-black bg-white hover:bg-pawhub-grey rounded-md text-black hover:text-white h-12 w-1/3 mx-3 mt-5" value='£50' onClick={handleClick}>
+                      <button className="shadow-xl mx-auto font-black bg-white hover:bg-pawhub-grey rounded-md text-black hover:text-white h-12 w-1/3 mx-3 mt-5" value='£50' onClick={handleClick}>
                 £50
-                  </button> 
+                      </button> 
 
-                  <button className="shadow-xl mx-auto font-black bg-white hover:bg-pawhub-grey rounded-md text-black hover:text-white h-12 w-1/3 mx-3 mt-5" value='£100' onClick={handleClick}>
+                      <button className="shadow-xl mx-auto font-black bg-white hover:bg-pawhub-grey rounded-md text-black hover:text-white h-12 w-1/3 mx-3 mt-5" value='£100' onClick={handleClick}>
                 £100
+                      </button> 
+
+                    </div>
+                    <p className="slant-text text-center text kessel-font mt-3 -rotate-6 ">Most Popular</p>
+
+                    <p className="text-base mt-4 mb-2"><span className="text-lg font-bold">£30</span> could go toward giving our dogs the vaccinations they need to stay healthy</p>
+
+                    <p className="text-base mt-2 mb-2"><span className="text-lg font-bold">£50</span> could provide a special heat pad to keep our dogs warm during surgery</p>
+
+                    <p className="text-base mt-2 mb-2"><span className="text-lg font-bold">£100</span> pays for all of the care a dog needs in their first week with us</p>
+
+                    <label htmlFor="text" className="block mt-5 mb-2 ml-3 text-base text-center">Or enter your own amount below...</label>
+                    <input type="text" id="text" className="shadow border-2 text-gray-700 text-sm rounded-lg block w-full py-3  text-center leading-tight focus:outline-none focus:border-pawhub-yellow placeholder-gray-400" placeholder="£100" value={donationValue} onChange={handleClick}
+                      required/>
+
+                    {/* <input className="shadow border-2 h-16 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-pawhub-yellow mb-5"  */}
+
+                  </form>
+                  <button className="content-center mx-auto font-black bg-pawhub-yellow hover:bg-pawhub-grey rounded-md text-black hover:text-white hover:border-2 hover:border-white h-12 w-full mr-3 mt-5 shadow-xl" type="submit" onClick={handleDonation}>
+                Donate  
                   </button> 
+                </>
+                :
+                <div className="bg-pawhub-stone mt-5 p-10">
+                  <h1 className="kessel-font">Thank you for your donation of {donationValue}!</h1>
+                </div>  
 
-                </div>
-                <p className="slant-text text-center text kessel-font mt-3 -rotate-6 ">Most Popular</p>
+              }
 
-                <p className="text-base mt-4 mb-2"><span className="text-lg font-bold">£30</span> could go toward giving our dogs the vaccinations they need to stay healthy</p>
-
-                <p className="text-base mt-2 mb-2"><span className="text-lg font-bold">£50</span> could provide a special heat pad to keep our dogs warm during surgery</p>
-
-                <p className="text-base mt-2 mb-2"><span className="text-lg font-bold">£100</span> pays for all of the care a dog needs in their first week with us</p>
-
-
-
-                <label htmlFor="text" className="block mt-5 mb-2 ml-3 text-base text-center">Or enter your own amount below...</label>
-                <input type="text" id="text" className="shadow border-2 text-gray-700 text-sm rounded-lg block w-full py-3  text-center leading-tight focus:outline-none focus:border-pawhub-yellow placeholder-gray-400" placeholder="£100" value={donationValue} onChange={handleClick}
-                  required/>
-
-                {/* <input className="shadow border-2 h-16 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-pawhub-yellow mb-5"  */}
-
-
-              </form>
-              <button className="content-center mx-auto font-black bg-pawhub-yellow hover:bg-pawhub-grey rounded-md text-black hover:text-white hover:border-2 hover:border-white h-12 w-full mr-3 mt-5 shadow-xl" type="submit">
-                Next  
-              </button> 
             </div>
     
           </div>
