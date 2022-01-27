@@ -13,6 +13,9 @@ import baby from '../../assets/baby.png'
 import emptyHeart from '../../assets/empty-heart.png'
 import fullHeart from '../../assets/full-heart.png'
 import dogFigure from '../../assets/dog-figure.png'
+import dogPushing from '../../assets/dog-pushing.png'
+import backgroundImage from '../../assets/show-background.png'
+
 
 
 function DogShow() {
@@ -149,7 +152,14 @@ function DogShow() {
       }
       {dog && !isError &&
     <>
-      <div className="text-center pt-10">
+      <div className="background-image-container">
+        <h1 className="image-text kessel-font" id="title">Rehoming</h1>
+        <p className="image-text text-lg" id="tagline">A dog is for life, not just for Christmas
+          <sup>®</sup>
+        </p>
+        <img src={backgroundImage} className="background-image"/>
+      </div>
+      <div className="text-center">
         <h3 className="text-xl m-1">
           <strong>Your rehoming journey starts here</strong>
         </h3>
@@ -221,8 +231,21 @@ function DogShow() {
 
 
         </div>
+
         <div className="bg-white w-5/6 m-3 p-6 xl:w-2/3">
           <h1 className="gooddog-font text-3xl">Questions</h1>
+          {dog.questions.length === 0 && 
+                <h1 className="m-1"><strong>No one has asked any questions about {dog.name} yet</strong></h1>
+          }
+          {dog.questions.length === 0 && !isAuth && 
+                <>
+                  <h1 className="m-1"><strong>Why not make an account and ask one?</strong></h1>
+                  <a href="/register">
+                    <button className="bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded">Register an account<img src={dogPushing} className="w-6 h-6 inline" /></button>
+                  </a>
+                </>
+
+          }
           {dog.questions.length > 0 &&
                 <h1 className="m-1"><strong>Questions asked about {dog.name}</strong></h1>
           }
@@ -245,11 +268,13 @@ function DogShow() {
             }
           </div>
           {isAuth &&
-                <><label><strong>Can&apos;t see the answer to your question? Ask something about {dog.name}?</strong></label><form onSubmit={handleSubmit}>
-                  <input type="text" className="border focus:border-pawhub-yellow w-2/3 p-1 m-2 rounded" placeholder="Type your question here" onChange={handleChange} value={question}></input>
-                  <br />
-                  <button type="submit" className="bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded">Submit Question</button>
-                </form></>
+                <>
+                  <hr />
+                  <label className="m-1"><strong>Can&apos;t see the answer to your question? Ask something about {dog.name}?</strong></label><form onSubmit={handleSubmit}>
+                    <input type="text" className="border-2 focus:outline-none focus:border-pawhub-yellow w-2/3 p-1 m-2 rounded" placeholder="Type your question here" onChange={handleChange} value={question}></input>
+                    <br />
+                    <button type="submit" className="bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded">Submit Question</button>
+                  </form></>
           }
               
         </div>

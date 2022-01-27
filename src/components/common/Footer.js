@@ -29,12 +29,12 @@ function Footer () {
         <p className="text-sm text-center">This page was made for Project 4 and is part of the General Assembly SEI-60 London course. We hope all of the dogs on this page find their forever home through the Dog&apos;s Trust</p>
       </div>
 
-      <div className="flex flex-col items-center w-1/3 mx-5"><h6 className="gooddog-font">Links</h6>
-        <ul className="sm:text-center">
-          <li className="text-sm hover:text-pawhub-yellow"><a href="/dogs">See all dogs</a></li>
-          <li className="text-sm hover:text-pawhub-yellow"><a href='/donation'>Donate</a></li>
-          <li className="text-sm hover:text-pawhub-yellow"><a href='/register'>Register</a></li>
-          <li className="text-sm hover:text-pawhub-yellow"><a href='/login'>Login</a></li>
+      <div className="flex flex-col items-center w-2/3 mx-5 md:w-1/3"><h6 className="gooddog-font">Links</h6>
+        <ul className="sm:text-center flex flex-row md:flex-col">
+          <li className="text-sm hover:text-pawhub-yellow px-1 md:px-0"><a href="/dogs">See all dogs</a></li>
+          <li className="text-sm hover:text-pawhub-yellow px-1 md:px-0"><a href='/donation'>Donate</a></li>
+          <li className="text-sm hover:text-pawhub-yellow px-1 md:px-0"><a href='/register'>Register</a></li>
+          <li className="text-sm hover:text-pawhub-yellow px-1 md:px-0"><a href='/login'>Login</a></li>
         </ul>
       </div>
 
