@@ -5,6 +5,7 @@ import DogCard from './DogCard'
 import Select from 'react-select'
 import { Link } from 'react-router-dom'
 import Error from '../common/Error'
+import Loading from '../common/Loading'
 
 function DogIndex() {
   const [dogs, setDogs] = React.useState([])
@@ -14,6 +15,8 @@ function DogIndex() {
   const [age, setAge] = React.useState([])
   const [isError, setIsError] = React.useState(false)
   const [error, setError] = React.useState(null)
+  const isLoading = !dogs && !isError
+
 
 
   const liveWithSelectOptions = [
@@ -108,18 +111,19 @@ function DogIndex() {
   
   return (
     <>
-      <div className="background-image-container">
-        <h1 className="image-text kessel-font" id="title">Rehoming</h1>
-        <p className="image-text text-lg" id="tagline">A dog is for life, not just for Christmas
-          <sup>®</sup>
-        </p>
-        <img src={backgroundImage} className="background-image"/>
-      </div>
+      {isLoading && <Loading />}
       {isError && 
           <Error error={error} />
       }
       {dogs && !isError && (
         <>
+          <div className="background-image-container">
+            <h1 className="image-text kessel-font" id="title">Rehoming</h1>
+            <p className="image-text text-lg" id="tagline">A dog is for life, not just for Christmas
+              <sup>®</sup>
+            </p>
+            <img src={backgroundImage} className="background-image"/>
+          </div>
           <div>
 
             <div>
