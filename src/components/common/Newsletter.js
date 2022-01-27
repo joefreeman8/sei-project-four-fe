@@ -50,9 +50,12 @@ function Newsletter() {
         </div>
       }
       {!isError &&
-        <div className="container h-screen flex justify-center mx-auto">
-          <div className="newsletter-background bg-auto lg:bg-left-top md:bg-center h-screen w-full shadow flex lg:justify-start md:justify-center">
-            <form className="bg-white lg:w-2/3 md:w-full sm:w-full h-1/2 pb-10 mb-20 m-10 shadow flex flex-col items-center" onSubmit={sendEmail}>
+        <div className="container h-screen min-w-full flex-col justify-center">
+          <div className="bg-pawhub-purple">
+            <p className="text-white text-base py-4 pl-10"><a href="/" className="hover:underline">Home</a> &gt; Newsletter</p>
+          </div>
+          <div className="newsletter-background bg-auto bg-center h-screen w-screen shadow flex justify-center items-center">
+            <form className="bg-white lg:w-2/3 sm:w-7/8 h-5/8 p-5 shadow flex flex-col items-center rounded" onSubmit={sendEmail}>
               {!isValidEmail && <div>
                 <div className="border border-red-400 rounded-b bg-red-100 px-4 py-3 w-4/5 mt-5 mx-auto text-red-700">
                   <p>Please enter a valid email address</p>
@@ -63,18 +66,18 @@ function Newsletter() {
                   <p>Thank you for signing up! please check your inbox</p>
                 </div>
               </div>}
-              <h2 className="text-2xl p-5">Signup to our newsletter</h2>
+              <h2 className="text-3xl font-semibold pt-4 pb-4">Sign up to our newsletter</h2>
               <hr className="mx-5 mb-5"></hr>
-              <p className="m-5">Enter your email address below to receive regular pupdates from our homeless hounds</p>
-              <label className="block mx-5 mb-2 text-pawhub-grey text-sm font-bold" htmlFor="to_name">
+              <p className="m-5 pb-4">Enter your email address below to receive regular pupdates from our homeless hounds</p>
+              <label className="block mx-5 mb-2 text-pawhub-grey text-xl font-bold" htmlFor="to_name">
                 Email
               </label>
               <input
-                className="block shadow rounded border-2 h-8 w-2/3 py-2 px-3 mx-5 text-gray-700 leading-tight focus:outline-none focus:border-pawhub-yellow mb-5" id="to_name" type="text" name="to_name" placeholder="signup to our newsletter" onChange={handleChange}>
+                className="block shadow rounded border-2 h-16 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-pawhub-yellow mb-5" id="to_name" type="text" name="to_name" placeholder="Sign up to our newsletter" onChange={handleChange}>
               </input>
-              <div className="h-14 w-4/5 flex justify-center lg:justify-end">
-                <button className="rounded-md w-auto h-16 lg:align-self-right mx-auto p-5 bg-cyan-600 text-white font-bold" type="submit">
-                  Signup
+              <div className="h-14 w-full flex justify-center lg:justify-end my-5">
+                <button className="rounded-md w-full h-16 lg:align-self-right mx-auto bg-pawhub-yellow text-pawhub-grey font-bold hover:bg-pawhub-grey hover:text-white" type="submit">
+                  Sign up
                 </button>
               </div>
             </form>
