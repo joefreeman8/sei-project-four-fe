@@ -26,6 +26,8 @@ class Carousel extends Component {
     this.setState({ currentSlide: newSlide })
   }
 
+
+
   render() {
     return (
       <div className="mt-8">
@@ -36,6 +38,7 @@ class Carousel extends Component {
 
           {CarouselHomeData.map((slide, index) => {
             return (
+              
               <img
                 src={slide.image}
                 alt="Dogs for adoption"
