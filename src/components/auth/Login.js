@@ -34,11 +34,14 @@ function Login() {
   }
 
   return (
-    <div className="container bg-stone-300/50 h-full w-full mx-auto flex flex-col justify-center items-start">
-      <div className="mx-auto">
+    <div className="container bg-donationTile bg-repeat-round h-full min-w-full flex flex-col justify-center items-start">
+      {/* <div className="mx-auto">
         <h1 className="text-6xl text-pawhub-grey font-bold align-center p-8">Login</h1>
+      </div> */}
+      <div className="login-background h-96 w-full bg-center bg-cover">
+
       </div>
-      <form className="bg-white w-2/3 h-1/2 pb-10 mb-20 mx-auto flex flex-col" onSubmit={handleSubmit}>
+      <form className="bg-white w-2/3 h-1/2 pb-10 mb-20 ml-16 -mt-32 flex flex-col shadow" onSubmit={handleSubmit}>
         <h2 className="text-2xl p-5">Login</h2>
         <hr className="mx-5 mb-5"></hr>
         {isError && <div>

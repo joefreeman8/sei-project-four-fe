@@ -14,7 +14,7 @@ function Newsletter() {
   init('user_dTYhId9PfnHHtjIv8laXU')
 
   const handleChange = (e) => {
-    setIsValidEmail(false)
+    setIsValidEmail(true)
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
@@ -72,8 +72,8 @@ function Newsletter() {
               <input
                 className="block shadow rounded border-2 h-8 w-2/3 py-2 px-3 mx-5 text-gray-700 leading-tight focus:outline-none focus:border-pawhub-yellow mb-5" id="to_name" type="text" name="to_name" placeholder="signup to our newsletter" onChange={handleChange}>
               </input>
-              <div className="h-14 w-full flex justify-center lg:justify-end">
-                <button className="rounded-md w-auto lg:align-self-right mx-auto lg:mr-36 p-5 bg-cyan-600 text-white font-bold" type="submit">
+              <div className="h-14 w-4/5 flex justify-center lg:justify-end">
+                <button className="rounded-md w-auto h-16 lg:align-self-right mx-auto p-5 bg-cyan-600 text-white font-bold" type="submit">
                   Signup
                 </button>
               </div>

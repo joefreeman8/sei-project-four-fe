@@ -219,3 +219,11 @@ justify-content: left;
     background-image: url('https://i.imgur.com/selrng8.jpg');
     height: 100%;
   }
+
+  .register-background {
+    background-image: url('https://i.imgur.com/rRP9lbR.jpg?1');
+  }
+
+  .login-background {
+    background-image: url('https://i.imgur.com/tdmm0eW.jpg')
+    }
