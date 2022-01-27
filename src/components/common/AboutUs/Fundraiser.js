@@ -10,7 +10,7 @@ function Fundraiser() {
         <p className="image-text text-lg mt-10" id="fundraiser-tagline">
           Thanks to your generosity we can help save these wonderful animals.
         </p>
-        <img src={twopawbanner} className="about-paw-banner background-image" />
+        <img src={twopawbanner} className="about-paw-banner background-image mt-5" />
       </div>
       <div className="bg-pawhub-purple mt-2">
         <p className="text-white text-base py-4 pl-10"><a href="/" className="hover:underline">Home</a> &gt; <a href="/aboutus" className="hover:underline">About Us</a> {'>'} Fundraiser</p>
