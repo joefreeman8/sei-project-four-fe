@@ -44,7 +44,11 @@ function WhoWeAre() {
             </div>
             <div className=" pl-2 columns-1 w-4/6">
               <h1 className="whoweare-name gooddog-font text-5xl">Joe Freeman</h1>
-              <p className="whoweare-p">Hi! I&apos;m Joe, a dog loving, travel obsessed, newly graduated software engineer.</p>
+              <p className="whoweare-p">
+                Hi! I&apos;m Joe, a dog loving, travel obsessed, newly graduated software engineer.
+                After taking the first baby steps with General Assembly this is the work & the team and I have managed to create with Django, React and the framework Tailwind. 
+                I am super excited to continue learning in this vast sea of numbers, letters and pretty websites. I hope you enjoy the app & the dogs on show!
+              </p>
 
             </div>
           </div>
