@@ -110,7 +110,6 @@ function DogShow() {
     const nowSeconds = Date.parse(now)
     const dogAdded = new Date(dog.dateAdded)
     const dogAddedDate = Date.parse(dogAdded)
-    console.log(nowSeconds - dogAddedDate)
     if (nowSeconds - dogAddedDate < 2068935000) {
       setIsNew(true)
     }
@@ -165,8 +164,8 @@ function DogShow() {
         </h3>
         <p className="text-sm">Find out how rehoming from us works and how to get started finding your perfect match.</p>
         <Link to="/rehoming">
-          <button className="bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded">
-            How rehoming works &gt;</button>
+          <button className="bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded shadow-xl">
+            How rehoming works</button>
         </Link>
       </div>
       {createImageArray(dog)}
@@ -174,8 +173,8 @@ function DogShow() {
         <p className="text-white text-base py-4 pl-10"><a href="/" className="hover:underline">Home</a> &gt; <a href="/dogs" className="hover:underline">Rehome</a> &gt; {dog.name}</p>
       </div>
       <div className="bg-pawhub-yellow flex justify-center items-center p-5 flex-col">
-        <div className="bg-white w-5/6 m-3 p-6 xl:w-2/3">
-          <div className="flex justify-between lg:justify-around">
+        <div className="bg-white w-5/6 m-3 p-6 shadow-xl xl:w-2/3">
+          <div className={`flex justify-between ${isAuth && 'lg:justify-around'}`}>
             <div>
               <h1 className="gooddog-font text-5xl">{dog.name}</h1>
               <p className="text-base">I&apos;m looking for a home...</p>
@@ -222,17 +221,17 @@ function DogShow() {
           </div>
           <div className="flex justify-around pt-5 flex-col lg:flex-row md:flex-row sm:flex-row">
             <a href="/rehomingform" className="flex justify-around xs:items-center">
-              <button className="bg-pawhub-purple hover:bg-pawhub-purple/50 text-white font-bold py-2 px-4 m-3 rounded">Rehoming me starts here</button>
+              <button className="bg-pawhub-purple hover:bg-pawhub-purple/50 text-white font-bold py-2 px-4 m-3 rounded shadow-xl">Rehoming me starts here</button>
             </a>
             <a href="/donation" className="flex justify-around xs:items-center">
-              <button className="bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded"><img src={dogFigure} className="w-6 h-6 inline" /> Donate to Dogs Trust</button>
+              <button className="bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded shadow-xl"><img src={dogFigure} className="w-6 h-6 inline" /> Donate to Dogs Trust</button>
             </a>
           </div>
 
 
         </div>
 
-        <div className="bg-white w-5/6 m-3 p-6 xl:w-2/3">
+        <div className="bg-white w-5/6 m-3 p-6 shadow-xl xl:w-2/3">
           <h1 className="gooddog-font text-3xl">Questions</h1>
           {dog.questions.length === 0 && 
                 <h1 className="m-1"><strong>No one has asked any questions about {dog.name} yet</strong></h1>
@@ -241,7 +240,7 @@ function DogShow() {
                 <>
                   <h1 className="m-1"><strong>Why not make an account and ask one?</strong></h1>
                   <a href="/register">
-                    <button className="bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded">Register an account<img src={dogPushing} className="w-6 h-6 inline" /></button>
+                    <button className="bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded shadow-xl">Register an account<img src={dogPushing} className="w-6 h-6 inline" /></button>
                   </a>
                 </>
 
@@ -273,7 +272,7 @@ function DogShow() {
                   <label className="m-1"><strong>Can&apos;t see the answer to your question? Ask something about {dog.name}?</strong></label><form onSubmit={handleSubmit}>
                     <input type="text" className="border-2 focus:outline-none focus:border-pawhub-yellow w-2/3 p-1 m-2 rounded" placeholder="Type your question here" onChange={handleChange} value={question}></input>
                     <br />
-                    <button type="submit" className="bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded">Submit Question</button>
+                    <button type="submit" className="bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded shadow-xl">Submit Question</button>
                   </form></>
           }
               

@@ -8,7 +8,7 @@ import Error from '../common/Error'
 import Loading from '../common/Loading'
 
 function DogIndex() {
-  const [dogs, setDogs] = React.useState([])
+  const [dogs, setDogs] = React.useState(null)
 
   const [liveWith, setLiveWith] = React.useState([])
   const [breed, setBreed] = React.useState([])
@@ -16,6 +16,8 @@ function DogIndex() {
   const [isError, setIsError] = React.useState(false)
   const [error, setError] = React.useState(null)
   const isLoading = !dogs && !isError
+
+  const [dogsToShow, setDogsToShow] = React.useState([])
 
 
 
@@ -73,6 +75,7 @@ function DogIndex() {
       try {
         const { data } = await getAllDogs()
         setDogs(data)
+        setDogsToShow(data.slice(0, 12))
       } catch (err) {
         setError(err.response.status.toString())
         setIsError(true)
@@ -80,8 +83,6 @@ function DogIndex() {
     }
     getData()
   }, [])
-
-  console.log(error)
 
   const handleLiveWithSelect = (selected) => {
     const selectedLiveWith = selected.map(item => item.value)
@@ -106,8 +107,12 @@ function DogIndex() {
         (dog.canLiveWithCats && liveWith.includes('Cats') || !liveWith.includes('Cats')) &&
         (dog.canLiveWithKids && liveWith.includes('Children') || !liveWith.includes('Children'))
     })
-
   }
+
+  const handleLoadMore = () => {
+    setDogsToShow(dogsToShow.concat(dogs.slice(dogsToShow.length, dogsToShow.length + 12)))
+  }
+  
   
   return (
     <>
@@ -133,8 +138,8 @@ function DogIndex() {
                 </h3>
                 <p className="text-sm">Find out how rehoming from us works and how to get started finding your perfect match.</p>
                 <Link to="/rehoming">
-                  <button className="bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded">
-    How rehoming works &gt;</button>
+                  <button className="bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-4 m-3 rounded shadow-xl">
+    How rehoming works</button>
                 </Link>
               </div>
             </div>
@@ -185,11 +190,18 @@ function DogIndex() {
               </div>
             </div>
           </div>
-          <div className="grid flex grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4 bg-pawhub-yellow pt-10 pb-10 justify-around">
-            {filteredDogs(dogs).map(dog => 
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4 bg-pawhub-yellow pt-10">
+            {filteredDogs(dogsToShow).map(dog => 
               <DogCard key={dog.id} {...dog} />
             )}
           </div>
+          {dogsToShow.length !== dogs.length &&
+          <div className="bg-pawhub-yellow flex justify-center pb-5">
+            <button className="shadow-xl bg-pawhub-purple text-white font-bold py-2 px-8 m-3 rounded hover:bg-white hover:text-pawhub-grey hover:border-2 hover:border-pawhub-grey border-2 border-pawhub-purple" onClick={handleLoadMore}>Load More Dogs</button>
+
+          </div>
+
+          }
         </>
 
       )
