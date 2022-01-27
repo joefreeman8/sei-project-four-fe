@@ -15,8 +15,11 @@ function Fundraiser() {
       <div className="bg-pawhub-purple mt-2">
         <p className="text-white text-base py-4 pl-10"><a href="/" className="hover:underline">Home</a> &gt; <a href="/aboutus" className="hover:underline">About Us</a> {'>'} Fundraiser</p>
       </div>
-      <div className="fundraiser-background h-full w-full bg-center bg-cover p-56">
-        <div className="bg-white/50 h-1/6 w-full flex flex-col justify-center items-center p-12 mt-56 -ml-48 -mb-16 rounded z-2">
+
+      <div className="fundraiser-background h-full w-full bg-center bg-cover py-48 px-10">
+    
+        <div className="-bt-48 bg-white/50 h-2/6 w-full flex flex-col justify-center items-center p-12 mt-56 ml-1/5 mr-1/5 -mb-16 rounded z-2 sm:ml-1/5 mr-1/5">
+
           <h3 className="text-5xl kessel-font text-center">New Rescue Centre</h3>
           <p className="mt-5 text-center">
             Here at PawHub HQ we are really seeing the effects of the corona-puppy-purchase surge,
@@ -29,10 +32,11 @@ function Fundraiser() {
             <li className="list-disc">Sponsored Dog Walk (lots)</li>
           </ul>
           <p className="mt-10 text-align-middle">
-            If you want to help raise money in collaboration PawHub please email the team at directly at <a className="underline" href="#">fundraiser@pawhub.dog</a> and we will be ready to assist.
+            If you want to help raise money in collaboration with PawHub please email the team at directly at <a className="underline" href="#">teampawhubsei@gmail.com</a> and we will be ready to assist.
           </p>
         </div>
       </div>
+      
     </>
   )
 }

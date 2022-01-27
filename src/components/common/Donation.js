@@ -5,13 +5,13 @@ function Donation() {
 
     <div className="container min-w-full">
 
-      <div className="bg-pawhub-purple mt-2 px-24"> 
+      <div className="bg-pawhub-purple"> 
         <p className="text-white text-base py-4 pl-10"><a href="/" className="hover:underline">Home</a> &gt; <a href="/dogs" className="hover:underline">Rehoming</a> &gt; Donate Now</p>
       </div>
 
       {/* sm:w-11/12 md:w-7/12 lg:w-5/12 xl:w-5/12 mx-auto px-6 */}
 
-      <section className="w-2/7 lg:w-full h-screen h-6/6 bg-donationHeader bg-cover bg-center mt-0"></section>
+      <section className="w-2/7 lg:w-full h-screen bg-donationHeader bg-cover bg-center"></section>
       <div className="bg-donationTile bg-repeat-round h-screen">
 
         {/* card starts here */}
@@ -29,15 +29,15 @@ function Donation() {
 
                 <div className ="text-center donate-buttons flex items-stretch">
 
-                  <button className="mx-auto font-black bg-white hover:bg-pawhub-grey rounded-md text-black hover:text-white hover:border-2 hover:border-pawhub-yellow h-12 w-1/3 mx-3 mt-5">
+                  <button className="mx-auto font-black bg-white hover:bg-pawhub-grey rounded-md text-black hover:text-white h-12 w-1/3 mx-3 mt-5">
                 £30
                   </button>
 
-                  <button className="mx-auto font-black bg-white hover:bg-pawhub-grey rounded-md text-black hover:text-white hover:border-2 hover:border-pawhub-yellow h-12 w-1/3 mx-3 mt-5">
+                  <button className="mx-auto font-black bg-white hover:bg-pawhub-grey rounded-md text-black hover:text-white h-12 w-1/3 mx-3 mt-5">
                 £50
                   </button> 
 
-                  <button className="mx-auto font-black bg-white hover:bg-pawhub-grey rounded-md text-black hover:text-white hover:border-2 hover:border-pawhub-yellow h-12 w-1/3 mx-3 mt-5">
+                  <button className="mx-auto font-black bg-white hover:bg-pawhub-grey rounded-md text-black hover:text-white h-12 w-1/3 mx-3 mt-5">
                 £100
                   </button> 
 

@@ -85,7 +85,7 @@ nav {
 }
 
 .background-image {
-  min-width: 1050px;
+  object-fit: cover;
 }
 
 #aboutus-tagline {
