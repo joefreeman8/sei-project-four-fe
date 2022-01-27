@@ -149,6 +149,7 @@ function DogIndex() {
               <div className="m-2 filter-item">
                 <label className="p-1">May live with...</label>
                 <div className="text-pawhub-grey">
+                  
                   <Select
                     options={liveWithSelectOptions}
                     isMulti
