@@ -6,8 +6,6 @@ function Carousel(props) {
   const [currentSlide, setCurrentSlide] = React.useState(0)
 
   const array = Object.values(props.dogImages)
-  console.log(array)
-
 
   const handleSlideChange = (e) => {
     if (currentSlide === 0 && e.target.dataset.id === 'left') {

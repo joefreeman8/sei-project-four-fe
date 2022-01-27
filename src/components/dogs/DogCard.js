@@ -21,7 +21,7 @@ function DogCard({ id, name, imageOne, breed, dateAdded }) {
         <a href={`/dogs/${id}`} className='relative'>
           {isNew && <div className="triangle-new absolute top-0 left-0">
             <p className='triangle-text -mt-16 ml-5 text-xl font-bold'>New</p></div>} 
-          <img src={imageOne} className="bg-white index-image p-1 group-hover:bg-pawhub-purple"
+          <img src={imageOne} className="bg-white index-image p-1 group-hover:bg-pawhub-purple shadow-xl"
           />
           <h1 className="gooddog-font text-3xl">{name}</h1>
           <h2 className="text-base">{breed}</h2>
