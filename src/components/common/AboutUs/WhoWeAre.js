@@ -56,11 +56,11 @@ function WhoWeAre() {
         <div className="bg-white w-5/6 m-3 p-6 shadow-xl">
           <div className="teamcard flex lg:start">
             <div className="columns-1 w-2/6">
-              <img src={'https://i.imgur.com/JWVnfPSm.jpg?1'} />
+              <img src={'https://i.imgur.com/BHeBQmYm.jpg'} />
             </div>
             <div className="pl-2 columns-1 w-4/6">
               <h1 className="whoweare-name gooddog-font text-5xl">Mike Salter</h1>
-              <p className="whoweare-p">My name is Mike and i look a lot like Joe in my photo. My name is Mike and i look a lot like Joe in my photo. My name is Mike and i look a lot like Joe in my photo. My name is Mike and i look a lot like Joe in my photo.</p>
+              <p className="whoweare-p">Hi I&apos;m Mike, this project was so fun to build, using Django, and React! It was the final part of my Software Engingeering Immersive Couse and I&apos;m looking to take the next step in my career. Outside of coding I&apos;m all about Japanese-studies, greyhound rescue, disabilty sport and fencing.</p>
             </div>
           </div>
         </div>
