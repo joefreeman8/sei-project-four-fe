@@ -49,8 +49,6 @@ function Home() {
 
   dogs ? dogs.slice(0, 5) : null
 
-  console.log(dogsToShow)
-
   return (
     <>
       {isLoading && !isError && <Loading />}

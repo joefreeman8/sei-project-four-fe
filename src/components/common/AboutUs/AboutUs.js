@@ -15,12 +15,12 @@ function AboutUs() {
       </div>
       <div className="aboutus-banner flex justify-center shadow-xl w-full px-5 py-10 mt-10 bg-pawhub-purple">
         <Link to="/aboutus/whoweare">
-          <button className="aboutus-button mx-20 shadow-xl bg-pawhub-yellow hover:bg-black hover:text-white transition duration-400 text-pawhub-grey font-bold py-5 px-10 m-3 rounded">
+          <button className="aboutus-button mx-20 shadow-xl bg-pawhub-yellow border-2 border-pawhub-yellow hover:bg-white hover:text-pawhub-grey hover:border-3 hover:border-pawhub-grey duration-400 text-pawhub-grey font-bold py-5 px-10 m-3 rounded">
             Who We Are
           </button>
         </Link>
         <Link to="/aboutus/fundraiser">
-          <button className="aboutus-button mx-20 shadow-xl bg-pawhub-yellow hover:bg-black hover:text-white transition duration-400 text-pawhub-grey font-bold py-5 px-10 m-3 rounded">
+          <button className="aboutus-button mx-20 shadow-xl bg-pawhub-yellow  border-2 border-pawhub-yellow hover:bg-white hover:text-pawhub-grey hover:border-3 hover:border-pawhub-grey duration-400 text-pawhub-grey font-bold py-5 px-10 m-3 rounded">
             Fundraiser
           </button>
         </Link>
