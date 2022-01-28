@@ -151,7 +151,7 @@ nav {
 
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 890px) {
   .nav-toggle {
     display: none;
   } 
@@ -256,4 +256,41 @@ nav {
 
   .login-background {
     background-image: url('https://i.imgur.com/tdmm0eW.jpg')
+    }
+
+    .fade-in-image {
+      animation: fadein 3s;
+      -webkit-animation: fadeIn 3s;
+      -moz-animation: fadeIn 3s;
+      -o-animation: fadeIn 3s;
+      -ms-animation: fadeIn 3s;
+    }
+    @keyframes fadeIn {
+      0% {opacity:0.3;}
+      50% {opacity:1;}
+      100% {opacity:0.3;}
+    }
+    
+    @-moz-keyframes fadeIn {
+      0% {opacity:0.3;}
+      50% {opacity:1;}
+      100% {opacity:0.3;}
+    }
+    
+    @-webkit-keyframes fadeIn {
+      0% {opacity:0.3;}
+      50% {opacity:1;}
+      100% {opacity:0.3;}
+    }
+    
+    @-o-keyframes fadeIn {
+      0% {opacity:0.3;}
+      50% {opacity:1;}
+      100% {opacity:0.3;}
+    }
+    
+    @-ms-keyframes fadeIn {
+      0% {opacity:0.3;}
+      50% {opacity:1;}
+      100% {opacity:0.3;}
     }

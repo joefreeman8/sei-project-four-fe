@@ -57,9 +57,10 @@ function Login() {
         </label>
         <input className="block shadow rounded border-2 h-16 w-full py-2 px-3 mx-5 text-gray-700 leading-tight focus:outline-none focus:border-pawhub-yellow mb-8 rounded-lg" id="passowrd" type="password" name="password" placeholder="Password" onChange={handleChange}>
         </input>
-        <button className="rounded-md w-full h-12 mb-8 bg-pawhub-yellow text-black text-xl font-bold" type="submit">
+        <button className="rounded-md w-full h-12 mb-8 bg-pawhub-yellow text-black text-xl font-bold hover:bg-pawhub-yellow/50" type="submit">
               Login 
         </button>
+
         <div className="mx-5 text-blue-700">
           <Link className='text-pawhub-purple' to="/register" >Don&apos;t have an account? Signup</Link>
         </div>
