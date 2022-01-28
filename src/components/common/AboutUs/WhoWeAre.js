@@ -66,8 +66,8 @@ function WhoWeAre() {
                 <p className="whoweare-p">
                   Hi! I&apos;m Joe, I love dogs, the outdoors & having sandy feet.
                   Over the past 12 weeks I have been enrolled on a Software Engineer Immersive course with General Assembly
-                  and have been developing my skills in various languages to be confident in securing my first Jr full stack developer role.
-                  My spare time consists sof wondering where I&apos;d like my next adventure to be,
+                  and have been developing my skills in various languages to be confident in securing my first full-stack Jr developer role.
+                  My spare time consists of wondering where I&apos;d like my next adventure to be,
                   taking the handsome chap in my photo for a run & practicing my new programming skills.
                   Have a look around & enjoy!
                 </p>
