@@ -66,8 +66,8 @@ function WhoWeAre() {
                 <p className="whoweare-p">
                   Hi! I&apos;m Joe, I love dogs, the outdoors & having sandy feet.
                   Over the past 12 weeks I have been enrolled on a Software Engineer Immersive course with General Assembly
-                  and have been developing my skills in various languages to be confident in securing my first Jr full stack developer role.
-                  My spare time consists sof wondering where I&apos;d like my next adventure to be,
+                  and have been developing my skills in various languages to be confident in securing my first full-stack Jr developer role.
+                  My spare time consists of wondering where I&apos;d like my next adventure to be,
                   taking the handsome chap in my photo for a run & practicing my new programming skills.
                   Have a look around & enjoy!
                 </p>
@@ -87,7 +87,7 @@ function WhoWeAre() {
             <div className="columns-1 w-4/6 px-2 flex flex-col justify-between">
               <div>
                 <h1 className="whoweare-name gooddog-font text-5xl">Mike Salter</h1>
-                <p className="whoweare-p">Hi I&apos;m Mike, this project was so fun to build, using Django, and React! It was the final part of my Software Engingeering Immersive Couse and I&apos;m looking to take the next step in my career. Outside of coding I&apos;m all about Japanese-studies, greyhound rescue, disability sports and fencing.</p>
+                <p className="whoweare-p">Hi I&apos;m Mike, this project was so fun to build, using Django, and React! It was the final part of my Software Engingeering Immersive Couse and I&apos;m looking to take the next step in my career. Outside of coding I&apos;m all about Japanese-studies, greyhound rescue, disability sport and fencing.</p>
               </div>
               <div className="flex justify-center md:justify-end">
                 <a href='https://www.linkedin.com/in/michael-saltergb/' target="_blank" rel="noopener noreferrer"><img src={linkedin}  className="h-10 m-1" /></a>
