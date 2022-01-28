@@ -18,6 +18,7 @@ import Fundraiser from './components/common/aboutus/Fundraiser'
 import UserProfile from './components/common/UserProfile'
 import Footer from './components/common/Footer'
 import Newsletter from './components/common/Newsletter'
+import Error from './components/common/Error'
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
         <Route path="/aboutus/fundraiser" element={<Fundraiser />} />
         <Route path="/newsletter" element={<Newsletter />} />
         <Route path="/profile/:userId" element={<UserProfile />} />
+        <Route path="*" element={<Error error={404} />} />
       </Routes>
       <Footer />
     </BrowserRouter>
