@@ -42,7 +42,7 @@ function DivCarousel(props) {
                 <h6 className='text-2xl font-bold mb-4'>{slide.title}</h6>
                 <p>{slide.content}</p>
                 <Link to={slide.link}>
-                  <button className="block mx-auto bg-pawhub-grey hover:bg-white rounded-md text-white hover:text-black border-2 border-pawhub-grey h-auto p-5 w-auto mt-10">
+                  <button className="block mx-auto bg-pawhub-grey hover:bg-white rounded-md text-white hover:text-black border-2 border-pawhub-grey p-5 h-16 w-64 mt-10">
                     {slide.buttonText}
                   </button>
                 </Link>
