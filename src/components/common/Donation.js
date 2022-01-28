@@ -27,12 +27,8 @@ function Donation() {
       <div className="bg-pawhub-purple"> 
         <p className="text-white text-base py-4 pl-10"><a href="/" className="hover:underline">Home</a> &gt; Donate Now</p>
       </div>
-
-      {/* sm:w-11/12 md:w-7/12 lg:w-5/12 xl:w-5/12 mx-auto px-6 */}
-
       
-      <section className="w-4/7 lg:w-screen h-screen bg-donationHeader bg-cover bg-center">
-        
+      <section className="w-4/7 lg:w-screen h-screen bg-donationHeader bg-cover bg-center">        
 
         {/* card starts here */}
         <div className="Donate-container pt-5 pl-5 pr-5 sm:w-px-1">
@@ -71,13 +67,14 @@ function Donation() {
                     <p className="text-center text-sm mt-0 mb-0 -py-4"><span className="text-lg font-bold">£100</span> pays for all of the care a dog needs in their first week with us</p>
 
                     <label htmlFor="text" className="block mt-2 mb-1 ml-3 text-sm -pb-2 text-center">Or enter your own amount below...</label>
-                    <input type="text" id="text" className="shadow border-2 text-gray-700 text-sm rounded-lg block w-full py-3  text-center text-lg leading-tight focus:outline-none focus:border-pawhub-yellow placeholder-gray-400" placeholder="£100" value={donationValue} onChange={handleClick}
-                      required/>
+                    <input type="text" id="text" className="shadow border-2 text-gray-700 text-sm rounded-lg block w-full py-3  text-center text-lg leading-tight
+                      focus:outline-none focus:border-pawhub-yellow placeholder-gray-400" placeholder="£100" value={donationValue} onChange={handleClick}
+                    required/>
 
                   </form>
-                  <button className="content-center mx-auto font-black bg-pawhub-yellow hover:bg-pawhub-grey rounded-md text-black hover:text-white hover:border-2 hover:border-white h-12 w-full mr-3 mt-5 shadow-xl" type="submit" onClick={handleDonation}>
-                Donate  
-                  </button> 
+                  <button className="content-center mx-auto font-black bg-pawhub-yellow hover:bg-pawhub-grey 
+                    rounded-md text-black hover:text-white hover:border-2 hover:border-white h-12 w-full mr-3 mt-5 shadow-xl" 
+                  type="submit" onClick={handleDonation}> Donate</button> 
                 </>
                 :
                 <div className="bg-pawhub-stone mt-5 p-10">
@@ -87,14 +84,9 @@ function Donation() {
               }
 
             </div>
-    
           </div>
-
-        
         </div>
-        
       </section>   
-
     </div>    
 
 

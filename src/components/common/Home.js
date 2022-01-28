@@ -83,7 +83,7 @@ function Home() {
             </Link>
             <div className="flex flex-col items-center bg-white pb-10">
               <h3 className="kessel-font text-6xl m-5">Adopt A Dog</h3>
-              <p>These are just a few of the <span className='font-bold'>{dogs.length}</span> dogs that need a forver home</p>
+              <p>These are just a few of the <span className='font-bold'>{dogs.length}</span> dogs that need a forever home</p>
               <div className="flex flex-row">
 
               </div>
