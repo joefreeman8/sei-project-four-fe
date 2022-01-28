@@ -1,4 +1,4 @@
-import Carousel from './carousel/HomeCarousel'
+// import Carousel from './carousel/HomeCarousel'
 import DivCarousel from './carousel/DivCarousel'
 import DogHomeCard from '../dogs/DogCard'
 import Error from './Error'
@@ -10,6 +10,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai'
 import Loading from './Loading'
+import DonateImageGallery from './carousel/DonateImageGallery'
 
 
 function Home() {
@@ -74,7 +75,8 @@ function Home() {
           <div className="flex flex-col items-center bg-pawhub-stone pb-5">
             <h3 className="kessel-font m-5 text-6xl">Donate Today</h3>
             <p>Every penny will help a dog in need</p>
-            <Carousel />
+            {/* <Carousel /> */}
+            <DonateImageGallery />
 
             <Link to="/donation" className="pb-10">
               <button className="block mx-auto bg-pawhub-grey rounded-md text-white h-16 w-64 mt-5 hover:bg-white hover:text-pawhub-grey border-2 border-pawhub-grey">

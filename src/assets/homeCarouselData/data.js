@@ -1,14 +1,21 @@
 export const CarouselHomeData = [
   {
     image:
-      'https://i.imgur.com/uiJLk0S.jpg',
+      'https://i.imgur.com/5sJu3yG.jpg?1',
+    caption: 'Donating helps to provide food',
   },
   {
     image:
-      'https://i.imgur.com/Zvnu3EQ.jpg',
+      'https://i.imgur.com/9PNMsTF.jpg?2',
+    caption: 'Donating helps to offer vet care',
   },
   {
     image:
-      'https://imgur.com/Rs5Qc1b.jpg',
+      'https://i.imgur.com/DJbtDch.jpg?1',
+    caption: 'Donating helps to keep dogs warm',
+  },  {
+    image:
+      'https://i.imgur.com/DSq4JcR.jpg?1',
+    caption: 'Donating helps to keep dogs happy',
   }
 ]
