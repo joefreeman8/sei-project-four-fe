@@ -79,16 +79,16 @@ function WhoWeAre() {
         <div className="bg-white w-5/6 lg:w-4/6 m-3 p-6 shadow-xl">
           <div className="teamcard flex flex-around lg:start">
             <div className="columns-1 w-2/6 flex justify-center">
-              <img src={'https://i.imgur.com/JWVnfPSm.jpg?1'} />
+              <img src={'https://i.imgur.com/BHeBQmYm.jpg'} />
             </div>
             <div className="columns-1 w-4/6 px-2 flex flex-col justify-between">
               <div>
                 <h1 className="whoweare-name gooddog-font text-5xl">Mike Salter</h1>
-                <p className="whoweare-p">My name is Mike and i look a lot like Joe in my photo. My name is Mike and i look a lot like Joe in my photo. My name is Mike and i look a lot like Joe in my photo. My name is Mike and i look a lot like Joe in my photo.</p>
+                <p className="whoweare-p">Hi I&apos;m Mike, this project was so fun to build, using Django, and React! It was the final part of my Software Engingeering Immersive Couse and I&apos;m looking to take the next step in my career. Outside of coding I&apos;m all about Japanese-studies, greyhound rescue, disabilty sport and fencing.</p>
               </div>
               <div className="flex justify-center md:justify-end">
-                <a href='' target="_blank" rel="noopener noreferrer"><img src={linkedin} className="h-10 m-1" /></a>
-                <a href='' target="_blank" rel="noopener noreferrer"><img src={github} className="h-10 m-1" /></a>
+                <a href='https://www.linkedin.com/in/michael-saltergb/' target="_blank" rel="noopener noreferrer"><img src={linkedin}  className="h-10 m-1" /></a>
+                <a href='https://github.com/Msalter91' target="_blank" rel="noopener noreferrer"><img src={github}  className="h-10 m-1" /></a>
               </div>
             </div>
           </div>
