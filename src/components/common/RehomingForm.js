@@ -50,9 +50,9 @@ function RehomingForm() {
         <form className="bg-white shadow-xl rounded w-5/6 mx-auto mt--10 px-10 pt-5 pb-5">
           
           <p className="text-3xl text-black font-bold text-center pb-4">Rehoming Questionnaire</p>
-          <div className="flex flex-row">
+          <div className="flex sm:flex-row flex-col">
 
-            <div className="w-full md:w-1/2 md:lg-1/2 mb-6 mx-3 ">
+            <div className="w-full md:w-1/2 md:lg-1/2 mb-6 mx-3">
 
               <p className="text-xl text-black">Section 1: Your Details</p>
               <p className="text-sm text-red-600">* <span className="text-black">Required</span></p>
@@ -78,7 +78,7 @@ function RehomingForm() {
               <input type="text" id="text" 
                 className="bg-white shadow rounded border border-black text-gray-900 text-sm rounded-lg 
               hover:border-pawhub-yellow ring-offset-2 ring-offset-pawhub-yellow focus:border-pawhub-yellow block w-full p-2" 
-                placeholder="Enter your answer" required/>
+                placeholder="Enter your answer" required onnput="this.setCustomValidity('')" onInvalid="this.setCustomValidity('')" />
 
               <br></br>
 
