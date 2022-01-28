@@ -45,9 +45,15 @@ function WhoWeAre() {
             <div className=" pl-2 columns-1 w-4/6">
               <h1 className="whoweare-name gooddog-font text-5xl">Joe Freeman</h1>
               <p className="whoweare-p">
-                Hi! I&apos;m Joe, a dog loving, travel obsessed, newly graduated software engineer.
-                After taking the first baby steps with General Assembly this is the work & the team and I have managed to create with Django, React and the framework Tailwind. 
-                I am super excited to continue learning in this vast sea of numbers, letters and pretty websites. I hope you enjoy the app & the dogs on show!
+                Hi! I&apos;m Joe, I love dogs, the outdoors & having sandy feet.
+                Over the past 12 weeks I have been working hard on a Software Engineer course and have been developing my skills to be confident in 
+                finding a Jr programming role.
+                My spare time consists of wondering where I&apos;d like my next adventure to be & taking the handsome chap in my photo for a run.
+                Have a look around & enjoy.
+                <br />
+                <br />
+                <a href="https://www.linkedin.com/in/joefreeman8/" target="_blank" rel="noreferrer"><img /></a>
+                <a href="https://github.com/joefreeman8" target="_blank" rel="noreferrer"><img /></a>
               </p>
 
             </div>
