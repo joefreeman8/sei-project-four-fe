@@ -26,11 +26,14 @@ function WhoWeAre() {
             <div className="columns-1 w-4/6 px-2 flex flex-col justify-between">
               <div>
                 <h1 className="whoweare-name gooddog-font text-5xl">Alex Chan</h1>
-                <p className="whoweare-p">My name is Alex and i like Pokemon.My name is Alex and i like Pokemon.My name is Alex and i like Pokemon.My name is Alex and i like Pokemon.My name is Alex and i like Pokemon.My name is Alex and i like Pokemon.</p>
+                <p className="whoweare-p ">Thank you for visiting this site, I&apos;m Alex! After an enjoyable career in Menswear Fashion & Graphic Design, I decided to make a career change and joined the Software Engineer Immersive course at General Assembly. As I reach the end of this course, I will walk away knowing I have a new skillset to start my journey into coding and met a great bunch of friends along the way! I particularly enjoy front-end web design and have recent experience working with framesworks (Tailwind 3.0, Bootstrap 5.0, Bulma etc) Trainee Developer at your service!</p>
+      
+
+              
               </div>
               <div className="flex justify-center md:justify-end">
-                <a href='' target="_blank" rel="noopener noreferrer"><img src={linkedin} className="h-10 m-1" /></a>
-                <a href='' target="_blank" rel="noopener noreferrer"><img src={github} className="h-10 m-1" /></a>
+                <a href='https://www.linkedin.com/in/achan81/' target="_blank" rel="noopener noreferrer"><img src={linkedin} className="h-10 m-1" /></a>
+                <a href='https://github.com/Achan81' target="_blank" rel="noopener noreferrer"><img src={github} className="h-10 m-1" /></a>
               </div>
             </div>
           </div>
