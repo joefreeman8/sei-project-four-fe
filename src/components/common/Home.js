@@ -49,8 +49,6 @@ function Home() {
 
   dogs ? dogs.slice(0, 5) : null
 
-  console.log(dogsToShow)
-
   return (
     <>
       {isLoading && !isError && <Loading />}
@@ -72,21 +70,6 @@ function Home() {
               </Link>
             </div>
           </div>
-
-          {/* Donate section */}
-          <div className="flex flex-col items-center bg-pawhub-stone pb-5">
-            <h3 className="kessel-font m-5 text-6xl">Donate Today</h3>
-            <p className='mb-5'>Every penny will help a dog in need</p>
-            {/* <Carousel /> */}
-            <DonateImageGallery />
-
-            <Link to="/donation" className="pb-10">
-              <button className="block mx-auto bg-pawhub-grey rounded-md text-white h-16 w-64 mt-5 hover:bg-white hover:text-pawhub-grey border-2 border-pawhub-grey">
-                Donate
-              </button>
-            </Link>
-          </div>
-          {/* dog section */}
           <div className="flex flex-col items-center bg-white pb-10">
             <h3 className="kessel-font text-6xl m-5">Adopt A Dog</h3>
             <p>These are just a few of the <span className='font-bold'>{dogs.length}</span> dogs that need a forever home</p>
@@ -108,6 +91,20 @@ function Home() {
               </button>
             </Link>
           </div>
+          {/* Donate section */}
+          <div className="flex flex-col items-center bg-pawhub-stone pb-5">
+            <h3 className="kessel-font m-5 text-6xl">Donate Today</h3>
+            <p className='mb-5'>Every penny will help a dog in need</p>
+            {/* <Carousel /> */}
+            <DonateImageGallery />
+
+            <Link to="/donation" className="pb-10">
+              <button className="block mx-auto bg-pawhub-grey rounded-md text-white h-16 w-64 mt-5 hover:bg-white hover:text-pawhub-grey border-2 border-pawhub-grey">
+                Donate
+              </button>
+            </Link>
+          </div>
+          {/* dog section */}
         </div><div className="w-full h-1/3 bg-pawhub-yellow flex justify-center items-center">
           <DivCarousel {...homepageCards} />
         </div></>

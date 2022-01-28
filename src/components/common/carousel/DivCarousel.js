@@ -7,7 +7,6 @@ function DivCarousel(props) {
   const [currentSlide, setCurrentSlide] = React.useState(0)
 
   const array = Object.values(props)
-  console.log(array)
 
   const handleSlideChange = (e) => {
     if (currentSlide === 0 && e.target.dataset.id === 'left') {
@@ -19,7 +18,6 @@ function DivCarousel(props) {
     }
   }
 
-  console.log(currentSlide)
 
   return (
     <div className=" h-3/4 px-10 w-full flex justify-center">
@@ -28,7 +26,6 @@ function DivCarousel(props) {
           <><AiOutlineLeft onClick={handleSlideChange} className='absolute left-0 text-3xl inset-y-1/2 text-pawhub-purple cursor-pointer' data-id='left' /><AiOutlineRight onClick={handleSlideChange} className='absolute right-0 text-3xl inset-y-1/2 text-pawhub-purple cursor-pointer' data-id='right' /></>
         }
         {array.map((slide, index) => {
-          console.log(slide)
           return (
             <div
               key={slide.title}

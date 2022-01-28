@@ -22,8 +22,6 @@ function DonateImageGallery () {
     return () => clearInterval(interval)
   }, [])
 
-  console.log(currentImage) 
-
 
   return (
     <div className="h-1/4 w-3/4 flex flex-col justify-center items-center">
