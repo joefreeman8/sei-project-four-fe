@@ -15,12 +15,12 @@ function AboutUs() {
       </div>
       <div className="aboutus-banner flex justify-center shadow-xl w-full px-5 py-10 mt-10 bg-pawhub-purple">
         <Link to="/aboutus/whoweare">
-          <button className="aboutus-button mx-20 shadow-xl bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-5 px-10 m-3 rounded">
+          <button className="aboutus-button mx-20 shadow-xl bg-pawhub-yellow hover:bg-black hover:text-white transition duration-400 text-pawhub-grey font-bold py-5 px-10 m-3 rounded">
             Who We Are
           </button>
         </Link>
         <Link to="/aboutus/fundraiser">
-          <button className="aboutus-button mx-20 shadow-xl bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-5 px-10 m-3 rounded">
+          <button className="aboutus-button mx-20 shadow-xl bg-pawhub-yellow hover:bg-black hover:text-white transition duration-400 text-pawhub-grey font-bold py-5 px-10 m-3 rounded">
             Fundraiser
           </button>
         </Link>
@@ -45,7 +45,7 @@ function AboutUs() {
       </div>
       <div className="flex justify-center">
         <Link to="/donation">
-          <button className="mx-20 shadow-xl bg-pawhub-yellow hover:bg-pawhub-yellow/50 text-pawhub-grey font-bold py-2 px-10 m-5 mb-10 rounded">
+          <button className="mx-20 shadow-xl bg-pawhub-yellow hover:bg-pawhub-yellow/50 transition duration-400 text-pawhub-grey font-bold py-2 px-10 m-5 mb-10 rounded">
             Make Donation
           </button>
         </Link>
