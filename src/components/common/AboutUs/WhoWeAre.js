@@ -87,7 +87,7 @@ function WhoWeAre() {
             <div className="columns-1 w-4/6 px-2 flex flex-col justify-between">
               <div>
                 <h1 className="whoweare-name gooddog-font text-5xl">Mike Salter</h1>
-                <p className="whoweare-p">Hi I&apos;m Mike, this project was so fun to build, using Django, and React! It was the final part of my Software Engingeering Immersive Couse and I&apos;m looking to take the next step in my career. Outside of coding I&apos;m all about Japanese-studies, greyhound rescue, disabilty sport and fencing.</p>
+                <p className="whoweare-p">Hi I&apos;m Mike, this project was so fun to build, using Django, and React! It was the final part of my Software Engingeering Immersive Couse and I&apos;m looking to take the next step in my career. Outside of coding I&apos;m all about Japanese-studies, greyhound rescue, disability sports and fencing.</p>
               </div>
               <div className="flex justify-center md:justify-end">
                 <a href='https://www.linkedin.com/in/michael-saltergb/' target="_blank" rel="noopener noreferrer"><img src={linkedin}  className="h-10 m-1" /></a>
