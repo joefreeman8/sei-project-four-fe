@@ -16,10 +16,7 @@ function DogIndex() {
   const [isError, setIsError] = React.useState(false)
   const [error, setError] = React.useState(null)
   const isLoading = !dogs && !isError
-
   const [dogsToShow, setDogsToShow] = React.useState([])
-
-
 
   const liveWithSelectOptions = [
     { value: 'Children', label: 'Children' },
@@ -64,6 +61,7 @@ function DogIndex() {
 
   const ageSelectOptions = [
     { value: '0 to 6 Months', label: '0 to 6 Months' },
+    { value: '6 to 12 Months', label: '6 to 12 Months' },
     { value: '1 to 2 Years', label: '1 to 2 Years' },
     { value: '2 to 5 Years', label: '2 to 5 Years' },
     { value: '5 to 7 Years', label: '5 to 7 Years' },
@@ -192,22 +190,20 @@ function DogIndex() {
             </div>
           </div>
           <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4 bg-pawhub-yellow pt-10">
-            {filteredDogs(dogsToShow).map(dog => 
+            {filteredDogs(
+              liveWith.length === 0 && age.length === 0 && breed.length === 0 ? dogsToShow : dogs
+            ).map(dog => 
               <DogCard key={dog.id} {...dog} />
             )}
           </div>
-          {dogsToShow.length !== dogs.length &&
+          {(dogsToShow.length !== dogs.length) && (liveWith.length === 0 && age.length === 0 && breed.length === 0) &&
           <div className="bg-pawhub-yellow flex justify-center pb-5">
             <button className="shadow-xl bg-pawhub-purple text-white font-bold py-2 px-8 m-3 rounded hover:bg-white hover:text-pawhub-grey hover:border-2 hover:border-pawhub-grey border-2 border-pawhub-purple" onClick={handleLoadMore}>Load More Dogs</button>
-
           </div>
-
           }
         </>
-
       )
       }
-
     </>
   )
 }
