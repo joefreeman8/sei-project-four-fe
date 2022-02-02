@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router'
 import { Link } from 'react-router-dom'
 import { loginUser } from '../../lib/api'
 import { setToken } from '../../lib/auth'
+import { createNotification } from '../../lib/notification'
 
 const initialState = {
   username: '',
@@ -27,6 +28,7 @@ function Login() {
     try {
       const res = await loginUser(formData)
       setToken(res.data.token)
+      createNotification(res.data.message)
       navigate('/')
     } catch (err) {
       setIsError(true)
