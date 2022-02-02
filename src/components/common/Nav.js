@@ -16,8 +16,9 @@ function Nav() {
 
   const handleLogout = () => {
     removeToken()
-    navigate('/')
     createNotification('Time for a walk? See you soon!')
+    navigate('/')
+    
   }
 
   return (
