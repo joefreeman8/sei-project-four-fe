@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import pawhubLogo from '../../assets/PawHub.png'
 import { isAuthenticated, removeToken } from '../../lib/auth'
 import { getUserId } from '../../lib/auth'
+import { createNotification } from '../../lib/notification'
 
 function Nav() {
   const navigate = useNavigate()
@@ -16,10 +17,12 @@ function Nav() {
   const handleLogout = () => {
     removeToken()
     navigate('/')
+    createNotification('Time for a walk? See you soon!')
   }
 
   return (
     <>
+      {/* NAV FOR FULLSCREEN */}
       <nav className="nav-toggle sticky top-0 h-24 bg-white/80 z-50">
         <div className="flex float-left mt-2 pl-24">
           <Link className="flex float-left" to="/">
@@ -48,6 +51,8 @@ function Nav() {
         </div>
       </nav>
 
+
+      {/* NAVBAR for Burger */}
       <nav className="nav burger-toggle inline z-50">
         <div className="flex float-left m-3 pl-4 z-50">
           <Link to="/"><img src={pawhubLogo} alt="logo" className="h-20 w-20"></img></Link>
