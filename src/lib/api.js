@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { getToken } from './auth'
+import { baseUrl } from '../config'
 
 function headers() {
   return {
@@ -7,7 +8,6 @@ function headers() {
   }
 }
 
-const baseUrl = '/api'
 
 // * Dog Requests
 
@@ -16,7 +16,7 @@ export function getAllDogs() {
 }
 
 export function getSingleDog(dogId) {
-  return axios.get(`${baseUrl}/dogs/${dogId}`)
+  return axios.get(`${baseUrl}/dogs/${dogId}/`)
 }
 
 // * User Requests
