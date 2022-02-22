@@ -323,7 +323,8 @@ Taking care of the about us page, the main thing here was to ensure the pages we
 * My first block arose when trying to work out how to have my Navbar & burger-menu react to the correct way responsively and without interfering with each other. At first I was puzzling myself, trying to figure out how to have both in the same nav section, then I took a break, went and grabbed a coffee, 3 chocolate hobnobs, sat downstairs and patted my dog. When I came back to my desk the answer was immediately obvious, create two separate nav sections and use media queries to dictate which nav element showed in accordance to the screen size. 
 * Working with Tailwind for the first time, I got off to a pretty slow start and struggled along for a little while. Eventually things started to work a little smoother for me though (even if I was dreaming of the project-three MUI days). 
 
-## Bugs ##
+
+## Bugs ##
 * Firefox doesn’t allow for the custom fonts to load, so Google Chrome is currently the preferred browser for viewing this app.
 * The carousel features sometimes break, causing the images to be lost.
 
