@@ -12,6 +12,15 @@
   box-sizing: border-box;
 }
 
+
+.favorite-heart {
+  cursor: pointer;
+}
+
+.delete-question {
+  cursor: pointer;
+}
+
 /* NAV BAR */
 nav {
   height: 10vh;

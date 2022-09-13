@@ -18,7 +18,7 @@ function Fundraiser() {
 
       {/* FULL SIZE SCREEN */}
       <div className="fundraiser-background h-full w-full bg-center bg-cover py-48 px-10">
-        <div className="-bt-48 bg-white/50 h-2/6 w-2/3 flex flex-col justify-center items-center p-12 mt-56 ml-1/5 mr-1/5 -mb-16 rounded z-2 sm:ml-1/5 mr-1/5">
+        <div className="-bt-48 bg-white/80 h-2/6 w-2/3 flex flex-col justify-center items-center p-12 mt-56 ml-1/5 mr-1/5 -mb-16 rounded z-2 sm:ml-1/5 mr-1/5">
           <h3 className="text-5xl kessel-font text-center">New Rescue Centre</h3>
           <p className="mt-5 text-center">
             Here at PawHub HQ we are really seeing the effects of the corona-puppy-purchase surge,

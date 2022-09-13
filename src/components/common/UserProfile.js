@@ -87,7 +87,7 @@ function UserProfile() {
             }
           </div>
           <div className="bg-white w-5/6 m-3 p-6 xl:w-2/3 shadow-xl">
-            <p className="px-4 pt-4">Found your pefect match?</p>
+            <p className="px-4 pt-4">Found your perfect match?</p>
             <button className="bg-red-800 hover:bg-red-800/50 text-white font-bold py-2 px-4 m-3 rounded shadow-xl" onClick={handleDelete}>Delete your account</button>
           </div>
         </div>
